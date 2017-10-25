@@ -22,16 +22,16 @@ systemProperties:
   - state
 
 links:
-  - name: experiments 
+  - name: studies 
     backref: cases
     label: member_of
-    target_type: experiment
+    target_type: study
     multiplicity: many_to_one
     required: true
 
 required:
   - submitter_id
-  - experiments 
+  - studies 
 
 uniqueKeys:
   - [id]
@@ -39,28 +39,12 @@ uniqueKeys:
 
 # Case properties
 properties:
-  type:
-    type: string
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-  state:
-    $ref: "_definitions.yaml#/state"
-  submitter_id:
-    type:
-      - string
-      - "null"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
   primary_site:
     description: "Primary site for the case."
     type: string
   disease_type:
     description: "Name of the disease for the case."
     type: string
-  experiments: 
+  studies: 
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
