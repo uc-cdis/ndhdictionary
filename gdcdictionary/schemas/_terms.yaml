@@ -1277,9 +1277,9 @@ preservation_method:
 
 primary_diagnosis:
   description: >
-    Text term for the structural pattern of cancer cells used to define a microscopic diagnosis.
+    Disease definition term (cancer, kidney, cardiovascular/cerebrovascular, etc) by ICD-9 CM Coding Book (9th Revision, 3rd Edition)
   termDef:
-    term: Neoplasm Histologic Type Name
+    term: ICD-9 CM Coding Book 9th Revision 3rd Edition
     source: caDSR
     cde_id: 3081934
     cde_version: 3.0
@@ -1822,7 +1822,7 @@ year_of_diagnosis:
 
 year_of_death:
   description: >
-    Numeric value to represent the year of the death of an individual.
+    Numeric value to represent the year of the death of an individual. 9999=Missing/Alive
   termDef:
     term: Year Death Number
     source: caDSR
