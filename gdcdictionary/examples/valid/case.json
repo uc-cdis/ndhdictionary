@@ -1,6 +1,12 @@
 {
     "type": "case",
     "submitter_id": "BLGSP-71-06-00019",
+	  "hiv_status": true,
+  	"cohort_id": "1984-85 recruit, censored",
+  	"last_visit_seronegative": 220,
+  	"last_macs_visit_seronegative": 140,
+  	"first_visit_seropositive": 10,
+  	"first_macs_visit_seropositive": 30,
     "studies": {
         "id": "daa208a7-f57a-562c-a04a-7a7c77542c98"
     }

@@ -1,6 +1,7 @@
 {
     "type": "study",
     "submitter_id": "study_1",
+    "study_center": "Chicago",
     "study_design": "Clinical",
     "study_objective": "Accuracy",
     "study_setup": "Genetic Analysis",
