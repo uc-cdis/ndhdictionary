@@ -8,5 +8,6 @@
     },
     "type": "demographic",
     "ethnicity": "not hispanic or latino",
-    "year_of_death": 2009
+    "year_of_death": 2009,
+    "vital_status": "Dead"
 }
