@@ -91,6 +91,15 @@ properties:
       - not reported
       - not allowed to collect
 
+  vital_status:
+    term:
+      $ref: "_terms.yaml#/vital_status"
+    enum:
+      - Alive
+      - Dead
+      - Lost to Follow-up
+      - Unknown
+
   year_of_birth:
     term:
       $ref: "_terms.yaml#/year_of_birth"
