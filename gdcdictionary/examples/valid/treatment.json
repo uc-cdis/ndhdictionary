@@ -1,13 +1,13 @@
 {
     "type": "treatment",
     "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_treatment",
-    "days_to_treatment": -1.0,
-    "days_to_treatment_end": 14,
-    "days_to_treatment_start": 25,
+    "regimen_or_line_of_therapy": "ART",
+    "year_of_last_haart_free": 1991,
+    "last_macs_visit_haart_free": 130,
+    "first_macs_visit_haart": 90,
+    "year_of_treatment": 2007,
     "therapeutic_agents": "",
-    "treatment_anatomic_site": "Arm", 
     "treatment_intent_type": "",
-    "treatment_or_therapy": "unknown",
     "treatment_type": "Other",
     "diagnoses": {
         "submitter_id": "E9EDB78B-6897-4205-B9AA-0CEF8AAB5A1F_diagnosis"
