@@ -31,7 +31,10 @@ links:
 
 required:
   - submitter_id
-  - studies 
+  - studies
+  - hiv_status
+  - cohort_id
+  - version_data 
 
 uniqueKeys:
   - [id]
@@ -40,11 +43,53 @@ uniqueKeys:
 # Case properties
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
-  primary_site:
-    description: "Primary site for the case."
+
+  hiv_status:
+    description: >
+      HIV Status
+    type: boolean
+
+  cohort_id:
+    description: >
+      MACS cohort identifier
     type: string
-  disease_type:
-    description: "Name of the disease for the case."
+
+  year_of_last_seronegative:
+    description: >
+      Last time seen seronegative (year)
+    type: number
+
+  last_macs_visit_seronegative:
+    description: >
+      Last MACS visit seen seronegative
+    type: integer
+
+  year_of_first_seropositive:
+    description: >
+      First time seen seropositive (year)
+    type: number
+
+  first_macs_visit_seropositive:
+    description: >
+      First MACS visit seen seropositive
+    type: integer
+
+  year_of_last_macs_visit:
+    description: >
+      Last completed MACS visit (year)
+    type: number
+
+  year_of_lost_to_followup:
+    description: >
+      Last year of contact (includes in-person or phone contact)
+    type: number
+
+  version_data:
+    description: >
+      Version number of data
     type: string
+
   studies: 
     $ref: "_definitions.yaml#/to_one"
+
+
