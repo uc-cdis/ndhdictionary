@@ -31,6 +31,7 @@ links:
 
 required:
   - submitter_id
+  - type
   - studies
   - hiv_status
   - cohort_id
@@ -51,8 +52,16 @@ properties:
 
   cohort_id:
     description: >
-      MACS cohort identifier
-    type: string
+      MACS cohort identifier:
+          20= 1984-85 recruit, not censored
+          21= 1984-85 recruit, censored
+          30= 1987-90 recruit, not censored
+          31= 1987-90 recruit, censored
+          36= 1988 Pittsburgh seroconverters
+          40= 2001-03 recruit
+          50= 2010 recruit
+          55= 2010 recruit - Columbus, OH
+    type: integer
 
   year_of_last_seronegative:
     description: >
@@ -87,7 +96,10 @@ properties:
   version_data:
     description: >
       Version number of data
-    type: string
+          011= Version 01 in Visit 01
+          ..
+          993= Version 03 in Visit 99
+    type: integer
 
   studies: 
     $ref: "_definitions.yaml#/to_one"
