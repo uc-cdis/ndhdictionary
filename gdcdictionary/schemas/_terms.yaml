@@ -776,6 +776,18 @@ height:
     cde_version: 4.1
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=649&version=4.1"
 
+hemoglobin:
+  description: >
+    The value (g/dL) for a medical procedure that involves testing a sample of blood for
+    hemoglobin, red respiratory protein of erythrocytes, to help determine a diagnosis, plan
+    treatment, check to see if treatment is working, or monitor the disease over time.
+  termDef:
+    term: Laboratory Procedure Hemoglobin Result Specified Value
+    source: caDSR
+    cde_id: 2190
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=2190&version=3.0"
+
 her2_erbb2_percent_positive_ihc:
   description: >
     Classification to represent the number of positive HER2/ERBB2 cells in a specimen or sample.
@@ -1240,6 +1252,16 @@ perineural_invasion_present:
     cde_id: 64181
     cde_version: 3.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=64181&version=3.0"
+
+platelet_count:
+  description: >
+    The absolute peripheral platelet count (in 1000/mm3).
+  termDef:
+    term: Laboratory Procedure Platelet Result Specified Value
+    source: caDSR
+    cde_id: 58304
+    cde_version: 4.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58304&version=4.0"
 
 platform: # TOREVIEW
   description: >
@@ -1774,6 +1796,16 @@ vital_status:
     cde_id: 5
     cde_version: 5.0
     term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5&version=5.0"
+
+wbc:
+  description: >
+    The absolute peripheral white blood cell count (in 1000/uL).
+  termDef:
+    term: Laboratory Procedure Leukocyte Result Specified Value
+    source: caDSR
+    cde_id: 58312
+    cde_version: 3.0
+    term_url: "https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html#/search?publicId=58312&version=3.0"
 
 weight:
   description: >
