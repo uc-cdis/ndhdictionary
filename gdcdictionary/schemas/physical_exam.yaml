@@ -136,46 +136,6 @@ properties:
       Limited range of motion of legs: Hip and knee. If not normal, explain
     type: string
 
-  right_vibration_perception:
-    description: >
-      Perception of vibration at great toe (right side) using a 128 Hz tuning fork
-    enum:
-      - No
-      - Yes (normal)
-      - Yes (mild loss)
-      - Yes (moderate loss)
-      - Unable to evaluate
-      - Refused
-
-  left_vibration_perception:
-    description: >
-      Perception of vibration in great toe (left side) using a 128 Hz tuning fork
-    enum:
-      - No
-      - Yes (normal)
-      - Yes (mild loss)
-      - Yes (moderate loss)
-      - Unable to evaluate
-      - Refused
-
-  right_ankle_reflexes:
-    description: >
-      Deep tendon reflexes at right ankle
-    enum:
-      - No
-      - Yes
-      - Unable to evaluate
-      - Refused
-
-  left_ankle_reflexes:
-    description: >
-      Deep tendon reflexes at left ankle
-    enum:
-      - No
-      - Yes
-      - Unable to evaluate
-      - Refused
-
   standing_balance_side:
     description: >
       Time held standing balanced in side-by-side

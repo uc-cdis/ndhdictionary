@@ -9,8 +9,6 @@
     "lymph_nodes": true,
     "diameter_lymph_node": ">4", 
     "standup_category": "Good Posture",
-    "right_vibration_perception": "Yes (moderate loss)",
-    "left_vibration_perception": "Yes (normal)",
     "standing_balance_side": 5, 
     "standing_balance_tandem": 7,
     "standing_balance_semitandem": 6.5, 
