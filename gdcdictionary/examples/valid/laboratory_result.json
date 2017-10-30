@@ -1,0 +1,14 @@
+{
+    "type":"laboratory_result",
+    "submitter_id":"lab_result_1234",
+    "platelets": 241,
+    "leu3n": 711,
+    "leu2n": 133,    
+    "rbc": 4.3,
+    "hematocrit": 38,
+    "hemoglobin": 13.8,    
+    "wbc": 4200,    
+    "followups": {
+        "submitter_id":"visit-990"
+    }
+}
