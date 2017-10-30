@@ -1,0 +1,67 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "protocol"
+title: Protocol
+type: object
+namespace: http://gdc.nci.nih.gov
+category: metadata_file
+project: '*'
+program: '*'
+description: >
+  Data file containing the metadata for the experiment performed.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+  - file_state
+  - error_type
+
+links:
+  - name: studies
+    backref: study_metadata_files
+    label: derived_from
+    target_type: study
+    multiplicity: many_to_many
+    required: false
+
+required:
+  - submitter_id
+  - type
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+  - data_format
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    type:
+      - string
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum: [ "Experimental Metadata" ]
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    type:
+      - string
+  studies:
+    $ref: "_definitions.yaml#/to_many"

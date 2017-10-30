@@ -1,0 +1,13 @@
+{
+    "type": "protocol",
+    "submitter_id": "experiment XML from SRA XML",
+    "file_name": "experiment.xml",
+    "file_size": 21234,
+    "md5sum": "84a72e8aaad3017348cb3f8459c5d5d9",
+    "data_category": "Sequencing Data",
+    "data_type": "Experimental Metadata",
+    "data_format": "SRA XML",
+    "studies": {
+        "id": "daa208a7-f57a-562c-a04a-7a7c77542c98"
+    }
+}
