@@ -38,7 +38,9 @@ required:
   - type
   - cases
   - visit_id
+  - visit_type
   - version_data
+
 
 uniqueKeys:
   - [id]
@@ -73,32 +75,12 @@ properties:
     description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
     type: number
 
-  cd4_positive_count:
-    description: >
-      Number of CD4 positive cells
-    type: number
-
-  cd8_positive_count:
-    description: >
-      Number of CD8 positive cells
-    type: number
-
   days_to_followup:
     description: "Number of days between the date used for index and the date the patient was seen or contacted at follow-up."
     type: integer
 
   height:
     description: "The height of the patient in centimeters."
-    type: number
-
-  hematocrit:
-    description: >
-      Hematocrit (%)
-    type: number
-
-  hemoglobin:
-    term:
-      $ref: "_terms.yaml#/hemoglobin"
     type: number
 
   intercourse_female_partners:
@@ -110,16 +92,6 @@ properties:
     description: >
       Number of male sexual intercourse partners since last visit
     type: integer
-
-  platelet_count:
-    term:
-      $ref: "_terms.yaml#/platelet_count"
-    type: number
-
-  rbc:
-    description: >
-      Count of red blood cells (millions/mm3)
-    type: number
 
   smoking_status:
     description: >
@@ -161,10 +133,12 @@ properties:
       MACS visit identifier
     type: integer
 
-  wbc:
-    term:
-      $ref: "_terms.yaml#/wbc"
-    type: number
+  visit_type:
+    description: >
+      Define if the visit is a follow-up or the baseline visit
+    enum:
+      - Baseline
+      - Follow-up
 
   weight:
     description: "The weight of the patient measured in kilograms."
