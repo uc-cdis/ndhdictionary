@@ -1,0 +1,27 @@
+{
+    "type":"physical_exam",
+    "submitter_id":"physical_exam_1234",
+    "first_blood_pressure": 11, 
+    "oral_temperature": 36.3, 
+    "dermatologic_lesions": "Psoriasis",
+    "skin_lesions_count": "3-10",
+    "diameter_skin_lesion": 2,  
+    "lymph_nodes": true,
+    "diameter_lymph_node": ">4", 
+    "standup_category": "Good Posture",
+    "right_vibration_perception": "Yes (moderate loss)",
+    "left_vibration_perception": "Yes (normal)",
+    "standing_balance_side": 5, 
+    "standing_balance_tandem": 7,
+    "standing_balance_semitandem": 6.5, 
+    "standing_balance_single_leg": 5.6,
+    "single_chair_stand": "Completed",
+    "repeated_chair_stand": "Completed",
+    "time_to_5_repeated_chair_stand": 7.3,
+    "time_to_10_repeated_chair_stand": 12.3,
+    "timed_walk": 2.1,
+    "grip_strength": 33,  
+    "followups": {
+        "submitter_id":"1234-visit-990"
+    }
+}

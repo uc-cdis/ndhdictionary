@@ -1,0 +1,237 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "physical_exam"
+title: Physical Exam
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Values obtained from a physical exam required by a medical professional and performed at one of the recurrent patient visit. The physical exam includes core physical, aging and frailty examinations.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: followups
+    backref: physical_exams
+    label: performed_at
+    target_type: followup
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - followups
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  first_blood_pressure:
+    description: >
+      Blood Pressure sitting at Right Arm (First lecture)
+    type: number
+
+  second_blood_pressure:
+    description: >
+      Blood Pressure sitting at Right Arm (Second lecture)
+    type: number
+
+  oral_temperature:
+    description: >
+      Oral temperature at least 30 minutes after smoking, eating or drinking
+    type: number
+
+  dermatologic_lesions:
+    description: >
+      List of Skin, Hair or Nails lesions
+    type: string
+
+  skin_lesions_count:
+    description: >
+      Number of skin lesions
+    enum:
+      - "1-2"
+      - "3-10"
+      - ">10"
+
+  diameter_skin_lesion:
+    description: >
+      Diameter of the largest skin lesion in cm
+    type: number
+
+  oropharyngeal_lesions:
+    description: >
+      List of oropharyngeal lesions
+    type: string
+
+  eye_lesions:
+    description: >
+      List of eye lesions
+    type: string
+
+  rectal_lesions:
+    description: >
+      List of rectal lesions
+    type: string
+
+  lymph_nodes:
+    description: >
+      Presence of lymph nodes (excluding femoral and inguinal) larger than 1 cm
+    type: boolean
+
+  diameter_lymph_node:
+    description: >
+      Diameter of the largest lymph node
+    enum:
+      - "1-2"
+      - "2.1-4"
+      - ">4"
+
+  genitalia_lesions:
+    description: >
+      List of genitalia lesions
+    type: string
+
+  standup_category:
+    description: >
+      Stands upright
+    enum:
+      - Good Posture
+      - Forward Head
+      - Thoracic Kyphosis
+      - Lumbar Lordosis
+      - Sway Back
+
+  arthritis:
+    description: >
+      Observaton for signs of arthritis, including joint deformities, joint swelling, tender, painful, or creaky joints. If not normal, explain.
+    type: string
+
+  peripheraml_edema:
+    description: >
+      Observation whether feet, ankles, lower legs or hands appear swollen. If not normal, explain
+    type: string
+
+  range_of_motion_arms:
+    description: >
+      Limited range of motion of arms: Shoulders and elbow. If not normal, explain
+    type: string
+
+  range_of_motion_arms:
+    description: >
+      Limited range of motion of legs: Hip and knee. If not normal, explain
+    type: string
+
+  right_vibration_perception:
+    description: >
+      Perception of vibration at great toe (right side) using a 128 Hz tuning fork
+    enum:
+      - No
+      - Yes (normal)
+      - Yes (mild loss)
+      - Yes (moderate loss)
+      - Unable to evaluate
+      - Refused
+
+  left_vibration_perception:
+    description: >
+      Perception of vibration in great toe (left side) using a 128 Hz tuning fork
+    enum:
+      - No
+      - Yes (normal)
+      - Yes (mild loss)
+      - Yes (moderate loss)
+      - Unable to evaluate
+      - Refused
+
+  right_ankle_reflexes:
+    description: >
+      Deep tendon reflexes at right ankle
+    enum:
+      - No
+      - Yes
+      - Unable to evaluate
+      - Refused
+
+  left_ankle_reflexes:
+    description: >
+      Deep tendon reflexes at left ankle
+    enum:
+      - No
+      - Yes
+      - Unable to evaluate
+      - Refused
+
+  standing_balance_side:
+    description: >
+      Time held standing balanced in side-by-side
+    type: number
+
+  standing_balance_tandem:
+    description: >
+      Time held standing balanced in tandem
+    type: number
+
+  standing_balance_semitandem:
+    description: >
+      Time held standing balanced in semi-tandem
+    type: number
+
+  standing_balance_single_leg:
+    description: >
+      Time held standing balanced in single leg
+    type: number
+
+  single_chair_stand:
+    description: >
+      Single chair stand test
+    enum:
+      - Unable
+      - Completed
+      - Attented but unable to do one stand
+
+  repeated_chair_stand:
+    description: >
+      Repeated chair stand test
+    enum:
+      - Unable
+      - Completed
+      - Attented but unable to do five stands
+      - Attended but unable to do ten stands
+
+  time_to_5_repeated_chair_stand:
+    description: >
+      Time to do 5 repeated chair stand test
+    type: number
+
+  time_to_10_repeated_chair_stand:
+    description: >
+      Time to do 10 repeated chair stand test
+    type: number
+
+  timed_walk:
+    description: >
+      Timed Walk (4 meters)
+    type: number
+
+  grip_strength:
+    description: >
+      Grip strength with dynamometer
+    type: number
+
+  followups:
+    $ref: "_definitions.yaml#/to_one"
