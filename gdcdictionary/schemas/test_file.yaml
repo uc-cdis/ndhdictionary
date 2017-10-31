@@ -43,6 +43,12 @@ links:
         target_type: neurocognitive_test
         multiplicity: one_to_one
         required: false
+      - name: mental_health_tests
+        backref: followup_files
+        label: derived_from
+        target_type: mental_health_test
+        multiplicity: one_to_one
+        required: false
 
 uniqueKeys:
   - [id]
@@ -86,4 +92,7 @@ properties:
     $ref: "_definitions.yaml#/to_one"
 
   neurocognitive_tests:
+    $ref: "_definitions.yaml#/to_one"
+
+  mental_health_tests:
     $ref: "_definitions.yaml#/to_one"

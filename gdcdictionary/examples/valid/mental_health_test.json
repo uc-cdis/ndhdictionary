@@ -1,0 +1,32 @@
+{
+    "type":"mental_health_test",
+    "submitter_id":"mental_health_1234",
+    "freq_bothering": "Rarely",
+    "freq_not_eating": "Occasionally",
+    "freq_blue": "Some",
+    "freq_as_good": "Rarely",
+    "freq_focused": "Occasionally",
+    "freq_depressed": "Some",
+    "freq_effort": "Most",
+    "freq_hopeful": "Occasionally",
+    "freq_life_failure": "Rarely",
+    "freq_fearful": "Most",
+    "freq_restless": "Occasionally",
+    "freq_happy": "Some",
+    "freq_talked_less": "Most",
+    "freq_lonely": "Occasionally",
+    "freq_unfriendly": "Some",
+    "freq_enjoy_life": "Rarely",
+    "freq_crying": "Most",
+    "freq_sadness": "Some",
+    "freq_disliked": "Rarely",
+    "freq_not_going": "Occasionally",
+    "life_feeling": "Delighted",
+    "freq_fresh_rested": "Less than half the time",
+    "run_own_life": true,
+    "worth_feeling": "Always true",
+    "talk_support": ">6 people",
+    "core_visits": {
+        "submitter_id":"1234-visit-990"
+    }
+}
