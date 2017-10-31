@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: followups
+  - name: core_visits
     backref: physical_exams
     label: performed_at
-    target_type: followup
+    target_type: core_visit
     multiplicity: one_to_one
     required: true
 
@@ -35,7 +35,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - followups
+  - core_visits
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -193,5 +193,5 @@ properties:
       Grip strength with dynamometer
     type: number
 
-  followups:
+  core_visits:
     $ref: "_definitions.yaml#/to_one"

@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: followups
+  - name: core_visits
     backref: laboratory_results
     label: performed_at
-    target_type: followup
+    target_type: core_visit
     multiplicity: one_to_one
     required: true
 
@@ -35,7 +35,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - followups
+  - core_visits
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -421,5 +421,19 @@ properties:
       If urine protein < 4, ratio usually not submitted by testing lab
     type: number
 
-  followups:
+  viral_load:
+    description: >
+      Standardized viral load (copies/ml)
+    type: number
+
+  viral_load_kit:
+    description: >
+      Viral Load Kit used
+    enum:
+      - Chiron 2nd Generation
+      - Roche 2nd Generation
+      - Roche ultra-sensitive 2nd Generation
+      - Roche Cobas TaqMan
+
+  core_visits:
     $ref: "_definitions.yaml#/to_one"

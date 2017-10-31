@@ -22,10 +22,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: followups
+  - name: core_visits
     backref: neurocognitive_tests
     label: performed_at
-    target_type: followup
+    target_type: core_visit
     multiplicity: one_to_one
     required: true
 
@@ -36,7 +36,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - followups
+  - core_visits
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -231,5 +231,5 @@ properties:
       Number of wrong words in the delayed recall for Rey Auditory Verbal Learning Test.
     type: integer
 
-  followups:
+  core_visits:
     $ref: "_definitions.yaml#/to_one"
