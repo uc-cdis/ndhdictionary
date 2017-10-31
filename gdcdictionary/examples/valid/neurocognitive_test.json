@@ -1,6 +1,8 @@
 {
     "type":"neurocognitive_test",
     "submitter_id":"neurocognitive_visit33_1234",
+    "avg_dominand_finger_tap": 30.0,
+    "avg_nondominand_finger_tap": 60.0,
     "right_vibration_perception": "Yes (moderate loss)",
     "left_vibration_perception": "Yes (normal)",
     "left_ankle_reflexes": "Yes",

@@ -41,6 +41,16 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+  avg_dominand_finger_tap:
+    description: >
+      Average score at finger tapping test for dementia screening (dominand hand).
+    type: number
+
+  avg_nondominand_finger_tap:
+    description: >
+      Average score at finger tapping test for dementia screening (non-dominand hand).
+    type: number
+
   left_ankle_reflexes:
     description: >
       Deep tendon reflexes at left ankle
