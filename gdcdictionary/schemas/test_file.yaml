@@ -49,6 +49,12 @@ links:
         target_type: mental_health_test
         multiplicity: one_to_one
         required: false
+      - name: gynecological_exams
+        backref: followup_files
+        label: derived_from
+        target_type: gynecological_exam
+        multiplicity: one_to_one
+        required: false
 
 uniqueKeys:
   - [id]
@@ -95,4 +101,7 @@ properties:
     $ref: "_definitions.yaml#/to_one"
 
   mental_health_tests:
+    $ref: "_definitions.yaml#/to_one"
+
+  gynecological_exams:
     $ref: "_definitions.yaml#/to_one"
