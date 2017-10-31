@@ -35,7 +35,6 @@ required:
   - studies
   - hiv_status
   - cohort_id
-  - version_data 
 
 uniqueKeys:
   - [id]
@@ -93,15 +92,5 @@ properties:
       Last year of contact (includes in-person or phone contact)
     type: number
 
-  version_data:
-    description: >
-      Version number of data
-          011= Version 01 in Visit 01
-          ..
-          993= Version 03 in Visit 99
-    type: integer
-
   studies: 
     $ref: "_definitions.yaml#/to_one"
-
-

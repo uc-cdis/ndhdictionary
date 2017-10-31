@@ -35,12 +35,13 @@ required:
   - type
   - cases
   - primary_diagnosis
+  - version_data
+  - visit_id
 
 preferred:
   - year_of_diagnosis
 
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
@@ -105,6 +106,19 @@ properties:
     term:
       $ref: "_terms.yaml#/tissue_or_organ_of_origin"
     type: string
+
+  version_data:
+    description: >
+      Version number of data
+          011= Version 01 in Visit 01
+          ..
+          993= Version 03 in Visit 99
+    type: integer
+
+  visit_id:
+    description: >
+      MACS visit identifier
+    type: integer
 
   year_of_diagnosis:
     term:
