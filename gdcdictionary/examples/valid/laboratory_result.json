@@ -6,9 +6,11 @@
     "leu2n": 133,    
     "rbc": 4.3,
     "hematocrit": 38,
-    "hemoglobin": 13.8,    
+    "hemoglobin": 13.8,
+    "viral_load": 5334,
+    "viral_load_kit": "Roche ultra-sensitive 2nd Generation",
     "wbc": 4200,    
-    "followups": {
+    "core_visits": {
         "submitter_id":"visit-990"
     }
 }
