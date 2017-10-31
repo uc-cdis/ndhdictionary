@@ -62,6 +62,23 @@ properties:
           55= 2010 recruit - Columbus, OH
     type: integer
 
+  study_center:
+    description: >
+      Study Site (where enrolled)
+    enum:
+      - Baltimore
+      - Chicago
+      - Pittsburgh
+      - Los Angeles
+      - Bronx
+      - Brooklyn
+      - San Francisco
+      - Washington
+      - Atlanta
+      - Birmingham
+      - Chapel Hill
+      - Miami
+
   year_of_last_seronegative:
     description: >
       Last time seen seronegative (year)

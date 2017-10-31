@@ -45,14 +45,6 @@ properties:
   data_description:
     description: "Brief description of the data being provided for this study. Free text"
     type: string
-  study_center:
-    description: >
-      Study Site (where enrolled)
-    enum:
-      - Baltimore
-      - Chicago
-      - Pittsburgh
-      - Los Angeles
   study_description:
     description: "A brief description of the study being performed. Free text"
     type: string
