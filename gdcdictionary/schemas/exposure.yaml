@@ -71,5 +71,10 @@ properties:
       - some graduate school
       - a graduate program and got a post-graduate degree
 
+  insurance_coverage:
+    description: >
+      Does the participant have insurance coverage?
+    type: boolean
+
   cases:
     $ref: "_definitions.yaml#/to_one"
