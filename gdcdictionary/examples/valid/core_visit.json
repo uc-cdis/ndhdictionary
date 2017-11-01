@@ -10,7 +10,9 @@
     "smoking_status": "No",
     "therapy_type_since_last_visit": "Potent ART",
     "version_data": 113,
-    "weight": 85,   
+    "weight": 85,
+    "health_insurance": true,
+    "drug_used": "Yes",
     "submitter_id": "MACS_visit_110",
     "cases": {
         "submitter_id": "BLGSP-71-06-00019"

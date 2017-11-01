@@ -79,6 +79,20 @@ properties:
     description: "Number of days between the date used for index and the date the patient was seen or contacted at follow-up."
     type: integer
 
+  drug_used:
+    description: >
+      Ever used any medical or recreational drugs since last visit
+    enum:
+      - "No"
+      - "Yes"
+      - "Refusal"
+      - "Don't know"
+
+  health_insurance:
+    description: >
+      Currently have any health insurance
+    type: boolean
+
   height:
     description: "The height of the patient in centimeters."
     type: number
@@ -92,6 +106,11 @@ properties:
     description: >
       Number of male sexual intercourse partners since last visit
     type: integer
+
+  pregnancy_status:
+    description: >
+      Is the participant pregnant (women) or has been pregnant since the last visit
+    type: boolean
 
   smoking_status:
     description: >
