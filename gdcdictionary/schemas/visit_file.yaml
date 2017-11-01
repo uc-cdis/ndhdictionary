@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "test_file"
-title: Test File
+id: "visit_file"
+title: Visit File
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
@@ -43,16 +43,22 @@ links:
         target_type: neurocognitive_test
         multiplicity: one_to_one
         required: false
-      - name: mental_health_tests
+      - name: mental_health_questionnaires
         backref: followup_files
         label: derived_from
-        target_type: mental_health_test
+        target_type: mental_health_questionnaire
         multiplicity: one_to_one
         required: false
       - name: gynecological_exams
         backref: followup_files
         label: derived_from
         target_type: gynecological_exam
+        multiplicity: one_to_one
+        required: false
+      - name: behavior_questionnaires
+        backref: followup_files
+        label: derived_from
+        target_type: behavior_questionnaire
         multiplicity: one_to_one
         required: false
 
@@ -100,8 +106,11 @@ properties:
   neurocognitive_tests:
     $ref: "_definitions.yaml#/to_one"
 
-  mental_health_tests:
+  mental_health_questionnaires:
     $ref: "_definitions.yaml#/to_one"
 
   gynecological_exams:
+    $ref: "_definitions.yaml#/to_one"
+
+  behavior_questionnaires:
     $ref: "_definitions.yaml#/to_one"
