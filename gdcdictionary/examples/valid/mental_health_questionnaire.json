@@ -1,5 +1,5 @@
 {
-    "type":"mental_health_test",
+    "type":"mental_health_questionnaire",
     "submitter_id":"mental_health_1234",
     "freq_bothering": "Rarely",
     "freq_not_eating": "Occasionally",

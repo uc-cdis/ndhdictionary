@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "mental_health_test"
-title: Mental Health Test
+id: "mental_health_questionnaire"
+title: Mental Health Questionnaire
 type: object
 namespace: http://gdc.nci.nih.gov
 category: clinical
@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: core_visits
-    backref: mental_health_tests
+    backref: mental_health_questionnaires
     label: performed_at
     target_type: core_visit
     multiplicity: one_to_one
