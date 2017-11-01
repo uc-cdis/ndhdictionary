@@ -9,5 +9,6 @@
     "type": "demographic",
     "ethnicity": "not hispanic or latino",
     "year_of_death": 2009,
+    "sexual_orientation": "Lesbian/Gay",
     "vital_status": "Dead"
 }

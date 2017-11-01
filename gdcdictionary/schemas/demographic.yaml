@@ -92,6 +92,17 @@ properties:
       - not reported
       - not allowed to collect
 
+  sexual_orientation:
+    description: >
+      Definition of sexual orientation
+    enum:
+      - Heterosexual
+      - Bisexual
+      - Lesbian/Gay
+      - Other
+      - Refusal
+      - Don't know
+
   vital_status:
     term:
       $ref: "_terms.yaml#/vital_status"
