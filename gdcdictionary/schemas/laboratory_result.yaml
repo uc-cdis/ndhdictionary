@@ -42,7 +42,7 @@ properties:
 
   wbc :
     description: >
-      Count of White blood cells
+      Count of white blood cells
     type: number
 
   rbc:
@@ -202,17 +202,17 @@ properties:
 
   leu4n:
     description: >
-      # of CD3 positive cells (total)/ul
+      Number of CD3 positive cells (total)/ul
     type: number
 
   leu4p:
     description: >
-      % CD3 positive cells (total) 
+      Percentage of CD3 positive cells (total) 
     type: number
 
   b8d38:
     description: >
-      % CD8 bright from CD38DR tube
+      Percentage of CD8 bright from CD38DR tube
     type: number
 
   q1d38:
