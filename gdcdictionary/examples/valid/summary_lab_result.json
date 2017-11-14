@@ -1,0 +1,20 @@
+{
+    "type":"summary_lab_result",
+    "submitter_id":"sumlab_1234",
+    "vload": 79000, 
+    "ud_vl": "Above upper limit of quantification (VLOAD set to upper limit)",
+    "llq_vl": "Roche Amplicor & NucliSens, .2 ml input",
+    "cd4n": 4,
+    "cd4p": 2.1,
+    "cd8n": 220,
+    "cd8p": 60.8,
+    "cd3n": 533,
+    "cd3p": 72,
+    "hsrat": 0,
+    "cd4dt": 2001,
+    "vldt": 2002,
+    "version": "V40",	
+	"core_visits": {
+        "submitter_id":"1234-visit-990"
+    }
+}
