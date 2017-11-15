@@ -36,27 +36,19 @@ required:
 
 preferred:
   - year_of_death
+  - year_of_birth
 
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
-  type:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  country_of_birth:
+    description: >
+      Country of birth
     type: string
-
-  id:
-    $ref: "_definitions.yaml#/UUID"
-    systemAlias: node_id
-
-  state:
-    $ref: "_definitions.yaml#/state"
-
-  submitter_id:
-    type:
-      - string
-      - "null"
 
   gender:
     term:
@@ -72,25 +64,27 @@ properties:
     term:
       $ref: "_terms.yaml#/race"
     enum:
-      - white
-      - american indian or alaska native
-      - black or african american
-      - asian
-      - native hawaiian or other pacific islander
-      - other
-      - Unknown
-      - not reported
-      - not allowed to collect
+      - White
+      - African-American
+      - Asian/Pacific Islander
+      - Ntv Amer/Alaskan
+      - Other
 
   ethnicity:
     term:
       $ref: "_terms.yaml#/ethnicity"
     enum:
-      - hispanic or latino
-      - not hispanic or latino
+      - Hispanic or Latino
+      - Not Hispanic or Latino
       - Unknown
-      - not reported
-      - not allowed to collect
+      - Other
+
+  caribbean_islander:
+    description: >
+      Caribbean procedence
+    enum:
+      - Not Caribbean island origin
+      - Caribbean island origin
 
   sexual_orientation:
     description: >
@@ -126,9 +120,3 @@ properties:
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  created_datetime:
-    $ref: "_definitions.yaml#/datetime"
-  updated_datetime:
-    $ref: "_definitions.yaml#/datetime"
