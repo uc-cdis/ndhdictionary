@@ -37,10 +37,9 @@ required:
   - submitter_id
   - type
   - cases
-  - visit_id
+  - visit_number
   - visit_type
   - version_data
-
 
 uniqueKeys:
   - [id]
@@ -51,33 +50,12 @@ properties:
 
   age_at_visit:
     description: >
-      Current Age - round to nearest integer 
-    type: number
-
-  alcohol_history:
-    term:
-      $ref: "_terms.yaml#/alcohol_history"
-    type: string
-
-  alcohol_intensity:
-    term:
-      $ref: "_terms.yaml#/alcohol_intensity"
-    type: string
-
-  alcohol_status:
-    description: >
-      Current Alcohol Use
-    enum:
-      - "No"
-      - "Yes"
+      Age at visit - round to nearest integer 
+    type: integer
 
   bmi:
     description: "The body mass divided by the square of the body height expressed in units of kg/m^2."
     type: number
-
-  days_to_followup:
-    description: "Number of days between the date used for index and the date the patient was seen or contacted at follow-up."
-    type: integer
 
   drug_used:
     description: >
@@ -88,6 +66,13 @@ properties:
       - "Refusal"
       - "Don't know"
 
+  ever_transferred:
+    description: >
+      Participant ever transferred sites (changed ids)
+    enum:
+      - "Never transferred"
+      - "Transferred"
+
   health_insurance:
     description: >
       Currently have any health insurance
@@ -97,60 +82,43 @@ properties:
     description: "The height of the patient in centimeters."
     type: number
 
-  intercourse_female_partners:
-    description: >
-      Number of female sexual intercourse partners since last visit
-    type: integer
-
-  intercourse_male_partners:
-    description: >
-      Number of male sexual intercourse partners since last visit
-    type: integer
-
   pregnancy_status:
     description: >
       Is the participant pregnant (women) or has been pregnant since the last visit
     type: boolean
 
-  smoking_status:
-    description: >
-      Currently smoking
-    enum:
-      - "No"
-      - "Yes"
-
-  therapy_type_since_last_visit:
-    description: >
-      Type of therapy used since last visit based on current guideline
-    enum:
-      - No Therapy
-      - Mono-therapy
-      - Combination Therapy
-      - Potent ART
-
   version_data:
     description: >
       Version number of data
-          011= Version 01 in Visit 01
-          ..
-          993= Version 03 in Visit 99
+    type: string
+
+  visit_number:
+    description: >
+      MACS/WIHS visit number
     type: integer
 
   visit_id:
     description: >
-      MACS visit identifier
+      MACS/WIHS ID at time of interview (prior to transfer)
     type: integer
 
   visit_type:
     description: >
       Define if the visit is a follow-up or the baseline visit
     enum:
-      - Baseline
-      - Follow-up
+      - Baseline Visit
+      - Follow-up Visit
+      - Abbreviated Visit (Record in ABRV file)
 
   weight:
-    description: "The weight of the patient measured in kilograms."
+    description: >
+      The weight of the patient measured in kilograms
     type: number
+
+  visit_date:
+    description: >
+      Year of the visit
+    type: integer
 
   cases:
     $ref: "_definitions.yaml#/to_one"
