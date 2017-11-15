@@ -79,35 +79,5 @@ properties:
       - Chapel Hill
       - Miami
 
-  year_of_last_seronegative:
-    description: >
-      Last time seen seronegative (year)
-    type: number
-
-  last_macs_visit_seronegative:
-    description: >
-      Last MACS visit seen seronegative
-    type: integer
-
-  year_of_first_seropositive:
-    description: >
-      First time seen seropositive (year)
-    type: number
-
-  first_macs_visit_seropositive:
-    description: >
-      First MACS visit seen seropositive
-    type: integer
-
-  year_of_last_macs_visit:
-    description: >
-      Last completed MACS visit (year)
-    type: number
-
-  year_of_lost_to_followup:
-    description: >
-      Last year of contact (includes in-person or phone contact)
-    type: number
-
   studies: 
     $ref: "_definitions.yaml#/to_one"
