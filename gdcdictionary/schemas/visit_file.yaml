@@ -26,39 +26,57 @@ links:
     required: true
     subgroup:
       - name: laboratory_results
-        backref: followup_files
+        backref: visit_files
         label: derived_from
         target_type: laboratory_result
         multiplicity: one_to_one
         required: false
       - name: physical_exams
-        backref: followup_files
+        backref: visit_files
         label: derived_from
         target_type: physical_exam
         multiplicity: one_to_one
         required: false
       - name: neurocognitive_tests
-        backref: followup_files
+        backref: visit_files
         label: derived_from
         target_type: neurocognitive_test
         multiplicity: one_to_one
         required: false
       - name: mental_health_questionnaires
-        backref: followup_files
+        backref: visit_files
         label: derived_from
         target_type: mental_health_questionnaire
         multiplicity: one_to_one
         required: false
       - name: gynecological_exams
-        backref: followup_files
+        backref: visit_files
         label: derived_from
         target_type: gynecological_exam
         multiplicity: one_to_one
         required: false
       - name: behavior_questionnaires
-        backref: followup_files
+        backref: visit_files
         label: derived_from
         target_type: behavior_questionnaire
+        multiplicity: one_to_one
+        required: false
+      - name: summary_lab_results
+        backref: visit_files
+        label: derived_from
+        target_type: summary_lab_result
+        multiplicity: one_to_one
+        required: false
+      - name: summary_socio_demographics
+        backref: visit_files
+        label: derived_from
+        target_type: summary_socio_demographic
+        multiplicity: one_to_one
+        required: false
+      - name: summary_drug_uses
+        backref: visit_files
+        label: derived_from
+        target_type: summary_drug_use
         multiplicity: one_to_one
         required: false
 
@@ -84,8 +102,15 @@ properties:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Laboratory Test
-      - Physical Examination 
+      - Laboratory Results
+      - Neurocognitive Test
+      - Physical Examination
+      - Gynecological Examination
+      - Socio-Demographic Questionnaire
+      - Health Questionnaire
+      - Mental Health Questionnaire
+      - Drug Use Questionnaire
+      - Behavior Questionnaire
 
   data_type:
     term:
@@ -114,3 +139,12 @@ properties:
 
   behavior_questionnaires:
     $ref: "_definitions.yaml#/to_one"
+
+  summary_lab_results:
+    $ref: "_definitions.yaml#/to_one"
+
+  summary_socio_demographics:
+    $ref: "_definitions.yaml#/to_one"
+
+  summary_drug_uses:
+    $ref: "_definitions.yaml#/to_one"    
