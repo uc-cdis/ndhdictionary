@@ -123,6 +123,16 @@ properties:
       - "Don't know"
       - "Missing"
 
+  drink_status:
+    description: >
+      Current Alcohol Use (If > 0 drinks then Yes)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
   ndrnkwk:
     description: >
       Number of drinks/week since last visit
@@ -141,7 +151,7 @@ properties:
       - "Don't know"
       - "Missing"
 
-  cursmoke:
+  smoke_status:
     description: >
       Current cigarette smoking status
     enum:
@@ -281,12 +291,12 @@ properties:
 
   msex6mo:
     description: >
-      Number of male sex partners since last visit
+      Number of men sexual intercourse partners since last visit
     type: integer
 
   fsex6mo:
     description: >
-      Number of female partners since last visit
+      Number of female sexual intercourse partners since last visit
     type: integer
 
   physf:
