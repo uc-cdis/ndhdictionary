@@ -65,9 +65,10 @@ properties:
       $ref: "_terms.yaml#/race"
     enum:
       - White
-      - African-American
+      - Black
+      - Multi-racial
       - Asian/Pacific Islander
-      - Ntv Amer/Alaskan
+      - American Indian or Alaskan Native
       - Other
 
   ethnicity:
