@@ -35,265 +35,20 @@ required:
   - type
   - cases
   - primary_diagnosis
+  - version_data
+  - visit_id
 
 preferred:
   - year_of_diagnosis
 
 uniqueKeys:
-  #unclear if want submitter ID for clinical
   - [id]
   - [project_id, submitter_id]
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  ajcc_clinical_m:
-    term:
-      $ref: "_terms.yaml#/ajcc_clinical_m"
-    enum:
-      - M0
-      - M1
-      - M1a
-      - M1b
-      - M1c
-      - MX
-      - cM0 (i+)
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  ajcc_clinical_n:
-    term:
-      $ref: "_terms.yaml#/ajcc_clinical_n"
-    enum:
-      - N0
-      - N0 (i+)
-      - N0 (i-)
-      - N0 (mol+)
-      - N0 (mol-)
-      - N1
-      - N1a
-      - N1b
-      - N1bI
-      - N1bII
-      - N1bIII
-      - N1bIV
-      - N1c
-      - N1mi
-      - N2
-      - N2a
-      - N2b
-      - N2c
-      - N3
-      - N3a
-      - N3b
-      - N3c
-      - N4
-      - NX
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  ajcc_clinical_stage:
-    term:
-      $ref: "_terms.yaml#/ajcc_clinical_stage"
-    enum:
-      - Stage 0
-      - Stage 0a
-      - Stage 0is
-      - Stage I
-      - Stage IA
-      - Stage IA1
-      - Stage IA2
-      - Stage IB
-      - Stage IB Cervix
-      - Stage IB1
-      - Stage IB2
-      - Stage II
-      - Stage II Cervix
-      - Stage IIA
-      - Stage IIA Cervix
-      - Stage IIB
-      - Stage IIC
-      - Stage III
-      - Stage IIIA
-      - Stage IIIB
-      - Stage IIIC
-      - Stage IS
-      - Stage IV
-      - Stage IVA
-      - Stage IVB
-      - Stage IVC
-      - Stage Tis
-      - Stage X
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  ajcc_clinical_t:
-    term:
-      $ref: "_terms.yaml#/ajcc_clinical_t"
-    enum:
-      - T0
-      - T1
-      - T1a
-      - T1a1
-      - T1a2
-      - T1b
-      - T1b1
-      - T1b2
-      - T1c
-      - T1mi
-      - T2
-      - T2a
-      - T2a1
-      - T2a2
-      - T2b
-      - T2c
-      - T2d
-      - T3
-      - T3a
-      - T3b
-      - T3c
-      - T3d
-      - T4
-      - T4a
-      - T4b
-      - T4c
-      - T4d
-      - T4e
-      - TX
-      - Ta
-      - Tis
-      - Tis (DCIS)
-      - Tis (LCIS)
-      - Tis (Paget's)
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  ajcc_pathologic_m:
-    term:
-      $ref: "_terms.yaml#/ajcc_pathologic_m"
-    enum:
-      - M0
-      - M1
-      - M1a
-      - M1b
-      - M1c
-      - M2
-      - MX
-      - cM0 (i+)
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  ajcc_pathologic_n:
-    term:
-      $ref: "_terms.yaml#/ajcc_pathologic_n"
-    enum:
-      - N0
-      - N0 (i+)
-      - N0 (i-)
-      - N0 (mol+)
-      - N0 (mol-)
-      - N1
-      - N1a
-      - N1b
-      - N1bI
-      - N1bII
-      - N1bIII
-      - N1bIV
-      - N1c
-      - N1mi
-      - N2
-      - N2a
-      - N2b
-      - N2c
-      - N3
-      - N3a
-      - N3b
-      - N3c
-      - N4
-      - NX
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
-  ajcc_pathologic_stage:
-    term:
-      $ref: "_terms.yaml#/ajcc_pathologic_stage"
-    enum:
-      - Stage 0
-      - Stage 0a
-      - Stage 0is
-      - Stage I
-      - Stage IA
-      - Stage IA1
-      - Stage IA2
-      - Stage IB
-      - Stage IB1
-      - Stage IB2
-      - Stage IC
-      - Stage II
-      - Stage IIA
-      - Stage IIA1
-      - Stage IIA2
-      - Stage IIB
-      - Stage IIC
-      - Stage III
-      - Stage IIIA
-      - Stage IIIB
-      - Stage IIIC
-      - Stage IV
-      - Stage IVA
-      - Stage IVB
-      - Stage IVC
-      - Stage Tis
-      - Stage X
-
-  ajcc_pathologic_t:
-    term:
-      $ref: "_terms.yaml#/ajcc_pathologic_t"
-    enum:
-      - T0
-      - T1
-      - T1a
-      - T1a1
-      - T1a2
-      - T1b
-      - T1b1
-      - T1b2
-      - T1c
-      - T1mi
-      - T2
-      - T2a
-      - T2a1
-      - T2a2
-      - T2b
-      - T2c
-      - T2d
-      - T3
-      - T3a
-      - T3b
-      - T3c
-      - T3d
-      - T4
-      - T4a
-      - T4b
-      - T4c
-      - T4d
-      - T4e
-      - TX
-      - Ta
-      - Tis
-      - Tis (DCIS)
-      - Tis (LCIS)
-      - Tis (Paget's)
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-
+  # CANCER SPECIFIC VARIABLES
   classification_of_tumor:
     term:
       $ref: "_terms.yaml#/classification_of_tumor"
@@ -306,51 +61,10 @@ properties:
       - not reported
       - Not Allowed To Collect
 
-  days_to_birth:
-    term:
-      $ref: "_terms.yaml#/days_to_birth"
-    type:
-      - number
-      - "null"
-    maximum: 0
-    minimum: -32872
-
-  days_to_death:
-    term:
-      $ref: "_terms.yaml#/days_to_death"
-    type: number
-    maximum: 32872
-    minimum: 0
-
   morphology:
     term:
       $ref: "_terms.yaml#/morphology"
     type: string
-
-  primary_diagnosis:
-    term:
-      $ref: "_terms.yaml#/primary_diagnosis"
-    type: string
-
-  prior_malignancy:
-    term:
-      $ref: "_terms.yaml#/prior_malignancy"
-    enum:
-      - "yes"
-      - "no"
-      - unknown
-      - not reported
-      - Not Allowed To Collect
-
-  prior_treatment:
-    term:
-      $ref: "_terms.yaml#/prior_treatment"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   progression_or_recurrence:
     term:
@@ -362,20 +76,6 @@ properties:
       - not reported
       - Not Allowed To Collect
 
-  residual_disease:
-    term:
-      $ref: "_terms.yaml#/residual_disease"
-    enum:
-      - R0
-      - R1
-      - R2
-      - RX
-
-  tissue_or_organ_of_origin:
-    term:
-      $ref: "_terms.yaml#/tissue_or_organ_of_origin"
-    type: string
-
   tumor_grade:
     term:
       $ref: "_terms.yaml#/tumor_grade"
@@ -385,6 +85,40 @@ properties:
     term:
       $ref: "_terms.yaml#/tumor_stage"
     type: string
+
+  # GENERAL DIAGNOSIS VARIABLES
+  primary_diagnosis:
+    term:
+      $ref: "_terms.yaml#/primary_diagnosis"
+    type: string
+
+  prior_treatment:
+    term:
+      $ref: "_terms.yaml#/prior_treatment"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+  tissue_or_organ_of_origin:
+    term:
+      $ref: "_terms.yaml#/tissue_or_organ_of_origin"
+    type: string
+
+  version_data:
+    description: >
+      Version number of data
+          011= Version 01 in Visit 01
+          ..
+          993= Version 03 in Visit 99
+    type: integer
+
+  visit_id:
+    description: >
+      MACS visit identifier
+    type: integer
 
   year_of_diagnosis:
     term:

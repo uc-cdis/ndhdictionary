@@ -414,10 +414,6 @@ properties:
     term:
       $ref: "_terms.yaml#/is_ffpe"
     type: boolean
-  longest_dimension:
-    terms:
-      $ref: "_terms.yaml#/longest_dimension"
-    type: string
   method_of_sample_procurement:
     term:
       $ref: "_terms.yaml#/method_of_sample_procurement"
@@ -597,83 +593,6 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-  tumor_code:
-    term:
-      $ref: "_terms.yaml#/tumor_code"
-    enum:
-      - Non cancerous tissue
-      - Diffuse Large B-Cell Lymphoma (DLBCL)
-      - Lung Cancer (all types)
-      - Lung Adenocarcinoma
-      - Non-small Cell Lung Carcinoma (NSCLC)
-      - Colon Cancer (all types)
-      - Breast Cancer (all types)
-      - Cervical Cancer (all types)
-      - Anal Cancer (all types)
-      - Acute lymphoblastic leukemia (ALL)
-      - Acute myeloid leukemia (AML)
-      - Induction Failure AML (AML-IF)
-      - Neuroblastoma (NBL)
-      - Osteosarcoma (OS)
-      - Ewing sarcoma
-      - Wilms tumor (WT)
-      - Clear cell sarcoma of the kidney (CCSK)
-      - Rhabdoid tumor (kidney) (RT)
-      - CNS, ependymoma
-      - CNS, glioblastoma (GBM)
-      - CNS, rhabdoid tumor
-      - CNS, low grade glioma (LGG)
-      - CNS, medulloblastoma
-      - CNS, other
-      - NHL, anaplastic large cell lymphoma
-      - NHL, Burkitt lymphoma (BL)
-      - Rhabdomyosarcoma
-      - Soft tissue sarcoma, non-rhabdomyosarcoma
-      - Castration-Resistant Prostate Cancer (CRPC)
-      - Prostate Cancer
-      - Hepatocellular Carcinoma (HCC)
-  tumor_code_id:
-    term:
-      $ref: "_terms.yaml#/tumor_code_id"
-    enum:
-      - "00"
-      - "01"
-      - "02"
-      - "03"
-      - "04"
-      - "10"
-      - "20"
-      - "21"
-      - "30"
-      - "40"
-      - "41"
-      - "50"
-      - "51"
-      - "52"
-      - "60"
-      - "61"
-      - "62"
-      - "63"
-      - "64"
-      - "65"
-      - "70"
-      - "71"
-      - "80"
-      - "81"
-  tumor_descriptor:
-    term:
-      $ref: "_terms.yaml#/tumor_descriptor"
-    enum:
-      - Metastatic
-      - Not Applicable
-      - Primary
-      - Recurrence
-      - Xenograft
-      - NOS
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-    description: "A description of the tumor from which the sample was derived." # TOREVIEW
   cases:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:

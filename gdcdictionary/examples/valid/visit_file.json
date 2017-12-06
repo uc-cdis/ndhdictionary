@@ -1,0 +1,13 @@
+{
+    "type":"visit_file",
+    "submitter_id":"labresult_file_1234",
+    "file_name":"1234labresult.tsv",
+    "data_format":"TSV",
+    "file_size": 21234,
+    "md5sum": "84a72e8aaad3017348cb3f8459c5d5d9",
+    "data_category":"Laboratory Results",
+    "data_type": "Summary Laboratory Results",
+    "summary_lab_results": {
+        "submitter_id":"labresults-visit-990"
+    }
+}

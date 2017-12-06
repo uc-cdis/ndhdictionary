@@ -1,0 +1,157 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "summary_lab_result"
+title: Laboratory Result Summary
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Summary of important values obtained from blood or other laboratory tests required 
+  by a medical professional and performed at one of the recurrent patient visit.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: core_visits
+    backref: summary_lab_results
+    label: performed_at
+    target_type: core_visit
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - core_visits
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  cd4dt:
+    description: >
+      Year that CD4 was collected
+    type: integer
+
+  hematocrit:
+    description: >
+      Hematocrit (%)
+    type: number
+
+  hemoglobin:
+    description: >
+      Hemoglobin (gm/dl)
+    type: number
+
+  hsrat:
+    description: >
+      Helper/Suppressor Ratio (CD4N/ CD8N)
+    type: number
+
+  leu3n:
+    description: >
+      # of CD4 positive cells (helpers, cells per mm^3)
+    type: integer
+
+  leu3p:
+    description: >
+      % CD4 positive cells (helpers)
+    type: number
+
+  leu2n:
+    description: >
+      # of CD8 positive cells (suppressors, cells per mm^3)
+    type: integer
+
+  leu2p:
+    description: >
+      % CD8 positive cells (supressors)
+    type: number
+
+  leu4n:
+    description: >
+      # of CD3 positive cells (cells per mm^3)
+    type: integer
+
+  leu4p:
+    description: >
+      % CD3 positive cells
+    type: number
+
+  llq_vl:
+    description: >
+      Lower limit of quantification of HIV RNA assay
+    enum:
+      - TaqMan
+      - Abbott Real Time PCR
+      - Roche Ultrasensitive, Chiron, & Siemens bDNA
+      - NucliSens, 1 ml input
+      - Unknown
+      - Roche Amplicor & NucliSens, .2 ml input
+      - Quantiplex
+      - NASBA, .1 ml input
+      - Bayer Branched DNA
+      - Missing (some pre-HAART for new recruits)
+
+  platelets:
+    description: >
+      Platelets (thousands/mm3)
+    type: number
+
+  rbc:
+    description: >
+      Count of Red blood cells (millions/mm3)
+    type: number
+
+  ud_vl:
+    description: >
+      HIV RNA detection status
+    enum:
+      - Below lower limit of quantification (VLOAD set to lower limit)
+      - Detected
+      - Above upper limit of quantification (VLOAD set to upper limit)
+
+  viral_load:
+    description: >
+      Standardized viral load (copies/ml)
+    type: number
+
+  viral_load_kit:
+    description: >
+      Viral Load Kit used
+    enum:
+      - Chiron 2nd Generation
+      - Roche 2nd Generation
+      - Roche ultra-sensitive 2nd Generation
+      - Roche Cobas TaqMan
+
+  vldt:
+    description: >
+      Year that Viral Load was collected
+    type: integer
+
+  version:
+    description: >
+      Version number of data
+    type: string
+
+  wbc:
+    description: >
+      Count of white blood cells
+    type: number
+
+  core_visits:
+    $ref: "_definitions.yaml#/to_one"

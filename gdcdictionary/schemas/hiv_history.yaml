@@ -1,0 +1,279 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "hiv_history"
+title: HIV History
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  History of HIV and other important dates related to the subject.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: hiv_history_records
+    label: describes
+    target_type: case
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - cases
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  bsdate:
+    description: >
+      Baseline year. First year in the WIHS
+    type: integer
+
+  bsvisit:
+    description: >
+      Baseline visit ID
+    type: integer
+
+  status:
+    description: >
+      Summarized HIV sero-status
+    enum:
+      - Negative
+      - Prevalent
+      - Converter
+      - Converted identified at death
+
+  lnegdate:
+    description: >
+      Last time seen seronegative (year)
+    type: integer
+
+  negvis:
+    description: >
+      Last visit seen seronegative
+    type: integer
+
+  fposdate:
+    description: >
+      First time seen seropositive (year)
+    type: integer
+
+  posvis:
+    description: >
+      First visit seen seropositive
+    type: integer
+
+  lastnoad:
+    description: >
+      Last reported ART free 
+    type: integer
+
+  lastnoav:
+    description: >
+      Last reported ART free visit
+    type: integer
+
+  frstartd:
+    description: >
+      First reported ART year
+    type: integer
+
+  frstartv:
+    description: >
+      First reported ART visit
+    type: integer
+
+  arthxbase:
+    description: >
+      Did particpant report use of ART prior to baseline (screening) visit?
+    type: boolean
+
+  ehaart:
+    description: >
+      Ever HAART use
+    type: boolean
+
+  lastnohd:
+    description: >
+      Last reported HAART free year
+    type: integer
+
+  lastnohv:
+    description: >
+      Last reported HAART free visit
+    type: integer
+
+  frsthaad:
+    description: >
+      First reported HAART year
+    type: integer
+
+  frsthaav:
+    description: >
+      First reported HAART visit
+    type: integer
+
+  lcd4higd:
+    description: >
+      Last year seen with CD4N >= 200 and CD4% >= 14
+    type: integer
+
+  lcd4higv:
+    description: >
+      Last visit seen with CD4N >= 200 and CD4% >= 14
+    type: integer
+
+  fcd4lowd:
+    description: >
+      First year seen with CD4N < 200 or CD4% < 14
+    type: integer
+
+  fcd4lowv:
+    description: >
+      First visit seen with CD4N < 200 or CD4% < 14
+    type: integer
+
+  lastafrd:
+    description: >
+      Last reported AIDS free year
+    type: integer
+
+  lastafrv:
+    description: >
+      Last reported AIDS free visit
+    type: integer
+
+  frstaidd:
+    description: >
+      First reported AIDS year
+    type: integer
+
+  frstaidv:
+    description: >
+      First reported AIDS visit
+    type: integer
+
+  frstcncrd:
+    description: >
+      First confirmed cancer year
+    type: integer
+
+  frstcncrv:
+    description: >
+      First confirmed cancer visit
+    type: integer
+
+  frsthtnmd:
+    description: >
+      First visit year with all necessary components to determine hypertension
+    type: integer
+
+  frsthtnmv:
+    description: >
+      First visit with all necessary components to determine hypertension
+    type: integer
+
+  frsthtnd:
+    description: >
+      First visit year with hypertension
+    type: integer
+
+  frsthtnv:
+    description: >
+      First visit with hypertension
+    type: integer
+
+  frstdmmd:
+    description: >
+      First visit year with all necessary components to determine diabetes
+    type: integer
+
+  frstdmmv:
+    description: >
+      First visit with all necessary components to determine diabetes
+    type: integer
+
+  frstdmd:
+    description: >
+      First visit year with diabetes
+    type: integer
+
+  frstdmv:
+    description: >
+      First visit with diabetes
+    type: integer
+
+  frstdthd:
+    description: >
+      Year of death
+    type: integer
+
+  frstdthv:
+    description: >
+      First visit reported dead
+    type: integer
+
+  mortcutd:
+    description: >
+      Mortality cut-off year based on NDI submission (site-level year)
+    type: integer
+
+  lastconv:
+    description: >
+      Last study visit attended
+    type: integer
+
+  lastcond:
+    description: >
+      Year of last study visit attended
+    type: integer
+
+  lastcontact:
+    description: >
+      Last year of contact (includes in-person or phone contact)
+    type: integer
+
+  cd4nadir:
+    description: >
+      HAART experienced only, CD4 nadir prior to HAART initiation (measured during WIHS followup or at HAART initiation for HAART- experienced recruits)
+    type: integer
+
+  bshcvstat:
+    description: >
+      Baseline HCV serostatus (based on 1st 3 visits)
+    enum:
+      - HCV negative
+      - HCV positive
+      - missing/unknown
+
+  bshbvstat:
+    description: >
+      Baseline HBV serostatus (based on 1st 3 visits)
+    enum:
+      - HBV negative
+      - HBV positive
+      - missing/unknown
+
+  version:
+    description: >
+      Version number of data
+    type: string
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"

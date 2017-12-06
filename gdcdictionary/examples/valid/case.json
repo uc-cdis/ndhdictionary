@@ -3,13 +3,7 @@
     "submitter_id": "BLGSP-71-06-00019",
 	  "hiv_status": true,
   	"cohort_id": 31,
-  	"year_of_last_seronegative": 1995,
-  	"last_macs_visit_seronegative": 140,
-  	"year_of_first_seropositive": 1985,
-  	"first_macs_visit_seropositive": 30,
-    "year_of_last_macs_visit": 1999,
-    "year_of_lost_to_followup": 2001,
-    "version_data": 993,
+    "study_center": "Chicago",
     "studies": {
         "id": "daa208a7-f57a-562c-a04a-7a7c77542c98"
     }

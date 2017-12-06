@@ -1,0 +1,439 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "laboratory_result"
+title: Laboratory Result
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Values obtained from blood or other laboratory tests required by a medical professional and performed at one of the recurrent patient visit.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: core_visits
+    backref: laboratory_results
+    label: performed_at
+    target_type: core_visit
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - core_visits
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  wbc :
+    description: >
+      Count of white blood cells
+    type: number
+
+  rbc:
+    description: >
+      Count of Red blood cells (millions/mm3)
+    type: number
+
+  hemoglobin:
+    description: >
+      Hemoglobin (gm/dl)
+    type: number
+
+  hematocrit:
+    description: >
+      Hematocrit (%)
+    type: number
+
+  mcv:
+    description: >
+      Mean corpuscular volume (u3/cell)
+    type: number
+
+  mch:
+    description: >
+      Mean corpuscular hemoglobin (pg/cell)
+    type: number
+
+  mchc:
+    description: >
+      Mean corpusc. Hb conc (% cell vol) 
+    type: number
+
+  platelets:
+    description: >
+      Platelets (thousands/mm3)
+    type: number
+
+  polys:
+    description: >
+      Polys/neutrophils (%)
+    type: number
+
+  bands:
+    description: >
+      Bands (%)
+    type: number
+
+  lymph:
+    description: >
+      Lymphocytes (%) 
+    type: number
+
+  monos:
+    description: >
+      Monocytes (%)
+    type: number
+
+  eos:
+    description: >
+      Eosinophils (%)
+    type: number
+
+  basos:
+    description: >
+      Basophils (%)
+    type: number
+
+  atyly:
+    description: >
+      Atypical lymphocytes(%)
+    type: number
+
+  hbsag:
+    description: >
+      Hepatitis B Surface Antigen 
+    type: number
+
+  athbs:
+    description: >
+      Anti-HBsAg
+    type: number
+
+  athbc:
+    description: >
+      Anti-HBcAg
+    type: number
+
+  hbeag:
+    description: >
+      HBeAg
+    type: number
+
+  athbe:
+    description: >
+      Anti-HBeAg
+    type: number
+
+  rpr:
+    description: >
+      Rapid Plasma Reagin (RPR) (Syphillis)
+    type: number
+
+  fta:
+    description: >
+      FTA Absorption (Syphillis)
+    type: number
+
+  c341:
+    description: >
+      CD3/CD4 Q I CD4+ Monocytes
+    type: number
+
+  c342:
+    description: >
+      CD3/CD4 Q II CD4+ T Lymphocytes
+    type: number
+
+  c344:
+    description: >
+      SCD3/CD4 Q IV CD4- T Lymphocytes
+    type: number
+
+  c381:
+    description: >
+      CD3/CD8 Q I CD8+ NK Cells
+    type: number
+
+  c382:
+    description: >
+      CD3/CD8 Q II CD8+ T Lymphocytes
+    type: number
+
+  c384:
+    description: >
+      CD3/CD8 Q IV T Lymphocytes
+    type: number
+
+  leu3n:
+    description: >
+      Number of CD4 positive cells (helpers)/ul
+    type: number
+
+  leu3p:
+    description: >
+      Percentage of CD4 positive cells (helpers)
+    type: number
+
+  leu2n:
+    description: >
+      Number of CD8 positive cells (suppressors)/ul
+    type: number
+
+  leu2p:
+    description: >
+      Percentage of CD8 positive cells (supressors)
+    type: number
+
+  leu4n:
+    description: >
+      Number of CD3 positive cells (total)/ul
+    type: number
+
+  leu4p:
+    description: >
+      Percentage of CD3 positive cells (total) 
+    type: number
+
+  b8d38:
+    description: >
+      Percentage of CD8 bright from CD38DR tube
+    type: number
+
+  q1d38:
+    description: >
+      1st quadrant for CD38+DR- (%) 
+    type: number
+
+  q2d38:
+    description: >
+      2nd quadrant for CD38+DR+ (%)
+    type: number
+
+  q3d38:
+    description: >
+      3rd quadrant for CD38-DR- (%) 
+    type: number
+
+  q4d38:
+    description: >
+      4th quadrant for CD38-DR+ (%)
+    type: number
+
+  rfi38 :
+    description: >
+      Median RFI for CD38 on CD8+ cells
+    type: number
+
+  rfidr:
+    description: >
+      Median RFI for HLADR on CD8+ cells
+    type: number
+
+  c38mq:
+    description: >
+      Median# CD38 mol/CD8+ cell (Quantibrite bead method) 
+    type: number
+
+  c38mh:
+    description: >
+      Median# CD38 mol/CD8+ cell (Hultin et al method) 
+    type: number
+
+  blkit:
+    description: >
+      Blood kit used
+    type: number
+
+  tcell:
+    description: >
+      T Cells were tested
+    type: number
+
+  tchol:
+    description: >
+      Total Cholesterol
+    type: number
+
+  hdl:
+    description: >
+      High Density Lipoprotein
+    type: number
+
+  trig:
+    description: >
+      Triglycerides
+    type: number
+
+  ldl:
+    description: >
+      Low Density Lipoprotein (fasting)
+    type: number
+
+  ldld:
+    description: >
+      Low Density Lipoprotein (non-fasting, or fasting with triglycerides>400)
+    type: number
+
+  gluc2:
+    description: >
+      Glucose (transformed)
+    type: number
+
+  ins:
+    description: >
+      Insulin
+    type: number
+
+  hga1c:
+    description: >
+      Hemoglobin A1C
+    type: number
+
+  rbili:
+    description: >
+      Total bilirubin (MG/DL)
+    type: number
+
+  album:
+    description: >
+      Albumin (G/DL)
+    type: number
+
+  ggtp:
+    description: >
+      Gamma-GT (GGT) gammaglutamyltransferase (IU/L) 
+    type: number
+
+  sgpt:
+    description: >
+      Alt (GPT) alamine amino transferase (IU/L)
+    type: number
+
+  sgot:
+    description: >
+      Ast (GOT) aspartate amino transferase (IU/L) 
+    type: number
+
+  alpho:
+    description: >
+      Alkaline phosphatase (IU/L)
+    type: number
+
+  pt:
+    description: >
+      PT (prothrombin time in seconds)
+    type: number
+
+  ptt:
+    description: >
+      PTT/aPTT (partial thromboplastin time in seconds)
+    type: number
+
+  athdv:
+    description: >
+      Antibody to Hepatitis delta virus (IgM or IgM+IgG)
+    type: number
+
+  athcv:
+    description: >
+      Antibody to Hepatitis C virus
+    type: number
+
+  qlhcv:
+    description: >
+      Qualitative HCV RNA
+    type: number
+
+  qthcv:
+    description: >
+      Quantitative HCV RNA (IU)
+    type: number
+
+  hbvdn:
+    description: >
+      HBV DNA (copies/ml)
+    type: number
+
+  hbvdniu:
+    description: >
+      HBV DNA (IU/ml)
+    type: number
+
+  hbvdncf:
+    description: >
+      HBVDN Conversion Factor
+    type: number
+
+  hbvsniu2:
+    description: >
+      HBV DNA (IU/ml) - 2nd measure
+    type: number
+
+  hbvdncf2:
+    description: >
+      HBVDN Conversion Factor - 2nd measure 
+    type: number
+
+  bunkd:
+    description: >
+      Blood Urea Nitrogen test-Kidney function
+    type: number
+
+  creat:
+    description: >
+      Creatinine blood test-Kidney function
+    type: number
+
+  ptinr:
+    description: >
+      Ratio of PT (prothombin time) to gold standard 
+    type: number
+
+  ucreat:
+    description: >
+      Urine creatinine (mg/dl)
+    type: number
+
+  uprot:
+    description: >
+      Urine Protein (mg/dl)
+    type: number
+
+  uprcr:
+    description: >
+      Urine protein in mg per gram of creatinine (mg/g creat). 
+      If urine protein < 4, ratio usually not submitted by testing lab
+    type: number
+
+  viral_load:
+    description: >
+      Standardized viral load (copies/ml)
+    type: number
+
+  viral_load_kit:
+    description: >
+      Viral Load Kit used
+    enum:
+      - Chiron 2nd Generation
+      - Roche 2nd Generation
+      - Roche ultra-sensitive 2nd Generation
+      - Roche Cobas TaqMan
+
+  core_visits:
+    $ref: "_definitions.yaml#/to_one"

@@ -1,0 +1,347 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "gynecological_exam"
+title: Gynecological Examination
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Values obtained from a extense gynecological exam required by a medical professional and performed at one of the recurrent patient visit.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: core_visits
+    backref: gynecological_exams
+    label: performed_at
+    target_type: core_visit
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - core_visits
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  genital_lesions:
+    description: >
+      Genital lesions
+    type: string
+
+  vagina_ph:
+    description: >
+      Vagina PH
+    type: number
+
+  vaginal_discharge_volume:
+    description: >
+      Vaginal discharge volume
+    enum:
+      - Normal
+      - Increased
+      - Refusal
+      - Don't know
+
+  vaginal_discharge_color:
+    description: >
+      Vaginal discharge volume
+    enum:
+      - White
+      - Yellow/Green
+      - Brown/Blood
+      - Refusal
+      - Don't know
+
+  vaginal_discharge_character_mucoid:
+    description: >
+      Vaginal discharge character: mucoid/floccular
+    enum:
+      - Circled
+      - Not Circled
+      - Refusal
+      - Don't know
+
+  vaginal_discharge_character_purulent:
+    description: >
+      Vaginal discharge character: purulent
+    enum:
+      - Circled
+      - Not Circled
+      - Refusal
+      - Don't know
+
+  vaginal_discharge_character_curdy:
+    description: >
+      Vaginal discharge character: curdy
+    enum:
+      - Circled
+      - Not Circled
+      - Refusal
+      - Don't know
+
+  vaginal_discharge_character_nonfloccular:
+    description: >
+      Vaginal discharge character: milky/creamy (non-floccular)
+    enum:
+      - Circled
+      - Not Circled
+      - Refusal
+      - Don't know
+
+  vaginal_discharge_character_frothy:
+    description: >
+      Vaginal discharge character: frothy
+    enum:
+      - Circled
+      - Not Circled
+      - Refusal
+      - Don't know
+
+  vaginal_discharge_character_bloody:
+    description: >
+      Vaginal discharge character: bloody
+    enum:
+      - Circled
+      - Not Circled
+      - Refusal
+      - Don't know
+
+  cervix_presence:
+    description: >
+      Presence of cervix
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  cervical_exam_done:
+    description: >
+      Check if the cervical exam has been done
+    type: boolean
+
+  cervical_lesion_presence:
+    description: >
+      Presence of cervical lesions
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  ectopy_presence:
+    description: >
+      Presence of visible ectopy
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  friability_presence:
+    description: >
+      Presence of friability
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  exudate_presence:
+    description: >
+      Presence of exudate
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  cervical_discharge_color:
+    description: >
+      Cervical discharge color
+    enum:
+      - White
+      - Yellow/Green
+      - Brown/Blood
+      - Refusal
+      - Don't know
+
+  cervical_motion_tenderness:
+    description: >
+      Presence of ervical motion tenderness
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  uterus_presence:
+    description: >
+      Presence of uterus
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  uterine_tenderness:
+    description: >
+      Presence of uterine tenderness
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  uterine_enlargement:
+    description: >
+      Presence of uterine enlargement
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  adnexae_presence:
+    description: >
+      Presence of Adnexae
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  adnexae_right_tenderness:
+    description: >
+      Presence of right  adnexal tenderness
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  adnexae_left_tenderness:
+    description: >
+      Presence of left adnexal tenderness
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  adnexae_right_mass:
+    description: >
+      Presence of right  adnexal mass
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  adnexae_left_mass:
+    description: >
+      Presence of left adnexal mass
+    enum:
+      - Present
+      - Absent
+      - Refusal
+      - Don't know
+
+  lesions_count:
+    description: >
+      Total number of lesions
+    type: integer
+
+  trichomonas_test:
+    description: >
+      Trichomonas wet prep test
+    enum:
+      - positive
+      - negative
+      - unclear
+      - not obtanied
+      - not read
+      - Refusal
+      - Don’t know
+
+  clue_cells_test:
+    description: >
+      Clue cells wet prep test
+    enum:
+      - positive
+      - negative
+      - unclear
+      - not obtanied
+      - not read
+      - Refusal
+      - Don’t know
+
+  clue_cells_percentage:
+    description: >
+      Percentage of clue cells observed (more or less 20%)
+    enum:
+      - "<20%"
+      - ">=20%"
+      - "Refusal"
+      - "Don’t know"
+
+  increased_wbcs:
+    description: >
+      Increased wbcs
+    enum:
+      - positive
+      - negative
+      - unclear
+      - not obtanied
+      - not read
+      - Refusal
+      - Don’t know
+
+  yeast_koh_test:
+    description: >
+      Yeast KOH mount test
+    enum:
+      - positive
+      - negative
+      - unclear
+      - not obtanied
+      - not read
+      - Refusal
+      - Don’t know
+
+  amine_odor_koh_test:
+    description: >
+      Amine odor KOH mount test
+    enum:
+      - positive
+      - negative
+      - unclear
+      - not obtanied
+      - not read
+      - Refusal
+      - Don’t know
+
+  clinical_impression_lesions:
+    description: >
+      List of clinical impression episodes
+    type: string
+
+  core_visits:
+    $ref: "_definitions.yaml#/to_one"

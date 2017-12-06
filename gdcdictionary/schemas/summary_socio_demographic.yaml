@@ -1,0 +1,624 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "summary_socio_demographic"
+title: Socio Demographic Summary
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Summary of socio-demographic information including drug use, sex partners, race background, income, insurance, etc asked to a patient at each of the recurrent visit.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: core_visits
+    backref: summary_socio_demographics
+    label: performed_at
+    target_type: core_visit
+    multiplicity: one_to_one
+    required: true
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - core_visits
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  marstat:
+    description: >
+      Marital status (F21/MAR_SD)
+    enum:
+      - "Legally/common-law married"
+      - "Not married but living with partner"
+      - "Widowed"
+      - "Divorced/Annulled"
+      - "Separated"
+      - "Never married"
+      - "Other"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  marsp:
+    description: >
+      Specify other marital status (F21/MRSPSD)
+    type: string
+
+  resid:
+    description: >
+      Place of residence (F21/ RES_SD)
+    enum:
+      - "Own house/apartment"
+      - "Parent's house"
+      - "Someone else's house/ apartment"
+      - "Rooming/boarding/halfway house"
+      - "Shelter/welfare hotel"
+      - "Street"
+      - "Jail/Correctional facility"
+      - "Residential drug/alcohol treatment facility"
+      - "Other place"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  residsp:
+    description: >
+      Specify other place of residence (F21/RESPSD)
+    type: string
+
+  employ:
+    description: >
+      Participant currently employed (F21/EMP_SD)
+    enum:
+      - "Yes"
+      - "No"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  insurance:
+    description: >
+      Participant currently has insurance
+    enum:
+      - "Yes"
+      - "No"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  income:
+    description: >
+      Average household income/year
+    enum:
+      - "$6000 or less"
+      - "$6001-$12000"
+      - "$12001-$18000"
+      - "$18001-$24000"
+      - "$24001-$30000"
+      - "$30001-$36000"
+      - "$36001-$75000"
+      - "> $75000"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  drink_status:
+    description: >
+      Current Alcohol Use (If > 0 drinks then Yes)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  ndrnkwk:
+    description: >
+      Number of drinks/week since last visit
+    type: number
+
+  drinkcat:
+    description: >
+      Alcohol Use Categories
+    enum:
+      - "Abstainer"
+      - ">0-7 drinks/wk"
+      - ">7-12 drinks/wk"
+      - ">12 drinks/wk"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  smoke_status:
+    description: >
+      Current cigarette smoking status
+    enum:
+      - "Not currently smoking"
+      - "Currently smoking"
+      - "Not currently smoking based on last report/visit"
+      - "Currently smoking based on last report/visit"
+
+  smkhist:
+    description: >
+      Number of years smoked cigarettes
+    type: integer
+
+  smkgrp:
+    description: >
+      History of Smoking cigarettes status
+    enum:
+      - "Never smoker"
+      - "Current smoker"
+      - "Former smoker (SMKHIST>0 and CURSMOKE=0 or 10)"
+      - "Cannot determine"
+
+  potuse:
+    description: >
+      Use marijuana/hash since last visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  crackuse:
+    description: >
+      Use crack/freebase cocaine since last visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  cocuse:
+    description: >
+      Use cocaine since last visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  heruse:
+    description: >
+      Use heroin since last visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  mdonuse:
+    description: >
+      Use (illicit) Methadone since last visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  mthause:
+    description: >
+      Use Methamphetamines since last visit (V21+)
+    type: boolean
+
+  odrguse:
+    description: >
+      Use amphetamines (pre-V21), narcotics (pre-V21), hallucinogens, other drugs (V39+) since last visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  idu:
+    description: >
+      Injected drugs since last visit (based on self-report, INJEBH, INJCBH)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  nidu:
+    description: >
+      Non-injected recreational drugs used since last visit. Includes CCH use, any marijuana use, hallucinogens, club drugs, methamphetamines.
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  recrxuse:
+    description: >
+      Use of prescription drugs in a way not prescribed (methadone, amphetamines (V21+ ), Other Narcotic use (V21+), tranquilizers (V39+)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  mdonrxuse:
+    description: >
+      In methadone maintenance program or reported prescribed use of methadone since last visit (F04/F24/ F24BEH,F22/F22MED,Drug2)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  sbxnrxuse:
+    description: >
+      In suboxone maintenance program (V39+) or reported prescribed use of suboxone since last visit (F22s4/ F22MEDs4, F22s6/F22MEDs6)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  msex6mo:
+    description: >
+      Number of men sexual intercourse partners since last visit
+    type: integer
+
+  fsex6mo:
+    description: >
+      Number of female sexual intercourse partners since last visit
+    type: integer
+
+  physf:
+    description: >
+      Physical function (F26/B7a-d)
+    type: integer
+
+  rolef:
+    description: >
+      Role function (F26/B2,B5)
+    type: integer
+
+  enfat:
+    description: >
+      Energy/Fatigue function (F26/ B8f,g
+    type: integer
+
+  soclf:
+    description: >
+      Social function (F26/B4,B8a)
+    type: integer
+
+  cognf:
+    description: >
+      Cognitive function (F26/B8b-c)
+    type: integer
+
+  pain:
+    description: >
+      Pain (F26/B3,B6)
+    type: integer
+
+  emotl:
+    description: >
+      Emotional wellbeing (F26/B8d- e,h)
+    type: integer
+
+  hlthp:
+    description: >
+      Health perception (F26/B1,B9a- b)
+    type: integer
+
+  hlthr:
+    description: >
+      Health rating (F26/B10)
+    type: integer
+
+  qlindx:
+    description: >
+      Quality of life health index scale (.2*physf +.17*pain + .28*enfat +.2*emotl + .05*soclf + .1*rolef)
+    type: integer
+
+  cesd:
+    description: >
+      Overall depression score (F26/ C1-C20). If CESD >= 16 then depressed.
+    type: integer
+
+  lang:
+    description: >
+      Interview language preference
+    enum:
+      - "English"
+      - "Spanish"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  ageatbl:
+    description: >
+      Age at Baseline visit
+    type: number
+
+  eductn:
+    description: >
+      Highest level of education (baseline visit)
+    enum:
+      - "No schooling"
+      - "Grades 1-6"
+      - "Grades 7-11"
+      - "Completed high school"
+      - "Some college"
+      - "Completed 4 years of college"
+      - "Attended/Completed graduate school"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  sexident:
+    description: >
+      Sexual identity (baseline visit)
+    enum:
+      - "Heterosexual/Straight"
+      - "Bisexual"
+      - "Lesbian/Gay"
+      - "Other"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basepot:
+    description: >
+      Ever used marijuana/hash (baseline visit)
+    type: boolean
+
+  basecch:
+    description: >
+      Ever used crack/cocaine/ heroin (baseline visit)
+    type: boolean
+
+  basecrack:
+    description: >
+      Ever used crack/freebase cocaine (baseline visit, not asked separately of 1994/95 recruits)
+    enum:
+      - "Yes"
+      - "No"
+      - "Not asked separately for 1994/95 recruits (see BASECCH)"
+
+  basecoc:
+    description: >
+      Ever used cocaine (baseline visit, not asked separately of 1994/95 recruits)
+    enum:
+      - "Yes"
+      - "No"
+      - "Not asked separately for 1994/95 recruits (see BASECCH)"
+
+  baseher:
+    description: >
+      Ever used heroin (baseline visit, not asked separately of 1994/95 recruits)
+    enum:
+      - "Yes"
+      - "No"
+      - "Not asked separately for 1994/95 recruits (see BASECCH)"
+
+  basemdon:
+    description: >
+      Ever used (illicit) methadone (baseline visit)
+    type: boolean
+
+  baseidu:
+    description: >
+      Participant ever injected drugs (baseline visit, based on self-report, F00/IDU_SC, F20/IDU_NR, INJCNR)
+    type: boolean
+
+  basenidu:
+    description: >
+      Non-injected recreational drugs ever used (baseline visit). Baseline rec drug use questions change over time. This may include CCH use, amphetamines, any marijuana, use, hallucinogens, club drugs, methamphetamines.
+    type: boolean
+
+  basemdonrx:
+    description: >
+      Ever in methadone maintenance program or reported prescribed use of methadone at baseline visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basesbxnrx:
+    description: >
+      Ever in suboxone maintenance program (V39+) or reported prescribed use of suboxone at baseline visit
+    enum:
+      - "Yes"
+      - "No"
+      - "Not asked at B/L for 1994/ 95, 2001/02, 2011-13 recruits"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basesex:
+    description: >
+      Number of sex partners (baseline visit)
+    enum:
+      - "0 or no partners"
+      - "1 to 4 partners"
+      - "5 to 10 partners"
+      - "11 to 100 partners"
+      - "More than 100 partners"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basetran:
+    description: >
+      Blood transfusion between 1975-1985 (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basemsex:
+    description: >
+      # lifetime male sex partners (baseline visit)
+    type: integer
+
+  baseminj:
+    description: >
+      Ever had sex with male who injected (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basemhem:
+    description: >
+      Ever had sex with male hemophiliac (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basemhiv:
+    description: >
+      Ever had sex with HIV+ male (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basemman:
+    description: >
+      Ever sex w/male who had sex w/ male (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basefsex:
+    description: >
+      # lifetime female partners (baseline visit)
+    type: integer
+
+  basefinj:
+    description: >
+      Ever had sex with woman who injected (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  basefhiv:
+    description: >
+      Ever had sex with HIV+ woman (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  paidsex:
+    description: >
+      Ever had sex for drugs,money, shelter (baseline visit)
+    enum:
+      - "Yes"
+      - "No"
+      - "NA (Skipped)"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  riskcat:
+    description: >
+      Exposure Category(baseline visit)
+    enum:
+      - "Intravenous drug use"
+      - "Heterosexual risk"
+      - "Transfusion risk"
+      - "No identified risk"
+      - "Missing"
+
+  v17idu:
+    description: >
+      Participant ever injected drugs (Reported visit 17)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  v20evndl:
+    description: >
+      Participant ever used a needle AFTER another user (Reported vis 20)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  v24idu:
+    description: >
+      Participant ever injected drugs (Reported visit 24)
+    enum:
+      - "Yes"
+      - "No"
+      - "Refusal"
+      - "Don't know"
+      - "Missing"
+
+  version:
+    description: >
+      Version number of data
+    type: string
+
+  core_visits:
+    $ref: "_definitions.yaml#/to_one"

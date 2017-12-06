@@ -32,7 +32,6 @@ links:
 required:
   - submitter_id
   - type
-  - data_description
   - study_description
   - projects
 
@@ -42,20 +41,15 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
+
   data_description:
     description: "Brief description of the data being provided for this study. Free text"
     type: string
-  study_center:
-    description: >
-      Study Site (where enrolled)
-    enum:
-      - Baltimore
-      - Chicago
-      - Pittsburgh
-      - Los Angeles
+
   study_description:
     description: "A brief description of the study being performed. Free text"
     type: string
+
   study_design:
     description: >
       Summary of the goals the study is designed to discover. General description of the
@@ -67,6 +61,7 @@ properties:
       - Clinical
       - Clinical Assay
       - Clinical Utility
+
   study_objective:
     description: >
       The general objective of the study. What the study hopes to discover or determine
@@ -79,11 +74,6 @@ properties:
       - Precision (Reproducibility)
       - Specificity/Sensitivity
       - Stability
-  study_setup:
-    description: >
-      A high level description of the setup used to achieve the study objectives.
-    enum:
-      - Detection/Enumeration/Isolation
-      - Genetic Analysis
+
   projects:
     $ref: "_definitions.yaml#/to_one"
