@@ -688,6 +688,7 @@ properties:
       - "HAART"
       - "HAART (HU/ddI defined)"
       - "unknown regiemn"
+      - "Potent ART"
       - "Missing"
 
   adh:
