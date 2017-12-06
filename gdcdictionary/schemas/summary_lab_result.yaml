@@ -41,18 +41,55 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  vload:
+  cd4dt:
     description: >
-      HIV RNA (copies per ml)
+      Year that CD4 was collected
+    type: integer
+
+  hematocrit:
+    description: >
+      Hematocrit (%)
     type: number
 
-  ud_vl:
+  hemoglobin:
     description: >
-      HIV RNA detection status
-    enum:
-      - Below lower limit of quantification (VLOAD set to lower limit)
-      - Detected
-      - Above upper limit of quantification (VLOAD set to upper limit)
+      Hemoglobin (gm/dl)
+    type: number
+
+  hsrat:
+    description: >
+      Helper/Suppressor Ratio (CD4N/ CD8N)
+    type: number
+
+  leu3n:
+    description: >
+      # of CD4 positive cells (helpers, cells per mm^3)
+    type: integer
+
+  leu3p:
+    description: >
+      % CD4 positive cells (helpers)
+    type: number
+
+  leu2n:
+    description: >
+      # of CD8 positive cells (suppressors, cells per mm^3)
+    type: integer
+
+  leu2p:
+    description: >
+      % CD8 positive cells (supressors)
+    type: number
+
+  leu4n:
+    description: >
+      # of CD3 positive cells (cells per mm^3)
+    type: integer
+
+  leu4p:
+    description: >
+      % CD3 positive cells
+    type: number
 
   llq_vl:
     description: >
@@ -69,55 +106,52 @@ properties:
       - Bayer Branched DNA
       - Missing (some pre-HAART for new recruits)
 
-  cd4n:
+  platelets:
     description: >
-      # of CD4 positive cells (helpers, cells per mm^3)
+      Platelets (thousands/mm3)
     type: number
 
-  cd4p:
+  rbc:
     description: >
-      % CD4 positive cells (helpers)
+      Count of Red blood cells (millions/mm3)
     type: number
 
-  cd8n:
+  ud_vl:
     description: >
-      # of CD8 positive cells (suppressors, cells per mm^3)
+      HIV RNA detection status
+    enum:
+      - Below lower limit of quantification (VLOAD set to lower limit)
+      - Detected
+      - Above upper limit of quantification (VLOAD set to upper limit)
+
+  viral_load:
+    description: >
+      Standardized viral load (copies/ml)
     type: number
 
-  cd8p:
+  viral_load_kit:
     description: >
-      % CD8 positive cells (supressors)
-    type: number
-
-  cd3n:
-    description: >
-      # of CD3 positive cells (cells per mm^3)
-    type: number
-
-  cd3p:
-    description: >
-      % CD3 positive cells
-    type: number
-
-  hsrat:
-    description: >
-      Helper/Suppressor Ratio (CD4N/ CD8N)
-    type: number
-
-  cd4dt:
-    description: >
-      CD4 year
-    type: integer
+      Viral Load Kit used
+    enum:
+      - Chiron 2nd Generation
+      - Roche 2nd Generation
+      - Roche ultra-sensitive 2nd Generation
+      - Roche Cobas TaqMan
 
   vldt:
     description: >
-      Viral Load year
+      Year that Viral Load was collected
     type: integer
 
   version:
     description: >
       Version number of data
     type: string
+
+  wbc:
+    description: >
+      Count of white blood cells
+    type: number
 
   core_visits:
     $ref: "_definitions.yaml#/to_one"
