@@ -61,22 +61,22 @@ properties:
 
   lnegdate:
     description: >
-      Last negative year
+      Last time seen seronegative (year)
     type: integer
 
   negvis:
     description: >
-      Reported converter last negative visit ID
+      Last visit seen seronegative
     type: integer
 
   fposdate:
     description: >
-      Year of first time seen HIV positive while in the study
+      First time seen seropositive (year)
     type: integer
 
   posvis:
     description: >
-      First visit seen HIV positive while in the study
+      First visit seen seropositive
     type: integer
 
   lastnoad:
@@ -102,6 +102,11 @@ properties:
   arthxbase:
     description: >
       Did particpant report use of ART prior to baseline (screening) visit?
+    type: boolean
+
+  ehaart:
+    description: >
+      Ever HAART use
     type: boolean
 
   lastnohd:
@@ -237,6 +242,11 @@ properties:
   lastcond:
     description: >
       Year of last study visit attended
+    type: integer
+
+  lastcontact:
+    description: >
+      Last year of contact (includes in-person or phone contact)
     type: integer
 
   cd4nadir:
