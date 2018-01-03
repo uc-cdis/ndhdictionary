@@ -57,7 +57,7 @@ properties:
       - Negative
       - Prevalent
       - Converter
-      - Converted identified at death
+      - Converter identified at death
 
   lnegdate:
     description: >
