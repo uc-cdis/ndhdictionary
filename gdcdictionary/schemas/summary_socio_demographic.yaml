@@ -163,7 +163,7 @@ properties:
   smkhist:
     description: >
       Number of years smoked cigarettes
-    type: integer
+    type: number
 
   smkgrp:
     description: >
@@ -302,7 +302,7 @@ properties:
   physf:
     description: >
       Physical function (F26/B7a-d)
-    type: integer
+    type: number
 
   rolef:
     description: >
@@ -317,7 +317,7 @@ properties:
   soclf:
     description: >
       Social function (F26/B4,B8a)
-    type: integer
+    type: number
 
   cognf:
     description: >
@@ -327,27 +327,27 @@ properties:
   pain:
     description: >
       Pain (F26/B3,B6)
-    type: integer
+    type: number
 
   emotl:
     description: >
       Emotional wellbeing (F26/B8d- e,h)
-    type: integer
+    type: number
 
   hlthp:
     description: >
       Health perception (F26/B1,B9a- b)
-    type: integer
+    type: number
 
   hlthr:
     description: >
       Health rating (F26/B10)
-    type: integer
+    type: number
 
   qlindx:
     description: >
       Quality of life health index scale (.2*physf +.17*pain + .28*enfat +.2*emotl + .05*soclf + .1*rolef)
-    type: integer
+    type: number
 
   cesd:
     description: >
@@ -464,7 +464,7 @@ properties:
     enum:
       - "Yes"
       - "No"
-      - "Not asked at B/L for 1994/ 95, 2001/02, 2011-13 recruits"
+      - "Not asked at B/L for 1994/95, 2001/02, 2011-13 recruits"
       - "Refusal"
       - "Don't know"
       - "Missing"
