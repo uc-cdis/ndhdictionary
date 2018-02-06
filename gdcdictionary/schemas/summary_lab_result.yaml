@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Summary of important values obtained from blood or other laboratory tests required 
+  Summary of important values obtained from blood or other laboratory tests required
   by a medical professional and performed at one of the recurrent patient visit.
 additionalProperties: false
 submittable: true
@@ -22,12 +22,22 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: core_visits
-    backref: summary_lab_results
-    label: performed_at
-    target_type: core_visit
-    multiplicity: one_to_one
+  - exclusive: true
     required: true
+    subgroup:
+      - name: follow_ups
+        backref: summary_lab_results
+        label: performed_at
+        target_type: follow_up
+        multiplicity: one_to_one
+        required: false
+
+      - name: samples
+        backref: summary_lab_results
+        label: performed_on
+        target_type: sample
+        multiplicity: one_to_one
+        required: false
 
 uniqueKeys:
   - [id]
@@ -153,5 +163,38 @@ properties:
       Count of white blood cells
     type: number
 
-  core_visits:
+  percent_infection:
+    description: >
+      percentage of cells that infected by virus percent_infection.
+    type: number
+
+  virus_titer_1:
+    description: >
+      A numerical expression of the quantity of virus in a given volume in first test. It is expressed in plaque forming unites (pfu) per mL.
+    type: int
+
+  virus_titer_2:
+    description: >
+      A numerical expression of the quantity of virus in a given volume in second test. It is expressed in plaque forming unites (pfu) per mL.
+    type: int
+
+  virus_titer_3:
+    description: >
+      A numerical expression of the quantity of virus in a given volume in third test. It is expressed in plaque forming unites (pfu) per mL.
+    type: int
+
+  virus_titer_4:
+    description: >
+      A numerical expression of the quantity of virus in a given volume in fourth test. It is expressed in plaque forming unites (pfu) per mL.
+    type: int
+
+  virus_titer_5:
+    description: >
+      A numerical expression of the quantity of virus in a given volume in fifth test. It is expressed in plaque forming unites (pfu) per mL.
+    type: int
+
+  follow_ups:
+    $ref: "_definitions.yaml#/to_one"
+
+  samples:
     $ref: "_definitions.yaml#/to_one"
