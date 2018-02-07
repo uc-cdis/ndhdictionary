@@ -34,21 +34,19 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 links:
-  - exclusive: true
+  - name: cases
+    backref: samples
+    label: derived_from
+    target_type: case
+    multiplicity: many_to_one
     required: true
-    subgroup:
-      - name: cases
-        backref: samples
-        label: derived_from
-        target_type: case
-        multiplicity: many_to_one
-        required: false
-      - name: follow_ups
-        backref: samples
-        label: related_to
-        target_type: follow_up
-        multiplicity: one_to_one
-        required: false
+
+  - name: core_visits
+    backref: samples
+    label: related_to
+    target_type: core_visit
+    multiplicity: one_to_one
+    required: false
 
   - name: diagnoses
     backref: samples
@@ -56,7 +54,6 @@ links:
     target_type: diagnosis
     multiplicity: many_to_one
     required: false
-
 
 # Sample properties: keep TCGA-specific fields
 properties:
@@ -637,7 +634,7 @@ properties:
 
   cases:
     $ref: "_definitions.yaml#/to_one"
-  follow_ups:
+  core_visits:
   $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

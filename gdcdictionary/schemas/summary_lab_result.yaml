@@ -25,10 +25,10 @@ links:
   - exclusive: true
     required: true
     subgroup:
-      - name: follow_ups
+      - name: core_visits
         backref: summary_lab_results
         label: performed_at
-        target_type: follow_up
+        target_type: core_visit
         multiplicity: one_to_one
         required: false
 
@@ -193,7 +193,7 @@ properties:
       A numerical expression of the quantity of virus in a given volume in fifth test. It is expressed in plaque forming unites (pfu) per mL.
     type: int
 
-  follow_ups:
+  core_visits:
     $ref: "_definitions.yaml#/to_one"
 
   samples:
