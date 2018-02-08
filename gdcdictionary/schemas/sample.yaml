@@ -635,7 +635,7 @@ properties:
   cases:
     $ref: "_definitions.yaml#/to_one"
   core_visits:
-  $ref: "_definitions.yaml#/to_one"
+    $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
   project_id:
