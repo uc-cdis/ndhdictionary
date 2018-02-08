@@ -41,7 +41,7 @@ links:
       - name: samples
         backref: virus_infections
         label: describes
-        target_type: case
+        target_type: sample
         multiplicity: one_to_many
         required: false
 
@@ -68,7 +68,7 @@ properties:
 
   virus_titer_in_stock:
     description: A numerical expression of the quantity of virus in a given volume in stock. It is expressed in plaque forming units (pfu) per mL.
-    type: int
+    type: integer
 
   virus_volume:
     description: >
