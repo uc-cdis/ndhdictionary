@@ -27,7 +27,7 @@ systemProperties:
 
 links:
   - name: cases
-    backref: follow_ups
+    backref: core_visits
     label: describes
     target_type: case
     multiplicity: many_to_one

@@ -1,4 +1,4 @@
-$schema: "http://json-schema.org/draft-04/schema#"
+ $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "sample"
 title: Sample
@@ -52,7 +52,7 @@ links:
     backref: samples
     label: related_to
     target_type: diagnosis
-    multiplicity: many_to_one
+    multiplicity: one_to_one
     required: false
 
 # Sample properties: keep TCGA-specific fields
