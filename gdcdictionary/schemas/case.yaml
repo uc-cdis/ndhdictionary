@@ -59,7 +59,7 @@ properties:
           40= 2001-03 recruit
           50= 2010 recruit
           55= 2010 recruit - Columbus, OH
-    type: string
+    type: integer
 
   study_center:
     description: >
