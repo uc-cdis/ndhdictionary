@@ -115,7 +115,7 @@ properties:
       The weight of the subject measured in grams.
     type: number
 
-  weight_percentage: >
+  weight_percentage:
     description: >
       The percentage of the weight considering the weight measured at the index date as the reference.
 
@@ -129,9 +129,10 @@ properties:
       6-month time interval for visit
     type: integer
 
-  days_to_follow_up: >
-    description:
+  days_to_follow_up:
+    description: >
       Number of days between the date used for index and the date the patient was seen or contacted at follow-up.
+    type: integer
 
   cases:
     $ref: "_definitions.yaml#/to_one"
