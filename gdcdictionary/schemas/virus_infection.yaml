@@ -41,7 +41,7 @@ links:
       - name: samples
         backref: virus_infections
         label: describes
-        target_type: case
+        target_type: sample
         multiplicity: one_to_many
         required: false
 
