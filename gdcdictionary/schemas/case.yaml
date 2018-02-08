@@ -9,7 +9,7 @@ program: '*'
 project: '*'
 description: >
   The collection of all data related to a specific subject in the
-  context of a specific experiment. 
+  context of a specific experiment.
 additionalProperties: false
 submittable: true
 validators: null
@@ -22,7 +22,7 @@ systemProperties:
   - state
 
 links:
-  - name: studies 
+  - name: studies
     backref: cases
     label: member_of
     target_type: study
@@ -33,7 +33,6 @@ required:
   - submitter_id
   - type
   - studies
-  - hiv_status
   - cohort_id
 
 uniqueKeys:
@@ -79,5 +78,123 @@ properties:
       - Chapel Hill
       - Miami
 
-  studies: 
+  species:
+    description: "Taxonomic species of the case."
+    enum:
+     - Drosophila melanogaster
+     - Homo sapiens
+     - Mus musculus
+     - Mustela putorius furo
+     - Rattus rattus
+     - Sus scrofa
+
+  strain:
+    description: >
+      A lower-level taxonomic rank used in microbiology or virology, plants and rodents, usually at the intraspecific level (within a species)
+    type: string
+
+  primary_site:
+    description: Primary site for the project.
+    enum:
+      - Accessory sinuses
+      - Adrenal gland
+      - Anus and anal canal
+      - Base of tongue
+      - Bladder
+      - Bones, joints and articular cartilage of limbs
+      - Bones, joints and articular cartilage of other and unspecified sites
+      - Brain
+      - Breast
+      - Bronchus and lung
+      - Cervix uteri
+      - Colon
+      - Connective, subcutaneous and other soft tissues
+      - Corpus uteri
+      - Esophagus
+      - Floor of mouth
+      - Gallbladder
+      - Gum
+      - Heart, mediastinum, and pleura
+      - Hematopoietic and reticuloendothelial systems
+      - Hypopharynx
+      - Kidney
+      - Larynx
+      - Lip
+      - Liver and intrahepatic bile ducts
+      - Lymph nodes
+      - Meninges
+      - Nasal cavity and middle ear
+      - Nasopharynx
+      - Oropharynx
+      - Other and ill-defined digestive organs
+      - Other and ill-defined sites
+      - Other and ill-defined sites in lip, oral cavity and pharynx
+      - Other and ill-defined sites within respiratory system and intrathoracic organs
+      - Other and unspecified female genital organs
+      - Other and unspecified major salivary glands
+      - Other and unspecified male genital organs
+      - Other and unspecified parts of biliary tract
+      - Other and unspecified parts of mouth
+      - Other and unspecified parts of tongue
+      - Other and unspecified urinary organs
+      - Other endocrine glands and related structures
+      - Ovary
+      - Palate
+      - Pancreas
+      - Parotid gland
+      - Penis
+      - Peripheral nerves and autonomic nervous system
+      - Placenta
+      - Prostate gland
+      - Pyriform sinus
+      - Rectosigmoid junction
+      - Rectum
+      - Renal pelvis
+      - Retroperitoneum and peritoneum
+      - Skin
+      - Small intestine
+      - Spinal cord, cranial nerves, and other parts of central nervous system
+      - Stomach
+      - Testis
+      - Thymus
+      - Thyroid gland
+      - Tonsil
+      - Trachea
+      - Unknown primary site
+      - Ureter
+      - Uterus, NOS
+      - Vagina
+      - Vulva
+      - Unknown
+      - Not Reported
+      - Adrenal Gland
+      - Bile Duct
+      - Blood
+      - Bone
+      - Bone Marrow
+      - Cervix
+      - Colorectal
+      - Eye
+      - Head and Neck
+      - Liver
+      - Lung
+      - Lymph Nodes
+      - Nervous System
+      - Not Applicable
+      - Pleura
+      - Prostate
+      - Soft Tissue
+      - Thyroid
+      - Uterus
+
+  index_date:
+    description: >
+      The reference or anchor date used during date obfuscation, where a single date is obscurred by creating one or more date ranges in relation to this date.
+    enum:
+      - Diagnosis
+      - First Patient Visit
+      - Study Enrollment
+      - Infection
+
+  studies:
     $ref: "_definitions.yaml#/to_one"

@@ -119,5 +119,10 @@ properties:
       $ref: "_terms.yaml#/year_of_death"
     type: number
 
+  rodent_age_at_index:
+    descripton: >
+      The rodent's age (in weeks) on the reference or anchor date used during date obfuscation
+    type: number
+
   cases:
     $ref: "_definitions.yaml#/to_one"

@@ -38,13 +38,21 @@ links:
     backref: samples
     label: derived_from
     target_type: case
-    multiplicity: many_to_one #not sure
+    multiplicity: many_to_one
     required: true
+
+  - name: core_visits
+    backref: samples
+    label: related_to
+    target_type: core_visit
+    multiplicity: one_to_one
+    required: false
+
   - name: diagnoses
     backref: samples
     label: related_to
     target_type: diagnosis
-    multiplicity: many_to_one
+    multiplicity: one_to_one
     required: false
 
 # Sample properties: keep TCGA-specific fields
@@ -593,8 +601,41 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+
+  cell_line:
+    description: >
+      A cell culture developed from a single cell and therefore consisting of cells with a uniform genetic makeup.
+    type: string
+
+  cell_number:
+    description: >
+      Number of cells cultured in one container.
+    type: int
+
+  passage:
+    description: >
+      A record of the number of times the culture has been subcultured.
+    type: int
+
+  cell_culture_vessel:
+    description: >
+      Flasks, Petri dishes, roller bottles, or multiwell plates to grow cells.
+    type: string
+
+  hours_to_collection:
+    description: >
+      Time interval from the date of biospecimen collection to the date of initial pathologic diagnosis, represented as a calculated number of days.
+    type: int
+
+  lysis_buffer:
+    description: >
+      A buffer solution used for the purpose of breaking open cells for use in molecular biology experiments that analyze the compounds of the cells.
+    type: string
+
   cases:
     $ref: "_definitions.yaml#/to_one"
+  core_visits:
+  $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
   project_id:

@@ -1,7 +1,7 @@
 schema: "http://json-schema.org/draft-04/schema#"
 
 id: "core_visit"
-title: Core Visit
+title: Core visit
 type: object
 namespace: http://gdc.nci.nih.gov
 category: clinical
@@ -27,7 +27,7 @@ systemProperties:
 
 links:
   - name: cases
-    backref: followups
+    backref: core_visits
     label: describes
     target_type: case
     multiplicity: many_to_one
@@ -50,7 +50,7 @@ properties:
 
   age_at_visit:
     description: >
-      Age at visit - round to nearest integer 
+      Age at visit - round to nearest integer
     type: integer
 
   bmi:
@@ -104,7 +104,7 @@ properties:
 
   visit_type:
     description: >
-      Define if the visit is a follow-up or the baseline visit
+      Define if the visit is a follow-up or the baseline visit.
     enum:
       - Baseline Visit
       - Follow-up Visit
@@ -112,18 +112,26 @@ properties:
 
   weight:
     description: >
-      The weight of the patient measured in kilograms
+      The weight of the subject measured in grams.
     type: number
+
+  weight_percentage: >
+    description: >
+      The percentage of the weight considering the weight measured at the index date as the reference.
 
   visit_date:
     description: >
-      Year of the visit
+      Year of the visit.
     type: integer
 
   tint:
     description: >
       6-month time interval for visit
     type: integer
+
+  days_to_follow_up: >
+    description:
+      Number of days between the date used for index and the date the patient was seen or contacted at follow-up.
 
   cases:
     $ref: "_definitions.yaml#/to_one"
