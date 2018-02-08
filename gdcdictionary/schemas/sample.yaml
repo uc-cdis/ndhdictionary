@@ -610,12 +610,12 @@ properties:
   cell_number:
     description: >
       Number of cells cultured in one container.
-    type: int
+    type: integer
 
   passage:
     description: >
       A record of the number of times the culture has been subcultured.
-    type: int
+    type: integer
 
   cell_culture_vessel:
     description: >
@@ -625,7 +625,7 @@ properties:
   hours_to_collection:
     description: >
       Time interval from the date of biospecimen collection to the date of initial pathologic diagnosis, represented as a calculated number of days.
-    type: int
+    type: integer
 
   lysis_buffer:
     description: >
