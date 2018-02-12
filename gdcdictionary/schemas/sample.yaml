@@ -27,18 +27,18 @@ systemProperties:
 required:
   - submitter_id
   - type
-  - cases
+  - subjects
 
 uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
 links:
-  - name: cases
+  - name: subjects
     backref: samples
     label: derived_from
-    target_type: case
-    multiplicity: many_to_one
+    target_type: subject
+    multiplicity: many_to_one #not sure
     required: true
 
   - name: core_visits
@@ -632,7 +632,7 @@ properties:
       A buffer solution used for the purpose of breaking open cells for use in molecular biology experiments that analyze the compounds of the cells.
     type: string
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
   core_visits:
     $ref: "_definitions.yaml#/to_one"

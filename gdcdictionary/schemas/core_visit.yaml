@@ -1,7 +1,7 @@
 schema: "http://json-schema.org/draft-04/schema#"
 
-id: "core_visit"
-title: Core visit
+id: "follow_up"
+title: Follow Up
 type: object
 namespace: http://gdc.nci.nih.gov
 category: clinical
@@ -26,17 +26,17 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
-    backref: core_visits
+  - name: subjects
+    backref: followups
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: many_to_one
     required: true
 
 required:
   - submitter_id
   - type
-  - cases
+  - subjects
   - visit_number
   - visit_type
   - version_data
@@ -134,5 +134,5 @@ properties:
       Number of days between the date used for index and the date the patient was seen or contacted at follow-up.
     type: integer
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"

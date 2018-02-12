@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: core_visits
+  - name: follow_ups
     backref: summary_drug_uses
     label: performed_at
-    target_type: core_visit
+    target_type: follow_up
     multiplicity: one_to_one
     required: true
 
@@ -35,7 +35,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - core_visits
+  - follow_ups
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -1574,5 +1574,5 @@ properties:
       Version number of data
     type: string
 
-  core_visits:
+  follow_ups:
     $ref: "_definitions.yaml#/to_one"

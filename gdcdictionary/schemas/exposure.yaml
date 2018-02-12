@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: exposures
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: many_to_one
     required: true
 
@@ -76,5 +76,5 @@ properties:
       Does the participant have insurance coverage?
     type: boolean
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
