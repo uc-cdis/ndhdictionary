@@ -32,10 +32,10 @@ links:
   - exclusive: true
     required: true
     subgroup:
-      - name: cases
+      - name: subjects
         backref: virus_infections
         label: describes
-        target_type: case
+        target_type: subject
         multiplicity: one_to_one
         required: false
       - name: samples
@@ -105,7 +105,7 @@ properties:
       The concentration of TPCK in growth medium for cell culture post virus infection.
     type: number
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
 
   samples:

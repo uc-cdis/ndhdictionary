@@ -37,7 +37,7 @@
     "healt": "Mostly true",
     "worse": "Mostly false",
     "excel": "Don't know",
-    "core_visits": {
+    "follow_ups": {
         "submitter_id":"1234-visit-990"
     }
 }
