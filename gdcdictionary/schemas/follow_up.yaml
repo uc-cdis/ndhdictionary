@@ -27,7 +27,7 @@ systemProperties:
 
 links:
   - name: subjects
-    backref: followups
+    backref: follow_ups
     label: describes
     target_type: subject
     multiplicity: many_to_one
