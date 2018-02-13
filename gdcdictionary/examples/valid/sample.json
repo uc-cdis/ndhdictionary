@@ -18,7 +18,7 @@
     "shortest_dimension": "0.5",
     "time_between_clamping_and_freezing": "30",
     "tissue_type": "Normal",
-    "cases": {
+    "subjects": {
         "submitter_id": "BLGSP-71-06-00019"
     }
 }

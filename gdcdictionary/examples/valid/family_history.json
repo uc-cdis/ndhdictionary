@@ -6,7 +6,7 @@
     "relative_with_hiv_history": "yes",
     "relationship_age_at_diagnosis": 12345,
     "relationship_primary_diagnosis": "cancer",
-    "cases": {
+    "subjects": {
         "submitter_id": "patient_z"
     }
 }

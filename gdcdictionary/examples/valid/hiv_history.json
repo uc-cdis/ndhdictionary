@@ -44,7 +44,7 @@
     "bshcvstat": "HCV positive",
     "bshbvstat": "missing/unknown",
     "version": "V450",
-    "cases": {
+    "subjects": {
         "submitter_id": "BLGSP-71-06-00019"
     }
 }

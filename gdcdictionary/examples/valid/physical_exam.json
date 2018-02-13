@@ -19,7 +19,7 @@
     "time_to_10_repeated_chair_stand": 12.3,
     "timed_walk": 2.1,
     "grip_strength": 33,  
-    "core_visits": {
+    "follow_ups": {
         "submitter_id":"1234-visit-990"
     }
 }
