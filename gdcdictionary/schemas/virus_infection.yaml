@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
 id: "virus_infection"
-title: virus_infection
+title: Virus Infection
 type: object
 namespace: http://gdc.nci.nih.gov
 category: clinical
@@ -32,10 +32,10 @@ links:
   - exclusive: true
     required: true
     subgroup:
-      - name: cases
+      - name: subjects
         backref: virus_infections
         label: describes
-        target_type: case
+        target_type: subject
         multiplicity: one_to_one
         required: false
       - name: samples
@@ -97,7 +97,7 @@ properties:
 
   post_infection_BSA_percentage:
     description: >
-      The percentage of serum in growth medium for cell culture post virus infecion.
+      The percentage of BSA in growth medium for cell culture post virus infecion.
     type: number
 
   post_infection_TPCK:
@@ -105,7 +105,7 @@ properties:
       The concentration of TPCK in growth medium for cell culture post virus infection.
     type: number
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
 
   samples:

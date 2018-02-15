@@ -23,17 +23,17 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: diagnoses
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: many_to_one
     required: true
 
 required:
   - submitter_id
   - type
-  - cases
+  - subjects
   - primary_diagnosis
   - version_data
   - visit_id
@@ -127,5 +127,5 @@ properties:
       - number
       - "null"
 
-  cases:
+  subjects:
     $ref: "_definitions.yaml#/to_one"

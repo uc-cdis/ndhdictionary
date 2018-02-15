@@ -21,15 +21,15 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: exposures
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: many_to_one
     required: true
 
 preferred:
-  - cigarettes_per_day 
+  - cigarettes_per_day
   - years_smoked
 
 uniqueKeys:
@@ -76,5 +76,10 @@ properties:
       Does the participant have insurance coverage?
     type: boolean
 
-  cases:
+  rodent_weight:
+    description: >
+      The weight of the rodent subject measured in grams
+    type: number
+
+  subjects:
     $ref: "_definitions.yaml#/to_one"

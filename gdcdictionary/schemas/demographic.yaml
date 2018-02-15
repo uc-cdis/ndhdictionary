@@ -22,17 +22,17 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: demographics
     label: describes
-    target_type: case
+    target_type: subject
     multiplicity: one_to_one
     required: true
 
 required:
   - submitter_id
   - type
-  - cases
+  - subjects
 
 preferred:
   - year_of_death
@@ -124,5 +124,10 @@ properties:
       The rodent's age (in weeks) on the reference or anchor date used during date obfuscation
     type: number
 
-  cases:
+  human_age_at_index:
+    descriptiont: >
+      The paticipant's age (in years) on the reference or anchor date used during date obfuscation.
+    type: number
+
+  subjects:
     $ref: "_definitions.yaml#/to_one"
