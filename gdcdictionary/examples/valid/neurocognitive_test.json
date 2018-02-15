@@ -36,7 +36,7 @@
     "verbal_learning_false_positive_word_count": 4,
     "verbal_learning_recognized_word_count": 8,
     "verbal_learning_wrong_word_count": 4,
-    "core_visits": {
+    "follow_ups": {
         "submitter_id":"1234-visit-990"
     }
 }

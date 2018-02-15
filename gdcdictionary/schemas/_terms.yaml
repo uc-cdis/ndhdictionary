@@ -64,7 +64,7 @@ ajcc_clinical_n:
 ajcc_clinical_stage:
   description: >
     Stage group determined from clinical information on the tumor (T), regional node (N) and
-    metastases (M) and by grouping cases with similar prognosis for cancer.
+    metastases (M) and by grouping subjects with similar prognosis for cancer.
   termDef:
     term: Neoplasm American Joint Committee on Cancer Clinical Group Stage
     source: caDSR

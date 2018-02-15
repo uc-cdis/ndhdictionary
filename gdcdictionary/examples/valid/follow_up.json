@@ -12,8 +12,8 @@
     "health_insurance": true,
     "drug_used": "Yes",
     "submitter_id": "MACS_visit_110",
-    "cases": {
+    "subjects": {
         "submitter_id": "BLGSP-71-06-00019"
     },
-    "type": "core_visit"
+    "type": "follow_up"
 }

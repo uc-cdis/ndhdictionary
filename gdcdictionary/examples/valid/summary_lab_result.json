@@ -15,7 +15,7 @@
     "cd4dt": 2001,
     "vldt": 2002,
     "version": "V40",	
-	"core_visits": {
+	"follow_ups": {
         "submitter_id":"1234-visit-990"
     }
 }
