@@ -94,5 +94,5 @@ properties:
       $ref: "_terms.yaml#/md5sum"
     type: string
 
-  miRNA_microarrays:
+  aliquots:
     $ref: "_definitions.yaml#/to_many"
