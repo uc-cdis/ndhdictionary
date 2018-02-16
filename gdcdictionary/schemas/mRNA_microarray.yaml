@@ -69,14 +69,6 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-      - RNA-Seq
-      - miRNA-Seq
-      - Total RNA-Seq
-      - DNA Panel
       - RNA-microarray
 
   file_name:
