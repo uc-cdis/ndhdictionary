@@ -79,7 +79,7 @@ properties:
       - Miami
 
   species:
-    description: "Taxonomic species of the case."
+    description: "Taxonomic species of the subject."
     enum:
      - Drosophila melanogaster
      - Homo sapiens
