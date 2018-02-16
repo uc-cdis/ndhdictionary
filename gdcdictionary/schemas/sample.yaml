@@ -38,14 +38,14 @@ links:
     backref: samples
     label: derived_from
     target_type: subject
-    multiplicity: many_to_one #not sure
+    multiplicity: many_to_one
     required: true
 
   - name: follow_ups
     backref: samples
     label: related_to
     target_type: follow_up
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     required: false
 
   - name: diagnoses
@@ -387,6 +387,7 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
+      - Supernatant
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
