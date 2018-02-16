@@ -33,7 +33,7 @@
     "yeast_koh_test": "positive",
     "amine_odor_koh_test": "positive",
     "clinical_impression_lesions": "Rush",
-    "core_visits": {
+    "follow_ups": {
         "submitter_id":"1234-visit-990"
     }
 }

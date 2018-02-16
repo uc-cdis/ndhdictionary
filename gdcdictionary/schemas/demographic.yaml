@@ -96,7 +96,7 @@ properties:
       - Lesbian/Gay
       - Other
       - Refusal
-      - Don't know
+      - "Don't know"
 
   vital_status:
     term:
@@ -121,7 +121,7 @@ properties:
 
   rodent_age_at_index:
     descripton: >
-      The rodent's age (in weeks) on the reference or anchor date used during date obfuscation
+      "The rodent's age (in weeks) on the reference or anchor date used during date obfuscation"
     type: number
 
   human_age_at_index:

@@ -10,7 +10,7 @@
     "viral_load": 5334,
     "viral_load_kit": "Roche ultra-sensitive 2nd Generation",
     "wbc": 4200,    
-    "core_visits": {
+    "follow_ups": {
         "submitter_id":"visit-990"
     }
 }
