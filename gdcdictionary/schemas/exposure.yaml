@@ -29,7 +29,7 @@ links:
     required: true
 
 preferred:
-  - cigarettes_per_day 
+  - cigarettes_per_day
   - years_smoked
 
 uniqueKeys:
@@ -75,6 +75,11 @@ properties:
     description: >
       Does the participant have insurance coverage?
     type: boolean
+
+  rodent_weight:
+    description: >
+      The weight of the rodent subject measured in grams
+    type: number
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
