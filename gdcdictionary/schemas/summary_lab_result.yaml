@@ -51,7 +51,6 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - follow_ups
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -170,32 +169,37 @@ properties:
 
   percent_infection:
     description: >
-      percentage of cells that infected by virus percent_infection.
+      percentage of cells that infected by virus.
     type: number
 
-  virus_titer_1:
+  virus_titer_rep1:
     description: >
       A numerical expression of the quantity of virus in a given volume in first test. It is expressed in plaque forming unites (pfu) per mL.
     type: integer
 
-  virus_titer_2:
+  virus_titer_rep2:
     description: >
       A numerical expression of the quantity of virus in a given volume in second test. It is expressed in plaque forming unites (pfu) per mL.
     type: integer
 
-  virus_titer_3:
+  virus_titer_rep3:
     description: >
       A numerical expression of the quantity of virus in a given volume in third test. It is expressed in plaque forming unites (pfu) per mL.
     type: integer
 
-  virus_titer_4:
+  virus_titer_rep4:
     description: >
       A numerical expression of the quantity of virus in a given volume in fourth test. It is expressed in plaque forming unites (pfu) per mL.
     type: integer
 
-  virus_titer_5:
+  virus_titer_rep5:
     description: >
       A numerical expression of the quantity of virus in a given volume in fifth test. It is expressed in plaque forming unites (pfu) per mL.
+    type: integer
+
+  titer_PFU_per_gram:
+    description: >
+      A numerical expression of the quantity of virus normalized by weight. It is expressed in plaque forming unites (pfu) per gram.
     type: integer
 
   follow_ups:
