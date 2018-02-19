@@ -79,7 +79,7 @@ properties:
   file_size:
     term:
       $ref: "_terms.yaml#/file_size"
-    type: number
+    type: integer
 
   md5sum:
     term:
