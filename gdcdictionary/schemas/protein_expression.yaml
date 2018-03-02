@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "mRNA_expression"
-title: mRNA Expression
+id: "protein_expression"
+title: Protein Expression
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing normalized mRNA expression.
+  Data file containing normalized protein expression.
 additionalProperties: false
 submittable: true
 validators: null
@@ -23,10 +23,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: mRNA_microarrays
-    backref: mRNA_expressions
-    label: derived_from
-    target_type: mRNA_microarray
+  - name: aliquots
+    backref: protein_expressions
+    label: data_for
+    target_type: aliquot
     multiplicity: one_to_many
     required: true
 
@@ -47,17 +47,17 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "mRNA_expression" ]
+    enum: [ "protein_expression" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Transcriptome Profiling
+      - Protein Profiling
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - mRNA Expression Quantification
+      - Protein Expression Quantification
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -69,15 +69,7 @@ properties:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - WGS
-      - WXS
-      - Low Pass WGS
-      - Validation
-      - RNA-Seq
-      - miRNA-Seq
-      - Total RNA-Seq
-      - DNA Panel
-      - RNA-microarray
+      - Mass Spectrometry
 
   file_name:
     term:
@@ -94,5 +86,5 @@ properties:
       $ref: "_terms.yaml#/md5sum"
     type: string
 
-  mRNA_microarrays:
+  aliquots:
     $ref: "_definitions.yaml#/to_many"
