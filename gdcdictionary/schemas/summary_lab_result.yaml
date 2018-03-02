@@ -197,6 +197,16 @@ properties:
       A numerical expression of the quantity of virus normalized by weight. It is expressed in plaque forming unites (pfu) per gram.
     type: integer
 
+  virus_NP_gRNA:
+    description: >
+      A numerical expression of the quantity of virus NP genomic RNA relative to RPL14 with log transformation.
+    type: number
+
+  virus_NP_mRNA:
+    description: >
+      A numerial expression of the quantity of virus NP mRNA level relative to RPL14 with log transformation.
+    type: number
+
   follow_ups:
     $ref: "_definitions.yaml#/to_one"
 
