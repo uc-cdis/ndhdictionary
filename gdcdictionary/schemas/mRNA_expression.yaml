@@ -94,5 +94,10 @@ properties:
       $ref: "_terms.yaml#/md5sum"
     type: string
 
+  urls:
+    term:
+      $ref:"_terms.yaml#/urls"
+    type: string
+
   mRNA_microarrays:
     $ref: "_definitions.yaml#/to_many"
