@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "protein_expression"
-title: Protein Expression
+id: "protein_mass_spectrometry"
+title: Protein Mass Spectrometry
 type: object
 namespace: http://gdc.nci.nih.gov
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing normalized protein expression.
+  Data file containing raw protein mass spectrometry data.
 additionalProperties: false
 submittable: true
 validators: null
@@ -24,18 +24,11 @@ systemProperties:
 
 links:
   - name: aliquots
-    backref: protein_expressions
+    backref: peptide_expressions
     label: data_for
     target_type: aliquot
-    multiplicity: one_to_many
+    multiplicity: many_to_one
     required: true
-
-  - name: peptide_expressions
-    backref: protein_expressions
-    label: derived_from
-    target_type: peptide_expression
-    multiplicity: one_to_one
-    required: false
 
 required:
   - submitter_id
@@ -54,7 +47,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "protein_expression" ]
+    enum: [ "protein_mass_spectrometry" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -64,7 +57,7 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - Protein Expression Quantification
+      - Protein Mass Spectrometry
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -72,6 +65,7 @@ properties:
       - TXT
       - TSV
       - CSV
+      - RAW
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
@@ -96,5 +90,3 @@ properties:
   aliquots:
     $ref: "_definitions.yaml#/to_many"
 
-  peptide_expressions:
-    $ref: "_definitions.yaml#/to_many"
