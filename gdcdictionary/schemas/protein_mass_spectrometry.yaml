@@ -24,7 +24,7 @@ systemProperties:
 
 links:
   - name: aliquots
-    backref: peptide_expressions
+    backref: protein_mass_spectrometries
     label: data_for
     target_type: aliquot
     multiplicity: many_to_one
