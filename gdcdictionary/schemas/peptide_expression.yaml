@@ -95,5 +95,5 @@ properties:
   aliquots:
     $ref: "_definitions.yaml#/to_many"
 
-  protein_mass_spectrometrys:
+  protein_mass_spectrometries:
     $ref: "_definitions.yaml#/to_many"
