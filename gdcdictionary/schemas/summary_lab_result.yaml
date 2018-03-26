@@ -195,7 +195,7 @@ properties:
   titer_PFU_per_gram:
     description: >
       A numerical expression of the quantity of virus normalized by weight. It is expressed in plaque forming unites (pfu) per gram.
-    type: integer
+    type: number
 
   virus_NP_gRNA:
     description: >
