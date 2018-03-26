@@ -29,7 +29,7 @@ links:
     target_type: aliquot
     multiplicity: one_to_many
     required: true
-  - name: protein_mass_spectrometrys
+  - name: protein_mass_spectrometries
     backref: peptide_expressions
     label: derived_from
     target_type: protein_mass_spectrometry

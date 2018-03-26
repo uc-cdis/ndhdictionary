@@ -97,4 +97,4 @@ properties:
     $ref: "_definitions.yaml#/to_many"
 
   peptide_expressions:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
