@@ -53,9 +53,14 @@ properties:
       A lower-level taxonomic rank used in microbiology or virology, plants and rodents, usually at the intraspecific level (within a species).
     type: string
 
-  influenza_virus_subtype:
+  virus_subtype:
     description: >
-      Influenza A viruses are divided into subtypes on the basis of two proteins on the surface of the virus: hemagglutinin (HA) and neuraminidase (NA).
+      Viruses are divided into subtypes on the basis of two proteins on the surface of the virus: hemagglutinin (HA) and neuraminidase (NA).
+    type: string
+
+  virus_type:
+    description: >
+      Virus type.
     type: string
 
   mutation_status:

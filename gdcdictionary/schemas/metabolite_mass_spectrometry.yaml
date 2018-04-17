@@ -66,6 +66,7 @@ properties:
       - TSV
       - CSV
       - RAW
+      - TAR
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
