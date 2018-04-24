@@ -1,0 +1,81 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "bgm_simulation"
+title: Bayesian Graph Model
+type: object
+namespace: https://niaid.bionimbus.org/
+category: data_file
+program: '*'
+project: '*'
+description: >
+  Data file containing the output from a bayesian graph model (BGM) simulation in graphical or text format.
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: mutation_panels
+        backref: bgm_simulations
+        label: data_from
+        target_type: mutation_panel
+        multiplicity: one_to_many
+        required: false
+      - name: core_metadata_records
+        backref: bgm_simulations 
+        label: data_from
+        target_type: core_metadata
+        multiplicity: one_to_one
+        required: false
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - file_name
+  - file_size
+  - md5sum
+  - data_category
+  - data_type
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  $ref: "_definitions.yaml#/data_file_properties"
+
+  data_category:
+    term:
+      $ref: "_terms.yaml#/data_category"
+    enum:
+      - BGM Simulation
+
+  data_type:
+    term:
+      $ref: "_terms.yaml#/data_type"
+    enum: [ "BGM Simulation" ]
+
+  data_format:
+    term:
+      $ref: "_terms.yaml#/data_format"
+    enum: 
+      - TSV
+      - TXT
+      - CSV
+      - PNG
+
+  mutation_panels:
+    $ref: "_definitions.yaml#/to_many"
+
+  core_metadata_records:
+    $ref: "_definitions.yaml#/to_one"
