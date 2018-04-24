@@ -74,7 +74,7 @@ properties:
       - CSV
       - PNG
 
-  subjects:
+  mutation_panels:
     $ref: "_definitions.yaml#/to_many"
 
   core_metadata_records:
