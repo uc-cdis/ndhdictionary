@@ -89,7 +89,9 @@ properties:
       - Unknown
 
   treatment_type:
-    $ref: "_terms.yaml#/treatment_type"
+    term:
+      $ref: "_terms.yaml#/treatment_type"
+    type: string
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
