@@ -73,21 +73,6 @@ properties:
     enum:
       - Liquid chromatography-tandem mass spectrometry
 
-  file_name:
-    term:
-      $ref: "_terms.yaml#/file_name"
-    type: string
-
-  file_size:
-    term:
-      $ref: "_terms.yaml#/file_size"
-    type: number
-
-  md5sum:
-    term:
-      $ref: "_terms.yaml#/md5sum"
-    type: string
-
   aliquots:
     $ref: "_definitions.yaml#/to_many"
 
