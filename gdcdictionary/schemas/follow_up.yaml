@@ -118,6 +118,7 @@ properties:
   weight_percentage:
     description: >
       The percentage of the weight considering the weight measured at the index date as the reference.
+    type: number
 
   visit_date:
     description: >

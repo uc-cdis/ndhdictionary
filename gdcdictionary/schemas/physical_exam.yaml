@@ -128,11 +128,6 @@ properties:
 
   range_of_motion_arms:
     description: >
-      Limited range of motion of arms: Shoulders and elbow. If not normal, explain
-    type: string
-
-  range_of_motion_arms:
-    description: >
       Limited range of motion of legs: Hip and knee. If not normal, explain
     type: string
 

@@ -51,7 +51,6 @@ required:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
-
   $ref: "_definitions.yaml#/data_file_properties"
 
   data_category:

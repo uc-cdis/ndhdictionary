@@ -71,20 +71,5 @@ properties:
     enum:
       - RNA-microarray
 
-  file_name:
-    term:
-      $ref: "_terms.yaml#/file_name"
-    type: string
-
-  file_size:
-    term:
-      $ref: "_terms.yaml#/file_size"
-    type: integer
-
-  md5sum:
-    term:
-      $ref: "_terms.yaml#/md5sum"
-    type: string
-
   aliquots:
     $ref: "_definitions.yaml#/to_many"
