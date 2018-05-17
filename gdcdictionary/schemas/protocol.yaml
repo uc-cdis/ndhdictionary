@@ -45,9 +45,8 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  $ref: 
-      - "_definitions.yaml#/ubiquitous_properties"
-      - "_definitions.yaml#/data_file_properties"
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+  $ref: "_definitions.yaml#/data_file_properties"
 
   data_category:
     term:
