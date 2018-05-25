@@ -20,25 +20,25 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: projects
+  - name: studies
     backref: publications
     label: refers_to
-    target_type: project
+    target_type: study
     multiplicity: many_to_many
     required: true
 
 required:
   - submitter_id
   - type
-  - projects
+  - studies
 
 uniqueKeys:
   - [ id ]
-  - [ project_id, submitter_id ] 
+  - [ project_id, submitter_id ]
 
 properties:
   type:
-    enum: [ "publication" ] 
+    enum: [ "publication" ]
   id:
     $ref: "_definitions.yaml#/UUID"
     systemAlias: node_id
@@ -48,11 +48,31 @@ properties:
     type:
       - string
       - "null"
-  pmid:
+  authors:
+    description: >
+      list of authors of the article
     type: string
   doi:
+    description: >
+      Digital object identifier (DOI) is a type of persistent identifier used to uniquely identify objects
+    type: integer
+ issue:
+    description: >
+      Journal issue in which the article was published
     type: string
-  projects:
+  journal:
+    description: >
+      Publication in which the article appears
+    type: string
+  pmid:
+    description: >
+      Pubmed identifier for the article
+    type: integer    
+  title:
+    description: >
+      Title of the article as it appears in Pubmed
+    type: string
+  studies:
     $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
