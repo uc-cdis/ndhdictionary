@@ -4,7 +4,7 @@ id: "supplementary_file"
 title: Supplementary File
 type: object
 namespace: http://gdc.nci.nih.gov
-category: administrative
+category: metadata_file
 program: '*'
 project: '*'
 description: >
@@ -23,7 +23,7 @@ systemProperties:
 links:
   - name: studies
     backref: supplementary_files
-    label: describes
+    label: refers_to
     target_type: study
     multiplicity: many_to_one
     required: TRUE

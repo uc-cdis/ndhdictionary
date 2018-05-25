@@ -56,7 +56,7 @@ properties:
     description: >
       Digital object identifier (DOI) is a type of persistent identifier used to uniquely identify objects
     type: integer
- issue:
+  issue:
     description: >
       Journal issue in which the article was published
     type: string
