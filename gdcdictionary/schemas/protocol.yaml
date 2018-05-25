@@ -56,11 +56,15 @@ properties:
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
-    enum: [ "Experimental Metadata" ]
+    enum: [ "Protocol File" ]
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     type:
       - string
+  protocol_description:
+    description: >
+      Free text to expand upon details
+    type: string      
   studies:
     $ref: "_definitions.yaml#/to_many"
