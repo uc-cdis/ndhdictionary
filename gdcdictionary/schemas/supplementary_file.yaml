@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "protocol"
-title: Protocol
+id: "supplementary_file"
+title: Supplementary File
 type: object
 namespace: http://gdc.nci.nih.gov
 category: metadata_file
-project: '*'
 program: '*'
+project: '*'
 description: >
-  Data file containing the metadata for the experiment performed.
+  Supplementary files associated to any study
 additionalProperties: false
 submittable: true
 validators: null
@@ -16,22 +16,25 @@ validators: null
 systemProperties:
   - id
   - project_id
+  - state
   - created_datetime
   - updated_datetime
-  - state
-  - file_state
-  - error_type
 
 links:
   - name: studies
-    backref: protocols
-    label: derived_from
+    backref: supplementary_files
+    label: refers_to
     target_type: study
-    multiplicity: many_to_many
-    required: false
+    multiplicity: many_to_one
+    required: TRUE
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
 
 required:
   - submitter_id
+  - studies
   - type
   - file_name
   - file_size
@@ -48,23 +51,49 @@ properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
   $ref: "_definitions.yaml#/data_file_properties"
 
+  file_description:
+    description: >
+      Free text to expand upon details
+    type: string
+
+  file_name:
+    description: >
+      File name
+    type: string
+
+  data_type:
+    description: >
+      Study file type
+    enum:
+      - "Adverse Events"
+      - "Assessment Results"
+      - "Case Report Form"
+      - "Concomitant Medications"
+      - "Data Dictionary"
+      - "Demographics"
+      - "Interventions"
+      - "Lab Test Results"
+      - "Study Data"
+      - "Study Medication"
+      - "Study Summary Description"
+      - "Substance Use"
+
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     type:
       - string
-  data_type:
-    term:
-      $ref: "_terms.yaml#/data_type"
-    enum: [ "Protocol File" ]
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     type:
       - string
+
   protocol_description:
     description: >
       Free text to expand upon details
-    type: string      
+    type: string     
+
   studies:
     $ref: "_definitions.yaml#/to_many"

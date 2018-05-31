@@ -61,6 +61,11 @@ properties:
           55= 2010 recruit - Columbus, OH
     type: integer
 
+  cohort_name:
+    description: >
+      Cohort identifier:
+    type: string
+
   study_center:
     description: >
       Study Site (where enrolled)
