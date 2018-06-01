@@ -56,11 +56,6 @@ properties:
       Free text to expand upon details
     type: string
 
-  file_name:
-    description: >
-      File name
-    type: string
-
   data_type:
     description: >
       Study file type
