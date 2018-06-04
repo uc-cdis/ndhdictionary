@@ -53,12 +53,7 @@ properties:
 
   file_description:
     description: >
-      Free text to expand upon details
-    type: string
-
-  file_name:
-    description: >
-      File name
+      Free text to expand upon details for this file
     type: string
 
   data_type:
