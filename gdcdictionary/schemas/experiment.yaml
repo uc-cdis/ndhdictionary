@@ -40,14 +40,14 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  description:
+  experiment_description:
     description: >
-      Free text to expand upon details
+      Free text to expand upon details about experiment
     type: string
 
   measurement_technique:
     description: >
-      Technique used to maeasure results in this experiment.
+      Technique used to measure results in this experiment.
     type: string
 
   experiment_type:

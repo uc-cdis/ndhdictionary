@@ -89,9 +89,9 @@ properties:
     term:
       $ref: "_terms.yaml#/concentration"
     type: number
-  description:
+  aliquot_description:
     description: >
-      Free text to expand upon details
+      Free text to describe the aliquot.
     type: string
   project_id:
     $ref: "_definitions.yaml#/project_id"
