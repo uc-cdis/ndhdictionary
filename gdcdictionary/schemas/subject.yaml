@@ -33,7 +33,6 @@ required:
   - submitter_id
   - type
   - studies
-  - cohort_id
 
 uniqueKeys:
   - [id]
@@ -63,7 +62,7 @@ properties:
 
   cohort_name:
     description: >
-      Cohort identifier:
+      Cohort identifier
     type: string
 
   study_center:
