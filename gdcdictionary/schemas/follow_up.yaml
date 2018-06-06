@@ -37,9 +37,6 @@ required:
   - submitter_id
   - type
   - subjects
-  - visit_number
-  - visit_type
-  - version_data
 
 uniqueKeys:
   - [id]
