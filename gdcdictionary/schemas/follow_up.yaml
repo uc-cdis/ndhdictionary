@@ -91,12 +91,12 @@ properties:
 
   visit_number:
     description: >
-      MACS/WIHS visit number
+      Visit number
     type: integer
 
   visit_id:
     description: >
-      MACS/WIHS ID at time of interview (prior to transfer)
+      ID at time of interview (prior to transfer)
     type: integer
 
   visit_type:
