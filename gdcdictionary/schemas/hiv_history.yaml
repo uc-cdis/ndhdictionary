@@ -42,7 +42,7 @@ properties:
 
   bsdate:
     description: >
-      Baseline year. First year in the WIHS
+      Baseline year. First year enrolled.
     type: integer
 
   bsvisit:
@@ -251,7 +251,7 @@ properties:
 
   cd4nadir:
     description: >
-      HAART experienced only, CD4 nadir prior to HAART initiation (measured during WIHS followup or at HAART initiation for HAART- experienced recruits)
+      HAART experienced only, CD4 nadir prior to HAART initiation (measured during followup or at HAART initiation for HAART- experienced recruits)
     type: integer
 
   bshcvstat:

@@ -55,6 +55,11 @@ properties:
       LDL Cholesterol measured directly in the laboratory (mg/dL)
     type: number
 
+  ldlcholc:
+    description: >
+      LDL Cholesterol calculated from other measurements (mg/dL)
+    type: number
+
   chol_hdl_ration:
     description: >
       Cholesterol/HDL ratio
