@@ -22,7 +22,7 @@ systemProperties:
   - updated_datetime
 
 links:
-  - exclusive: true
+  - exclusive: false
     required: true
     subgroup:
       - name: follow_ups
