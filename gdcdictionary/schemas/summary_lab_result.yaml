@@ -29,7 +29,7 @@ links:
         backref: summary_lab_results
         label: performed_at
         target_type: follow_up
-        multiplicity: one_to_one
+        multiplicity: many_to_one
         required: false
 
       - name: samples
