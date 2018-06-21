@@ -99,6 +99,11 @@ properties:
       ID at time of interview (prior to transfer)
     type: integer
 
+  visit_name:
+    description: >
+      Visit ID (string)
+    type: string
+
   visit_type:
     description: >
       Define if the visit is a follow-up or the baseline visit.
