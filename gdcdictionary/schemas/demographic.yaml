@@ -64,11 +64,14 @@ properties:
     term:
       $ref: "_terms.yaml#/race"
     enum:
+      - Asian
       - White
       - Black
       - Multi-racial
       - Asian/Pacific Islander
       - American Indian or Alaskan Native
+      - Unspecified
+      - Unknown
       - Other
 
   ethnicity:
