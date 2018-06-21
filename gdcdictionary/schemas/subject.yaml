@@ -191,6 +191,12 @@ properties:
       - First Patient Visit
       - Study Enrollment
       - Infection
+      - Postmenstrual
+      - Baseline Visit
+      - Initial Treatment
+      - Vaccine Administration
+      - Not Specified
+      - Other
 
   studies:
     $ref: "_definitions.yaml#/to_one"
