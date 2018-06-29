@@ -32,6 +32,12 @@ links:
     target_type: subject
     multiplicity: many_to_one
     required: true
+  - name: studies
+    backref: follow_ups
+    label: data_from
+    target_type: study
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
