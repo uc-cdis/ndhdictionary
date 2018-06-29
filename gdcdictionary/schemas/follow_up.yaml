@@ -145,3 +145,6 @@ properties:
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
+
+  studies:
+    $ref: "_definitions.yaml#/to_one"
