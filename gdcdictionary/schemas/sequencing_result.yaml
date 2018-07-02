@@ -59,6 +59,8 @@ properties:
     enum:
       - 16s Ribosome Sequencing OTU Results
       - 16s Ribosome Sequencing ASV Results
+      - cfDNA Sequencing Results
+      - cfDNA Sequencing OTU Results
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
