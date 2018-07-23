@@ -1,9 +1,9 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "miRNA_microarray"
+id: "mirna_microarray"
 title: miRNA Microarray
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://niaid.bionimbus.org
 category: data_file
 program: '*'
 project: '*'
@@ -24,7 +24,7 @@ systemProperties:
 
 links:
   - name: aliquots
-    backref: miRNA_microarrays
+    backref: mirna_microarrays
     label: data_for
     target_type: aliquot
     multiplicity: one_to_one
@@ -47,7 +47,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "miRNA_microarray" ]
+    enum: [ "mirna_microarray" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"

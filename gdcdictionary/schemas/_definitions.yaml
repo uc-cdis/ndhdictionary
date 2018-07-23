@@ -178,6 +178,7 @@ data_file_properties:
   error_type:
     $ref: "#/data_file_error_type"
 
+
 workflow_properties:
   $ref: "#/ubiquitous_properties"
   workflow_link:
