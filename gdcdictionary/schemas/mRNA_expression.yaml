@@ -1,9 +1,9 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "mRNA_expression"
+id: "mrna_expression"
 title: mRNA Expression
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: http://niaid.bionimbus.org
 category: data_file
 program: '*'
 project: '*'
@@ -23,10 +23,10 @@ systemProperties:
   - error_type
 
 links:
-  - name: mRNA_microarrays
-    backref: mRNA_expressions
+  - name: mrna_microarrays
+    backref: mrna_expressions
     label: derived_from
-    target_type: mRNA_microarray
+    target_type: mrna_microarray
     multiplicity: one_to_many
     required: true
 
@@ -47,7 +47,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "mRNA_expression" ]
+    enum: [ "mrna_expression" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
@@ -94,5 +94,5 @@ properties:
       $ref: "_terms.yaml#/md5sum"
     type: string
 
-  mRNA_microarrays:
+  mrna_microarrays:
     $ref: "_definitions.yaml#/to_many"
