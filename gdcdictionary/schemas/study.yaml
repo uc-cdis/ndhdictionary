@@ -42,9 +42,28 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+  age_unit:
+    description: >
+      Age unit used in this study
+    enum:
+      - "Days"
+      - "Hours"
+      - "Minutes"
+      - "Months"
+      - "Not Specified"
+      - "Seconds"
+      - "Weeks"
+      - "Years"
+      - "d.p.c."
+
   data_description:
     description: "Brief description of the data being provided for this study. Free text"
     type: string
+
+  is_clinical_trial:
+    description: >
+      Flag that indicates whether this is a clinical trial study
+    type: boolean
 
   study_description:
     description: "A brief description of the study being performed. Free text"
@@ -54,26 +73,49 @@ properties:
     description: >
       Summary of the goals the study is designed to discover. General description of the
       study's place in relation to a clinical application.
-    enum:
-      - Research/Early Development
-      - Pre-Analytical
-      - Analytical
-      - Clinical
-      - Clinical Assay
-      - Clinical Utility
+    type: string
 
   study_objective:
     description: >
       The general objective of the study. What the study hopes to discover or determine
       through testing.
+    type: string
+
+  study_completeness:
+    description: >
+      Description of data status. 
+      0=Descriptive data and results as originally received from the data provider. 
+      1=Includes updates to the original data submission short of completeness.
+      2=Complete set of descriptive data and results, as ascertained by curator.
     enum:
-      - Accuracy
-      - Interference
-      - Limit of Detection
-      - Precision (Repeatability)
-      - Precision (Reproducibility)
-      - Specificity/Sensitivity
-      - Stability
+      - "0"
+      - "1"
+      - "2"
+
+  study_doi:
+    description: >
+      Digital object identifier (DOI) is a type of persistent identifier used to uniquely identify objects
+    type: string
+
+  study_release_date:
+    description: >
+      Latest date when the study was shared
+    type: string
+
+  study_release_version:
+    description: >
+      Latest version of study shared
+    type: string
+
+  study_organization:
+    description: >
+      Name of the primary organization that oversees implementation of the study
+    type: string
+
+  study_setup:
+    description: >
+      Category
+    type: string
 
   projects:
     $ref: "_definitions.yaml#/to_one"

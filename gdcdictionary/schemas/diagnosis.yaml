@@ -117,7 +117,7 @@ properties:
 
   visit_id:
     description: >
-      MACS visit identifier
+      Visit identifier
     type: integer
 
   year_of_diagnosis:

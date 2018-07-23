@@ -114,6 +114,7 @@ properties:
       - Breast
       - Broad Ligament
       - Bronchiole
+      - Bronchoalveolar Lavage Fluid
       - Bronchus
       - Brow
       - Buccal Cavity
@@ -142,9 +143,11 @@ properties:
       - Clitoris
       - Colon
       - Colon - Mucosa Only
+      - Colonic Lamina Propria
       - Common Duct
       - Conjunctiva
       - Connective Tissue
+      - Cord Blood
       - Dermal
       - Descending Colon
       - Diaphragm
@@ -157,6 +160,7 @@ properties:
       - Endocrine Gland
       - Epididymis
       - Epidural Space
+      - Epithelium
       - Esophagogastric Junction
       - Esophagus
       - Esophagus - Mucosa Only
@@ -179,6 +183,7 @@ properties:
       - Fundus Of Stomach
       - Gallbladder
       - Ganglia
+      - Gastric Lamina Propria
       - Gastroesophageal Junction
       - Gastrointestinal Tract
       - Groin
@@ -218,6 +223,7 @@ properties:
       - Lung
       - Lymph Node
       - Lymph Node(s) Axilla
+      - Lymph Node(s) Brachial
       - Lymph Node(s) Cervical
       - Lymph Node(s) Distant
       - Lymph Node(s) Epitrochlear
@@ -227,6 +233,7 @@ properties:
       - Lymph Node(s) Iliac-External
       - Lymph Node(s) Inguinal
       - Lymph Node(s) Internal Mammary
+      - Lymph Node(s) Lung
       - Lymph Node(s) Mammary
       - Lymph Node(s) Mesenteric
       - Lymph Node(s) Occipital
@@ -254,6 +261,7 @@ properties:
       - Nails
       - Nasal Cavity
       - Nasal Soft Tissue
+      - Nasal Lavage Fluid
       - Nasopharynx
       - Neck
       - Nerve
@@ -296,6 +304,7 @@ properties:
       - Ring Finger
       - Round Ligament
       - Sacrum
+      - Saliva
       - Salivary Gland
       - Scalp
       - Scapula
@@ -304,6 +313,8 @@ properties:
       - Seminal Vesicle
       - Shoulder
       - Sigmoid Colon
+      - Synovial Fluid
+      - Synovial Tissue
       - Sinus
       - Sinus(es), Maxillary
       - Skeletal Muscle
@@ -340,9 +351,11 @@ properties:
       - Transverse Colon
       - Trunk
       - Umbilical Cord
+      - Umbilical Cord Blood
       - Ureter
       - Urethra
       - Urinary Tract
+      - Urine
       - Uterus
       - Uvula
       - Vagina
@@ -351,7 +364,7 @@ properties:
       - Venous
       - Vertebra
       - Vulva
-      - White Blood Cells
+
       - Wrist
       - Unknown
       - Not Reported
@@ -360,18 +373,14 @@ properties:
     term:
       $ref: "_terms.yaml#/composition"
     enum:
+      - B cell
       - Buccal Cells
       - Buffy Coat
       - Bone Marrow Components
       - Bone Marrow Components NOS
-      - Control Analyte
       - Cell
-      - Circulating Tumor Cell (CTC)
-      - Derived Cell Line
-      - EBV Immortalized
       - Fibroblasts from Bone Marrow Normal
       - Granulocytes
-      - Human Original Cells
       - Lymphocytes
       - Mononuclear Cells from Bone Marrow Normal
       - Peripheral Blood Components NOS
@@ -380,14 +389,22 @@ properties:
       - Plasma
       - Peripheral Whole Blood
       - Serum
-      - Saliva
-      - Sputum
       - Solid Tissue
       - Whole Bone Marrow
       - Unknown
+      - Macrophage
+      - Monocyte
       - Not Reported
       - Not Allowed To Collect
       - Supernatant
+      - White Blood Cells
+      - Peripheral Blood Molecular Cell
+      - Carbohydrate
+      - Red Blood Cell
+      - T cell
+      - Dendritic cell
+      - NK cell
+      - Neutrophil
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
@@ -515,8 +532,6 @@ properties:
       - cfDNA
       - Circulating Tumor Cell (CTC)
       - Control Analyte
-      - Clinical
-      - Contrived
       - ctDNA
       - DNA
       - EBV Immortalized Normal
@@ -524,16 +539,16 @@ properties:
       - FFPE Scrolls
       - Fibroblasts from Bone Marrow Normal
       - GenomePlex (Rubicon) Amplified DNA
-      - Granulocytes
       - Human Tumor Original Cells
+      - Lipid
       - Metastatic
       - Mononuclear Cells from Bone Marrow Normal
       - Primary Blood Derived Cancer - Peripheral Blood
       - Recurrent Blood Derived Cancer - Peripheral Blood
-      - Pleural Effusion
       - Primary Blood Derived Cancer - Bone Marrow
       - Primary Tumor
       - Primary Xenograft Tissue
+      - Protein
       - Post neo-adjuvant therapy
       - Recurrent Blood Derived Cancer - Bone Marrow
       - Recurrent Tumor

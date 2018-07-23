@@ -44,12 +44,12 @@ properties:
 
   first_macs_visit_haart:
     description: >
-      First MACS visit reported HAART
+      First visit reported HAART
     type: number
 
   last_macs_visit_haart_free:
     description: >
-      Last MACS visit reported HAART-free
+      Last visit reported HAART-free
     type: integer
 
   regimen_or_line_of_therapy:
@@ -91,6 +91,7 @@ properties:
   treatment_type:
     term:
       $ref: "_terms.yaml#/treatment_type"
+    type: string
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"

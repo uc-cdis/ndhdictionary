@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "mrna_microarray"
-title: mRNA Microarray
+id: "sequencing_result"
+title: Sequencing Result
 type: object
-namespace: http://niaid.bionimbus.org
+namespace: http://ndh.bionimbus.org
 category: data_file
 program: '*'
 project: '*'
 description: >
-  Data file containing raw mRNA microarray intensity.
+  Data file containing different sequencing results
 additionalProperties: false
 submittable: true
 validators: null
@@ -23,11 +23,11 @@ systemProperties:
   - error_type
 
 links:
-  - name: aliquots
-    backref: mrna_microarrays
-    label: data_for
-    target_type: aliquot
-    multiplicity: one_to_one
+  - name: experiments
+    backref: sequencing_results
+    label: data_from
+    target_type: experiment
+    multiplicity: one_to_many
     required: true
 
 required:
@@ -47,17 +47,20 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
   type:
-    enum: [ "mrna_microarray" ]
+    enum: [ "sequencing_result" ]
   data_category:
     term:
       $ref: "_terms.yaml#/data_category"
     enum:
-      - Transcriptome Profiling
+      - Microbial Analysis
   data_type:
     term:
       $ref: "_terms.yaml#/data_type"
     enum:
-      - mRNA Expression Quantification
+      - 16s Ribosome Sequencing OTU Results
+      - 16s Ribosome Sequencing ASV Results
+      - cfDNA Sequencing Results
+      - cfDNA Sequencing OTU Results
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -65,11 +68,16 @@ properties:
       - TXT
       - TSV
       - CSV
+      - TAR
   experimental_strategy:
     term:
       $ref: "_terms.yaml#/experimental_strategy"
     enum:
-      - RNA-microarray
+      - Ribosome Sequencing Experiment
+      - Targeted Ribosome Sequencing Experiment
+      - Sequencing Experiment
+      - Targeted Sequencing Experiment
 
-  aliquots:
+  experiments:
     $ref: "_definitions.yaml#/to_many"
+

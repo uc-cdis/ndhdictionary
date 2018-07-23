@@ -78,7 +78,6 @@ properties:
       - Total RNA-Seq
       - DNA Panel
       - RNA-microarray
-
   file_name:
     term:
       $ref: "_terms.yaml#/file_name"
