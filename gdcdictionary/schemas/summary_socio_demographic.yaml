@@ -67,7 +67,7 @@ properties:
     enum:
       - "Own house/apartment"
       - "Parent's house"
-      - "Someone else's house/ apartment"
+      - "Someone else's house/apartment"
       - "Rooming/boarding/halfway house"
       - "Shelter/welfare hotel"
       - "Street"

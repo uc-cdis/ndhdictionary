@@ -22,14 +22,14 @@ systemProperties:
   - updated_datetime
 
 links:
-  - exclusive: true
+  - exclusive: false
     required: true
     subgroup:
       - name: follow_ups
         backref: summary_lab_results
         label: performed_at
         target_type: follow_up
-        multiplicity: one_to_one
+        multiplicity: many_to_one
         required: false
 
       - name: samples
@@ -49,6 +49,41 @@ required:
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  ldlchold:
+    description: >
+      LDL Cholesterol measured directly in the laboratory (mg/dL)
+    type: number
+
+  ldlcholc:
+    description: >
+      LDL Cholesterol calculated from other measurements (mg/dL)
+    type: number
+
+  chol_hdl_ration:
+    description: >
+      Cholesterol/HDL ratio
+    type: number
+
+  chol:
+    description: >
+      Cholesterol (mg/dL)      
+    type: number
+
+  triglyc:
+    description: >
+      Triglycerides (mg/dL)
+    type: number
+
+  hdlchol:
+    description: >
+      HDL Cholesterol (mg/dL)
+    type: number
+
+  ldlchold_ratio:
+    description: >
+      LDL/HDL Cholesterol ratio
+    type: number
 
   cd4dt:
     description: >

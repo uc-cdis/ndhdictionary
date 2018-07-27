@@ -32,14 +32,17 @@ links:
     target_type: subject
     multiplicity: many_to_one
     required: true
+  - name: studies
+    backref: follow_ups
+    label: data_from
+    target_type: study
+    multiplicity: many_to_one
+    required: false
 
 required:
   - submitter_id
   - type
   - subjects
-  - visit_number
-  - visit_type
-  - version_data
 
 uniqueKeys:
   - [id]
@@ -94,13 +97,18 @@ properties:
 
   visit_number:
     description: >
-      MACS/WIHS visit number
+      Visit number
     type: integer
 
   visit_id:
     description: >
-      MACS/WIHS ID at time of interview (prior to transfer)
+      ID at time of interview (prior to transfer)
     type: integer
+
+  visit_name:
+    description: >
+      Visit ID (string)
+    type: string
 
   visit_type:
     description: >
@@ -118,6 +126,7 @@ properties:
   weight_percentage:
     description: >
       The percentage of the weight considering the weight measured at the index date as the reference.
+    type: number
 
   visit_date:
     description: >
@@ -135,4 +144,7 @@ properties:
     type: integer
 
   subjects:
+    $ref: "_definitions.yaml#/to_one"
+
+  studies:
     $ref: "_definitions.yaml#/to_one"

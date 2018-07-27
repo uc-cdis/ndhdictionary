@@ -20,16 +20,16 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: projects
+  - name: studies
     backref: keywords
     label: describe
-    target_type: project
+    target_type: study
     multiplicity: many_to_many
     required: true
 
 required:
   - submitter_id
-  - projects
+  - studies
 
 uniqueKeys:
   - [ id ]
@@ -50,7 +50,10 @@ properties:
   keyword_name:
     description: "The name of the keyword."
     type: string
-  projects:
+  keyword_definition:
+    description: "Description of the keyword."
+    type: string
+  studies:
     $ref: "_definitions.yaml#/to_many"
   project_id:
     type: string
