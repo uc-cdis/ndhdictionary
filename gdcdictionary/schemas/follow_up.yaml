@@ -67,7 +67,7 @@ properties:
       - "No"
       - "Yes"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
 
   ever_transferred:
     description: >

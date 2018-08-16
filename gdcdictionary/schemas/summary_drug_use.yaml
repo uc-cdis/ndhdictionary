@@ -702,7 +702,7 @@ properties:
       - "I haven't taken any of my prescribed medications"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   tmpv:

@@ -53,7 +53,7 @@ properties:
       - "Other"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   marsp:
@@ -76,7 +76,7 @@ properties:
       - "Other place"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   residsp:
@@ -92,7 +92,7 @@ properties:
       - "No"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   insurance:
@@ -103,7 +103,7 @@ properties:
       - "No"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   income:
@@ -120,7 +120,7 @@ properties:
       - "> $75000"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   drink_status:
@@ -130,7 +130,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   ndrnkwk:
@@ -148,7 +148,7 @@ properties:
       - ">12 drinks/wk"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   smoke_status:
@@ -181,7 +181,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   crackuse:
@@ -191,7 +191,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   cocuse:
@@ -201,7 +201,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   heruse:
@@ -211,7 +211,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   mdonuse:
@@ -221,7 +221,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   mthause:
@@ -236,7 +236,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   idu:
@@ -246,7 +246,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   nidu:
@@ -256,7 +256,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   recrxuse:
@@ -266,7 +266,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   mdonrxuse:
@@ -276,7 +276,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   sbxnrxuse:
@@ -286,7 +286,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   msex6mo:
@@ -362,7 +362,7 @@ properties:
       - "Spanish"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   ageatbl:
@@ -383,7 +383,7 @@ properties:
       - "Attended/Completed graduate school"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   sexident:
@@ -396,7 +396,7 @@ properties:
       - "Other"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basepot:
@@ -455,7 +455,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basesbxnrx:
@@ -466,7 +466,7 @@ properties:
       - "No"
       - "Not asked at B/L for 1994/95, 2001/02, 2011-13 recruits"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basesex:
@@ -480,7 +480,7 @@ properties:
       - "More than 100 partners"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basetran:
@@ -491,7 +491,7 @@ properties:
       - "No"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basemsex:
@@ -506,7 +506,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basemhem:
@@ -516,7 +516,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basemhiv:
@@ -526,7 +526,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basemman:
@@ -536,7 +536,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basefsex:
@@ -551,7 +551,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   basefhiv:
@@ -561,7 +561,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   paidsex:
@@ -572,7 +572,7 @@ properties:
       - "No"
       - "NA (Skipped)"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   riskcat:
@@ -592,7 +592,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   v20evndl:
@@ -602,7 +602,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   v24idu:
@@ -612,7 +612,7 @@ properties:
       - "Yes"
       - "No"
       - "Refusal"
-      - "Don't know"
+      - "Unknown"
       - "Missing"
 
   version:

@@ -99,7 +99,7 @@ properties:
       - Lesbian/Gay
       - Other
       - Refusal
-      - "Don't know"
+      - "Unknown"
 
   vital_status:
     term:
