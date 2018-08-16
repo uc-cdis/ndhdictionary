@@ -420,7 +420,7 @@ properties:
     enum:
       - "Positive"
       - "Negative"
-      - "Don't know"
+      - "Unknown"
 
   oinf1:
     description: >
@@ -520,7 +520,7 @@ properties:
     enum:
       - "Positive"
       - "Negative"
-      - "Don't know"
+      - "Unknown"
 
   orin1:
     description: >
@@ -578,7 +578,7 @@ properties:
     enum:
       - "Positive"
       - "Negative"
-      - "Don't know"
+      - "Unknown"
 
   aejm1:
     description: >

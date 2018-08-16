@@ -57,7 +57,7 @@ properties:
       - Normal
       - Increased
       - Refusal
-      - Don't know
+      - Unknown
 
   vaginal_discharge_color:
     description: >
@@ -67,7 +67,7 @@ properties:
       - Yellow/Green
       - Brown/Blood
       - Refusal
-      - Don't know
+      - Unknown
 
   vaginal_discharge_character_mucoid:
     description: >
@@ -76,7 +76,7 @@ properties:
       - Circled
       - Not Circled
       - Refusal
-      - Don't know
+      - Unknown
 
   vaginal_discharge_character_purulent:
     description: >
@@ -85,7 +85,7 @@ properties:
       - Circled
       - Not Circled
       - Refusal
-      - Don't know
+      - Unknown
 
   vaginal_discharge_character_curdy:
     description: >
@@ -94,7 +94,7 @@ properties:
       - Circled
       - Not Circled
       - Refusal
-      - Don't know
+      - Unknown
 
   vaginal_discharge_character_nonfloccular:
     description: >
@@ -103,7 +103,7 @@ properties:
       - Circled
       - Not Circled
       - Refusal
-      - Don't know
+      - Unknown
 
   vaginal_discharge_character_frothy:
     description: >
@@ -112,7 +112,7 @@ properties:
       - Circled
       - Not Circled
       - Refusal
-      - Don't know
+      - Unknown
 
   vaginal_discharge_character_bloody:
     description: >
@@ -121,7 +121,7 @@ properties:
       - Circled
       - Not Circled
       - Refusal
-      - Don't know
+      - Unknown
 
   cervix_presence:
     description: >
@@ -130,7 +130,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   cervical_exam_done:
     description: >
@@ -144,7 +144,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   ectopy_presence:
     description: >
@@ -153,7 +153,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   friability_presence:
     description: >
@@ -162,7 +162,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   exudate_presence:
     description: >
@@ -171,7 +171,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   cervical_discharge_color:
     description: >
@@ -181,7 +181,7 @@ properties:
       - Yellow/Green
       - Brown/Blood
       - Refusal
-      - Don't know
+      - Unknown
 
   cervical_motion_tenderness:
     description: >
@@ -190,7 +190,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   uterus_presence:
     description: >
@@ -199,7 +199,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   uterine_tenderness:
     description: >
@@ -208,7 +208,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   uterine_enlargement:
     description: >
@@ -217,7 +217,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   adnexae_presence:
     description: >
@@ -226,7 +226,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   adnexae_right_tenderness:
     description: >
@@ -235,7 +235,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   adnexae_left_tenderness:
     description: >
@@ -244,7 +244,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   adnexae_right_mass:
     description: >
@@ -253,7 +253,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   adnexae_left_mass:
     description: >
@@ -262,7 +262,7 @@ properties:
       - Present
       - Absent
       - Refusal
-      - Don't know
+      - Unknown
 
   lesions_count:
     description: >
@@ -279,7 +279,7 @@ properties:
       - not obtanied
       - not read
       - Refusal
-      - Don’t know
+      - Unknown
 
   clue_cells_test:
     description: >
@@ -291,7 +291,7 @@ properties:
       - not obtanied
       - not read
       - Refusal
-      - Don’t know
+      - Unknown
 
   clue_cells_percentage:
     description: >
@@ -300,7 +300,7 @@ properties:
       - "<20%"
       - ">=20%"
       - "Refusal"
-      - "Don’t know"
+      - "Unknown"
 
   increased_wbcs:
     description: >
@@ -312,7 +312,7 @@ properties:
       - not obtanied
       - not read
       - Refusal
-      - Don’t know
+      - Unknown
 
   yeast_koh_test:
     description: >
@@ -324,7 +324,7 @@ properties:
       - not obtanied
       - not read
       - Refusal
-      - Don’t know
+      - Unknown
 
   amine_odor_koh_test:
     description: >
@@ -336,7 +336,7 @@ properties:
       - not obtanied
       - not read
       - Refusal
-      - Don’t know
+      - Unknown
 
   clinical_impression_lesions:
     description: >
