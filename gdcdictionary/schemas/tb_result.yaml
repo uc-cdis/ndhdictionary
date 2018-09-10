@@ -1,0 +1,89 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "tb_result"
+title: TB Result
+type: object
+namespace: https://niaid.bionimbus.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Tuberculosis test Values obtained from laboratory tests
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: subjects
+    backref: tb_results
+    label: performed_on
+    target_type: subject
+    multiplicity: many_to_one
+    required: true
+
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+required:
+  - submitter_id
+  - type
+  - subjects
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  test_type:
+    description: >
+      Type of DST test
+    enum:
+      - "bactec"
+      - "dst"
+      - "le"
+      - "hain"
+      - "genexpert"
+
+  drug:
+    description: >
+      Resistance to drug tested for DST test
+    enum:
+      - "isoniazid"
+      - "amikacin"
+      - "amoxicillin_clavulanate"
+      - "capreomycin"
+      - "cycloserine"
+      - "ethambutol"
+      - "fluoroquinolones"
+      - "kanamycin"
+      - "levofloxacin"
+      - "moxifloxacin"
+      - "mycobutin"
+      - "ofloxacin"
+      - "p_aminosalicylic_acid"
+      - "prothionamide"
+      - "pyrazinamide"
+      - "rifampicin"
+      - "streptomycin"
+
+  response:
+    description: >
+      Response to DST test
+        S -- sensitive
+        R -- resistant
+        I -- intermediate
+    enum:
+      - "not reported"
+      - "S"
+      - "R"
+      - "I"
+
+  subjects:
+    $ref: "_definitions.yaml#/to_one"

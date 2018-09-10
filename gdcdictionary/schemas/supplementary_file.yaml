@@ -26,7 +26,7 @@ links:
     label: refers_to
     target_type: study
     multiplicity: many_to_one
-    required: TRUE
+    required: true
 
 uniqueKeys:
   - [id]
@@ -88,7 +88,7 @@ properties:
   protocol_description:
     description: >
       Free text to expand upon details
-    type: string     
+    type: string
 
   studies:
     $ref: "_definitions.yaml#/to_many"

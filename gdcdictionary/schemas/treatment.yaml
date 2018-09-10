@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "treatment"
 title: Treatment
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://niaid.bionimbus.org
 category: clinical
 program: '*'
 project: '*'
@@ -24,7 +24,7 @@ systemProperties:
 links:
   - name: diagnoses
     backref: treatments
-    label: describes #need better term here
+    label: relates_to
     target_type: diagnosis
     multiplicity: many_to_one
     required: true
@@ -60,7 +60,7 @@ properties:
 
   year_of_last_haart_free:
     description: >
-      Last reported HAART-free year 
+      Last reported HAART-free year
     type: number
 
   year_of_treatment:
@@ -91,6 +91,21 @@ properties:
   treatment_type:
     term:
       $ref: "_terms.yaml#/treatment_type"
+    type: string
+
+  treatment_span:
+    description: >
+      Span of treatment
+    type: integer
+
+  regimen_count:
+    description: >
+      Count of regimens
+    type: integer
+
+  treatment_status:
+    description: >
+      Status of treatment.
     type: string
 
   diagnoses:

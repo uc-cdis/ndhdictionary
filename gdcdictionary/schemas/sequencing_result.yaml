@@ -28,7 +28,14 @@ links:
     label: data_from
     target_type: experiment
     multiplicity: one_to_many
-    required: true
+    required: false
+
+  - name: submitted_unaligned_reads_files
+    backref: sequencing_results
+    label: data_from
+    target_type: submitted_unaligned_reads
+    multiplicity: many_to_many
+    required: false
 
 required:
   - submitter_id
@@ -78,6 +85,23 @@ properties:
       - Sequencing Experiment
       - Targeted Sequencing Experiment
 
+  mycobacterium_tuberculosis_lineage:
+    description: >
+      Classification determined by spoligotype using the lorikeet spoligotype analysis software.
+    enum:
+      - "Beijing"
+      - "T5-RUS1"
+      - "T1"
+      - "Unknown"
+
+  octal_spoligotype:
+    description: >
+      Octal spoligotype determined by the lorikeet spoligotype analysis software.
+    type: string
+
   experiments:
+    $ref: "_definitions.yaml#/to_many"
+
+  submitted_unaligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
 

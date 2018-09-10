@@ -3,14 +3,13 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "diagnosis"
 title: Diagnosis
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://niaid.bionimbus.org
 category: clinical
 program: '*'
 project: '*'
 description: >
   Data from the investigation, analysis and recognition of the presence and nature of disease,
-  condition, or injury from expressed signs and symptoms; also, the scientific determination of any
-  kind; the concise results of such an investigation.
+  condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.
 additionalProperties: false
 submittable: true
 validators: null
@@ -61,10 +60,34 @@ properties:
       - not reported
       - Not Allowed To Collect
 
+  lung_localization:
+    description: >
+      Pulmonary tuberculosis (PTB) and extrapulmonary TB (EPTB): PTB and EPTB diagnosed at the same time. A patient with both pulmonary and extrapulmonary TB should be classified as a case of PTB. Extrapulmonary tuberculosis (EPTB) refers to any bacteriologically confirmed or clinically diagnosed case of TB involving organs other than the lungs, e.g. pleura, lymph nodes, abdomen, genitourinary tract, skin, joints and bones, meninges. Pulmonary tuberculosis (PTB) refers to any bacteriologically confirmed or clinically diagnosed case of TB involving the lung parenchyma or the tracheobronchial tree. Miliary TB is classified as PTB because there are lesions in the lungs. Tuberculous intra-thoracic lymphadenopathy (mediastinal and/or hilar) or tuberculous pleural effusion, without radiographic abnormalities in the lungs, constitutes a case of extrapulmonary TB.
+    enum:
+      - "Pulmonary and Extrapulmonary"
+      - "Pulmonary"
+      - "Extrapulmonary"
+
   morphology:
     term:
       $ref: "_terms.yaml#/morphology"
     type: string
+
+   # GENERAL DIAGNOSIS VARIABLES
+  primary_diagnosis:
+    term:
+      $ref: "_terms.yaml#/primary_diagnosis"
+    type: string
+
+  prior_treatment:
+    term:
+      $ref: "_terms.yaml#/prior_treatment"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
 
   progression_or_recurrence:
     term:
@@ -85,22 +108,6 @@ properties:
     term:
       $ref: "_terms.yaml#/tumor_stage"
     type: string
-
-  # GENERAL DIAGNOSIS VARIABLES
-  primary_diagnosis:
-    term:
-      $ref: "_terms.yaml#/primary_diagnosis"
-    type: string
-
-  prior_treatment:
-    term:
-      $ref: "_terms.yaml#/prior_treatment"
-    enum:
-      - "Yes"
-      - "No"
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
 
   tissue_or_organ_of_origin:
     term:
