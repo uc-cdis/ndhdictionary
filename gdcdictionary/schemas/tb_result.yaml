@@ -61,7 +61,8 @@ properties:
       - "capreomycin"
       - "cycloserine"
       - "ethambutol"
-      - "fluoroquinolones',"kanamycin"
+      - "fluoroquinolones"
+      - "kanamycin"
       - "levofloxacin"
       - "moxifloxacin"
       - "mycobutin"
@@ -75,6 +76,9 @@ properties:
   response:
     description: >
       Response to DST test
+        S -- sensitive
+        R -- resistant
+        I -- intermediate
     enum:
       - "not reported"
       - "S"
