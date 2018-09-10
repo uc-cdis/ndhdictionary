@@ -1569,6 +1569,140 @@ properties:
       - "Uncertain"
       - "Missing"
 
+  h:
+    description: >
+      Yes / No if Isoniazid was included in the regimen
+    type: boolean
+
+  r:
+    description: >
+      Yes / No if Rifampicin was included in the regimen
+    type: boolean
+
+  s:
+    description: >
+      Yes / No if Streptomycin was included in the regimen
+    type: boolean
+
+  e:
+    description: >
+      Yes / No if Ethambutol was included in the regimen
+    type: boolean
+
+  ofx:
+    description: >
+      Yes / No if Ofloxacin was included in the regimen
+    type: boolean
+
+  cm:
+    description: >
+      Yes / No if Capreomycin was included in the regimen
+    type: boolean
+
+  am:
+    description: >
+      Yes / No if Amikacin was included in the regimen
+    type: boolean
+
+  km:
+    description: >
+      Yes / No if Kanamycin was included in the regimen
+    type: boolean
+
+  z:
+    description: >
+      Yes / No if Pyrazinamide was included in the regimen
+    type: boolean
+
+  lfx:
+    description: >
+      Yes / No if Levoflaxcin was included in the regimen
+    type: boolean
+
+  mfx:
+    description: >
+      Yes / No if Moxifloxacin was included in the regimen
+    type: boolean
+
+  pas:
+    description: >
+      Yes / No if p-aminosalicylic acid was included in the regimen
+    type: boolean
+
+  pto:
+    description: >
+      Yes / No if Prothionamide was included in the regimen
+    type: boolean
+
+  cs:
+    description: >
+      Yes / No if cycloserine was included in the regimen
+    type: boolean
+
+  amx_clv:
+    description: >
+      Yes / No if Amoxicillin-clavulanate was included in the regimen
+    type: boolean
+
+  mb:
+    description: >
+      Yes / No if Mycobutin was included in the regimen
+    type: boolean
+
+  dld:
+    description: >
+      Yes / No if Delamandid was included in the regimen
+    type: boolean
+
+  bdq:
+    description: >
+      Yes / No if Bedaquiline was included in the regimen
+    type: boolean
+
+  ipm_cln:
+    description: >
+      Yes / No if Imipenem-cilastatin was included in the regimen
+    type: boolean
+
+  lzd:
+    description: >
+      Yes / No if Linezolid was included in the regimen
+    type: boolean
+
+  cfz:
+    description: >
+      Yes / No if Clofazimine was included in the regimen
+    type: boolean
+
+  clr:
+    description: >
+      Yes / No if Clarithromycin was included in the regimen
+    type: boolean
+
+  fq:
+    description: >
+      Yes / No if Fluoroquinolones were included in the regimen
+    type: boolean
+
+  ag_cp:
+    description: >
+      Yes / No if aminoglycosides - injectible agents were included in the regimen
+    type: boolean
+
+  trd:
+    description: >
+      Yes / No if Terizidone was included in the regimen
+    type: boolean
+
+  art:
+    description: >
+      Yes / No if Antiretroviral therapy (a treatment of people infecte with human immunodeficiency virus using anti HIV-drugs) was included in the regimen
+    type: boolean
+
+  cotrimoxazol:
+    description: >
+      Yes / No if Co-trimoxazole preventive therapy was included in the regimen
+    type: boolean
   version:
     description: >
       Version number of data

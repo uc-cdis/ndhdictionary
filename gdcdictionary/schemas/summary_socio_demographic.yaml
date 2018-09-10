@@ -21,12 +21,18 @@ systemProperties:
   - updated_datetime
 
 links:
+  - name: subjects
+    backref: summary_socio_demographics
+    label: performed_on
+    target_type: subject
+    multiplicity: one_to_one
+    required: False
   - name: follow_ups
     backref: summary_socio_demographics
     label: performed_at
     target_type: follow_up
     multiplicity: one_to_one
-    required: true
+    required: False
 
 uniqueKeys:
   - [id]
@@ -35,7 +41,6 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - follow_ups
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -620,5 +625,18 @@ properties:
       Version number of data
     type: string
 
+  number_of_daily_contacts:
+    description: >
+      Number of daily contacts an individual with TB has
+    type: integer
+
+  ex_prisoner:
+    description: >
+      Social risk factors for a patient (yes or no) as ex prisoner
+    type: boolean
+
   follow_ups:
+    $ref: "_definitions.yaml#/to_one"
+
+  subjects:
     $ref: "_definitions.yaml#/to_one"

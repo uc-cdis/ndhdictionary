@@ -3,16 +3,12 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "sample"
 title: Sample
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://niaid.bionimbus.org
 category: biospecimen
 program: '*'
 project: '*'
 description: >
-  Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment
-  or research purposes, including a sample obtained from a living organism or taken from the
-  biological object after halting of all its life functions. Biospecimen can contain one or more
-  components including but not limited to cellular molecules, cells, tissues, organs, body fluids,
-  embryos, and body excretory products.
+  Any material sample taken from a biological entity for testing, diagnostic, propagation, treatment or research purposes, including a sample obtained from a living organism or taken from the biological object after halting of all its life functions. Biospecimen can contain one or more components including but not limited to cellular molecules, cells, tissues, organs, body fluids, embryos, and body excretory products.
 additionalProperties: false
 submittable: true
 validators: null
@@ -646,6 +642,16 @@ properties:
   lysis_buffer:
     description: >
       A buffer solution used for the purpose of breaking open cells for use in molecular biology experiments that analyze the compounds of the cells.
+    type: string
+
+  ncbi_bioproject:
+    description: >
+      Record identifier assigned by NCBI for entry in the BioProject database.
+    type: string
+
+  ncbi_biosample:
+    description: >
+      Record identifier assigned by NCBI for entry in the BioSample database.
     type: string
 
   subjects:
