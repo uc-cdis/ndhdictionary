@@ -26,13 +26,13 @@ links:
     label: performed_on
     target_type: subject
     multiplicity: one_to_one
-    required: False
+    required: false
   - name: follow_ups
     backref: summary_socio_demographics
     label: performed_at
     target_type: follow_up
     multiplicity: one_to_one
-    required: False
+    required: false
 
 uniqueKeys:
   - [id]

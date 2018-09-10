@@ -26,7 +26,7 @@ links:
     label: data_for
     target_type: imaging_file
     multiplicity: many_to_one
-    required: TRUE
+    required: true
 
 
 uniqueKeys:

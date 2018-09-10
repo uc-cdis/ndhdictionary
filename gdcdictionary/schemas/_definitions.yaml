@@ -17,7 +17,7 @@ foreign_key:
     type: object
     # Allow true here because we can have other unique keys defined on
     # a target type
-    additionalProperties: True
+    additionalProperties: true
     #Can either use 'id' which are GDC IDs (UUID) or 'submitter_id'
     #which are user defined IDs ("submitter IDs in the backend")
     properties:

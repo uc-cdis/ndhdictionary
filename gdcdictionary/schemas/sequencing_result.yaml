@@ -28,14 +28,14 @@ links:
     label: data_from
     target_type: experiment
     multiplicity: one_to_many
-    required: False
+    required: false
 
   - name: submitted_unaligned_reads_files
     backref: sequencing_results
     label: data_from
     target_type: submitted_unaligned_reads
     multiplicity: many_to_many
-    required: FALSE
+    required: false
 
 required:
   - submitter_id

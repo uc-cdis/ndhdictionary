@@ -26,7 +26,7 @@ links:
     label: describes
     target_type: imaging_study
     multiplicity: one_to_one
-    required: TRUE
+    required: true
 
 
 uniqueKeys:

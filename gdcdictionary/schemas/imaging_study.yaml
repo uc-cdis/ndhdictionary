@@ -26,13 +26,13 @@ links:
     label: performed_on
     target_type: subject
     multiplicity: many_to_one
-    required: TRUE
+    required: true
   - name: follow_ups
     backref: imaging_studies
     label: performed_at
     target_type: follow_up
     multiplicity: one_to_one
-    required: FALSE
+    required: false
 
 
 uniqueKeys:
