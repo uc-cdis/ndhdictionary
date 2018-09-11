@@ -118,11 +118,11 @@ properties:
     discription: >
       Type of TB resistance
     enum:
-      - "MDR non XDR"
-      - "Mono DR"
-      - "Poly DR"
-      - "Sensitive"
-      - "XDR"
+      - MDR non XDR
+      - Mono DR
+      - Poly DR
+      - Sensitive
+      - XDR
 
   version_data:
     description: >
