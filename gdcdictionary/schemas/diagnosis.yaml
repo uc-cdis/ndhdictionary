@@ -114,6 +114,16 @@ properties:
       $ref: "_terms.yaml#/tissue_or_organ_of_origin"
     type: string
 
+  type_of_resistance:
+    discription: >
+      Type of TB resistance
+    enum:
+      - "MDR non XDR"
+      - "Mono DR"
+      - "Poly DR"
+      - "Sensitive"
+      - "XDR"
+
   version_data:
     description: >
       Version number of data
