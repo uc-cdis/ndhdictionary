@@ -43,7 +43,7 @@ properties:
 
   dissemination:
     description: >
-      Diffuse pulmonary nodules detected (yes or no)
+      Diffuse pulmonary nodules detected
     type: boolean
 
   lungcavity_size:
