@@ -65,7 +65,7 @@ properties:
 
   year_of_treatment:
     description: >
-      First reported HAART year
+      First reported treatment year
     type: number
 
   therapeutic_agents:
@@ -86,6 +86,11 @@ properties:
       - Partial Response
       - Treatment Ongoing
       - Treatment Stopped Due to Toxicity
+      - Completed
+      - Cured
+      - Default
+      - Failed
+      - Died
       - Unknown
 
   treatment_type:
