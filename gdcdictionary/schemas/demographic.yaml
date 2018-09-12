@@ -128,12 +128,12 @@ properties:
     type: number
 
   rodent_age_at_index:
-    descripton: >
+    description: >
       "The rodent's age (in weeks) on the reference or anchor date used during date obfuscation"
     type: number
 
   human_age_at_index:
-    descriptiont: >
+    description: >
       The paticipant's age (in years) on the reference or anchor date used during date obfuscation.
     type: number
 
