@@ -43,10 +43,8 @@ properties:
 
   dissemination:
     description: >
-      Diffuse pulmonary nodules detected (yes or no)
-    enum:
-      - "Yes"
-      - "No"
+      Diffuse pulmonary nodules detected
+    type: boolean
 
   lungcavity_size:
     description: >

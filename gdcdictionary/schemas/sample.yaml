@@ -415,7 +415,7 @@ properties:
     type: integer
   diagnosis_pathologically_confirmed:
     term:
-      ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
+      $ref: "_terms.yaml#/diagnosis_pathologically_confirmed"
     enum:
       - "Yes"
       - "No"
@@ -429,7 +429,7 @@ properties:
       $ref: "_terms.yaml#/initial_weight"
     type: number
   intermediate_dimension:
-    terms:
+    term:
       $ref: "_terms.yaml#/intermediate_dimension"
     type: string
   is_ffpe:

@@ -69,7 +69,7 @@ properties:
       - PacBio
       - Other
   instrument_model:
-    terms:
+    term:
       $ref: "_terms.yaml#/instrument_model"
     enum:
       - 454 GS FLX Titanium
@@ -210,6 +210,8 @@ properties:
       $ref: "_terms.yaml#/is_paired_end"
     type: boolean
   read_length:
+    term:
+      $ref: "_terms.yaml#/read_length"
     type: integer
   read_group_name:  # it may be good to assign UUID to read group
     description: "Read Group Name"
