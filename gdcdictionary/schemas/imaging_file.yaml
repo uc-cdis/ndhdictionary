@@ -36,7 +36,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - imaging_study
+  - imaging_studies
   - file_name
   - file_size
   - data_format
@@ -80,5 +80,5 @@ properties:
       - "Poor image quality"
       - "Not Reported"
 
-  imaging_study:
+  imaging_studies:
     $ref: "_definitions.yaml#/to_one"
