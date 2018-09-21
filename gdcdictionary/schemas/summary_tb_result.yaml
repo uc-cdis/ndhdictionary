@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: subjects
+  - name: samples
     backref: summary_tb_results
     label: performed_on
-    target_type: subject
+    target_type: sample
     multiplicity: one_to_one
     required: true
 

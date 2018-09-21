@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: subjects
+  - name: samples
     backref: tb_results
     label: performed_on
-    target_type: subject
+    target_type: samples
     multiplicity: many_to_one
     required: true
 
@@ -55,23 +55,24 @@ properties:
     description: >
       Resistance to drug tested for DST test
     enum:
-      - "isoniazid"
-      - "amikacin"
-      - "amoxicillin_clavulanate"
-      - "capreomycin"
-      - "cycloserine"
-      - "ethambutol"
-      - "fluoroquinolones"
-      - "kanamycin"
-      - "levofloxacin"
-      - "moxifloxacin"
-      - "mycobutin"
-      - "ofloxacin"
-      - "p_aminosalicylic_acid"
-      - "prothionamide"
-      - "pyrazinamide"
-      - "rifampicin"
-      - "streptomycin"
+      - "h"
+      - "am"
+      - "amx_clv"
+      - "cm"
+      - "cs"
+      - "e"
+      - "fq"
+      - "km"
+      - "lfx"
+      - "mfx"
+      - "mb"
+      - "ofx"
+      - "pas"
+      - "pto"
+      - "z"
+      - "r"
+      - "s"
+      - "ag_cp"
 
   response:
     description: >
