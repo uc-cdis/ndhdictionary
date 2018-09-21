@@ -121,3 +121,6 @@ properties:
 
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
+
+  follow_ups:
+    $ref: "_definitions.yaml#/to_one"
