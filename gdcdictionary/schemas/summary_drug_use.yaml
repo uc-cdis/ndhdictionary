@@ -21,12 +21,21 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: follow_ups
-    backref: summary_drug_uses
-    label: performed_at
-    target_type: follow_up
-    multiplicity: one_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: follow_ups
+        backref: summary_drug_uses
+        label: performed_at
+        target_type: follow_up
+        multiplicity: one_to_one
+        required: false
+      - name: treatments
+        backref: summary_drug_uses
+        label: associate_with
+        target_type: treatment
+        multiplicity: one_to_one
+        required: false
 
 uniqueKeys:
   - [id]
@@ -1709,4 +1718,7 @@ properties:
     type: string
 
   follow_ups:
+    $ref: "_definitions.yaml#/to_one"
+
+  treatments:
     $ref: "_definitions.yaml#/to_one"

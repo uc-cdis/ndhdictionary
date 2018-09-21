@@ -48,7 +48,7 @@ links:
     backref: samples
     label: related_to
     target_type: diagnosis
-    multiplicity: one_to_one
+    multiplicity: one_to_many
     required: false
 
 # Sample properties: keep TCGA-specific fields
@@ -324,6 +324,7 @@ properties:
       - Spinal Cord
       - Spleen
       - Splenic Flexure
+      - Sputum
       - Sternum
       - Stomach
       - Stomach - Mucosa Only

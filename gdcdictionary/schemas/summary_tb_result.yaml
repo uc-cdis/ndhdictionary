@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: subjects
+  - name: samples
     backref: summary_tb_results
     label: performed_on
-    target_type: subject
+    target_type: sample
     multiplicity: one_to_one
     required: true
 
@@ -62,5 +62,5 @@ properties:
       Result of microscopy. Examples include 10-99 acid-resistant bacter in 1 field of view when stained by Ziehl-Nielsen, 1 to 9 in 1, 10 to 99 in 100, and more.
     type: string
 
-  subjects:
+  samples:
     $ref: "_definitions.yaml#/to_one"
