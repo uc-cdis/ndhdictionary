@@ -30,7 +30,6 @@ links:
         target_type: follow_up
         multiplicity: one_to_one
         required: false
-
       - name: treatments
         backref: summary_drug_uses
         label: associate_with
