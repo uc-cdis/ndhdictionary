@@ -24,7 +24,7 @@ links:
   - name: samples
     backref: tb_results
     label: performed_on
-    target_type: samples
+    target_type: sample
     multiplicity: many_to_one
     required: true
 
