@@ -1720,3 +1720,6 @@ properties:
 
   follow_ups:
     $ref: "_definitions.yaml#/to_one"
+
+  treatments:
+    $ref: "_definitions.yaml#/to_one"
