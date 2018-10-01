@@ -48,7 +48,7 @@ properties:
       - string
       - "null"
   acknowledgee:
-    description: "The individiual or group being acknowledged by the project."
+    description: "The individual or group being acknowledged by the project."
     type: string
   projects:
     $ref: "_definitions.yaml#/to_many"
