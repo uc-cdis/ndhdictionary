@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Values obtained from a neurocognitive questionnaire performed at one of the recurrent patient visit. 
+  Values obtained from a neurocognitive questionnaire performed at one of the recurrent patient visit.
   The neurocognitive test includes peripheral neuropathy (perception and reflexes) and neuropsychological screenings.
 additionalProperties: false
 submittable: true
@@ -41,14 +41,14 @@ required:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  avg_dominand_finger_tap:
+  avg_dominant_finger_tap:
     description: >
-      Average score at finger tapping test for dementia screening (dominand hand).
+      Average score at finger tapping test for dementia screening (dominant hand).
     type: number
 
-  avg_nondominand_finger_tap:
+  avg_nondominant_finger_tap:
     description: >
-      Average score at finger tapping test for dementia screening (non-dominand hand).
+      Average score at finger tapping test for dementia screening (non-dominant hand).
     type: number
 
   left_ankle_reflexes:
@@ -86,24 +86,24 @@ properties:
       Actual score at the pegboard test
     type: integer
 
-  pegboard_dominand_hand_drops:
+  pegboard_dominant_hand_drops:
     description: >
-      Number of drops at the pegboard test with the dominand hand.
+      Number of drops at the pegboard test with the dominant hand.
     type: integer
 
-  pegboard_dominand_hand_time:
+  pegboard_dominant_hand_time:
     description: >
-      Time taken to complete the pegboard test with the dominand hand.
+      Time taken to complete the pegboard test with the dominant hand.
     type: number
 
-  pegboard_nondominand_hand_drops:
+  pegboard_nondominant_hand_drops:
     description: >
-      Number of drops at the pegboard test with the non-dominand hand.
+      Number of drops at the pegboard test with the non-dominant hand.
     type: integer
 
-  pegboard_nondominand_hand_time:
+  pegboard_nondominant_hand_time:
     description: >
-      Time taken to complete the pegboard test with the non-dominand hand.
+      Time taken to complete the pegboard test with the non-dominant hand.
     type: number
 
   rey_osterreith_copy_score:

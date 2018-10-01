@@ -40,7 +40,7 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  dominand_hand:
+  dominant_hand:
     description: >
       Hand the subject use to write
     enum:

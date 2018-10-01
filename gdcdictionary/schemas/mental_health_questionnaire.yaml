@@ -42,7 +42,7 @@ properties:
 
   freq_bothering:
     description: >
-      Frequency of feeling bothered in the pask week.
+      Frequency of feeling bothered in the past week.
     enum:
       - Rarely
       - Some

@@ -684,7 +684,7 @@ properties:
       - "Combination therapy"
       - "HAART"
       - "HAART (HU/ddI defined)"
-      - "unknown regiemn"
+      - "unknown regimen"
       - "Missing"
 
   thrpyv:
@@ -702,7 +702,7 @@ properties:
 
   adh:
     description: >
-      How often took antiretrovirals as prescribed over past 6 months (start from visit9 and after)
+      How often took antiretrovirals as prescribed over past 6 months (start from visit 9 and after)
     enum:
       - "100% of the time"
       - "95-99% of the time"
@@ -1695,7 +1695,7 @@ properties:
 
   ag_cp:
     description: >
-      Yes / No if aminoglycosides - injectible agents were included in the regimen
+      Yes / No if aminoglycosides - injectable agents were included in the regimen
     type: boolean
 
   trd:
@@ -1705,7 +1705,7 @@ properties:
 
   art:
     description: >
-      Yes / No if Antiretroviral therapy (a treatment of people infecte with human immunodeficiency virus using anti HIV-drugs) was included in the regimen
+      Yes / No if Antiretroviral therapy (a treatment of people infected with human immunodeficiency virus using anti HIV-drugs) was included in the regimen
     type: boolean
 
   cotrimoxazol:

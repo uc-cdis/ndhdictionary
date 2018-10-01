@@ -42,7 +42,7 @@ properties:
 
   propexp:
     description: >
-      Took anti-HIV medications to prevent getting infected either beforee being exposed to HIV or following a possible exposure.
+      Took anti-HIV medications to prevent getting infected either before being exposed to HIV or following a possible exposure.
     enum:
       - "No"
       - "Yes"
@@ -275,7 +275,7 @@ properties:
 
   fndfl:
     description: >
-      The finacial difficulties are similar that last visit
+      The financial difficulties are similar that last visit
     enum:
       - "Less"
       - "Same"

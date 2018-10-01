@@ -216,7 +216,7 @@ properties:
       - A little of the time
       - None of the time
 
-  nervs:
+  nerves:
     description: >
       Frequency feeling a very nervous person in the last four weeks.
     enum:
@@ -249,7 +249,7 @@ properties:
       - A little of the time
       - None of the time
 
-  energ:
+  energy:
     description: >
       Frequency having a lot of energy in the last four weeks.
     enum:
@@ -325,7 +325,7 @@ properties:
       - Mostly false
       - Definitively false
 
-  healt:
+  health:
     description: >
       Feeling as healthy as anybody known.
     enum:

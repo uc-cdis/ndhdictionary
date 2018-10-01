@@ -67,7 +67,7 @@ properties:
 
   chol:
     description: >
-      Cholesterol (mg/dL)      
+      Cholesterol (mg/dL)
     type: number
 
   triglyc:
@@ -122,7 +122,7 @@ properties:
 
   leu2p:
     description: >
-      % CD8 positive cells (supressors)
+      % CD8 positive cells (suppressors)
     type: number
 
   leu4n:
@@ -239,7 +239,7 @@ properties:
 
   virus_NP_mRNA:
     description: >
-      A numerial expression of the quantity of virus NP mRNA level relative to RPL14 with log transformation.
+      A numerical expression of the quantity of virus NP mRNA level relative to RPL14 with log transformation.
     type: number
 
   follow_ups:

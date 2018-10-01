@@ -144,7 +144,7 @@ properties:
 
   accumulation_of_contrast:
     description: >
-      More than 30HU of contrast accumulated, less than 10-30HU of contrast accumulated, or no constrast accumulated
+      More than 30HU of contrast accumulated, less than 10-30HU of contrast accumulated, or no contrast accumulated
     enum:
       - "No"
       - "less10-13"
@@ -187,7 +187,7 @@ properties:
 
   rater:
     description: >
-      Type of rater, eg: radiologist, general practioner, other
+      Type of rater, eg: radiologist, general practitioner, other
     enum:
       - "General practitioner"
       - "Radiologist"

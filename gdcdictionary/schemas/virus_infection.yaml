@@ -82,7 +82,7 @@ properties:
 
   infection_buffer:
     description: >
-      The buffer solution to disolve virus for infection.
+      The buffer solution to dissolve virus for infection.
     type: string
 
   moi:
@@ -102,7 +102,7 @@ properties:
 
   post_infection_BSA_percentage:
     description: >
-      The percentage of BSA in growth medium for cell culture post virus infecion.
+      The percentage of BSA in growth medium for cell culture post virus infection.
     type: number
 
   post_infection_TPCK:

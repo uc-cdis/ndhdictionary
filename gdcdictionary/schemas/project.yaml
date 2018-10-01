@@ -10,7 +10,7 @@ description: >
   Any specifically defined piece of work that is undertaken or attempted to meet a single
   requirement. (NCIt C47885)
 additionalProperties: false
-submittable: true 
+submittable: true
 validators: null
 
 systemProperties:
@@ -21,8 +21,8 @@ systemProperties:
   - intended_release_date
 
 required:
-  - code 
-  - name 
+  - code
+  - name
   - programs
 
 uniqueKeys:
@@ -67,7 +67,7 @@ properties:
       - Open
       - Restricted
   availability_mechanism:
-    description: "Mechanism by which the project will be made avilable."
+    description: "Mechanism by which the project will be made available."
     type: string
   support_source:
     description: "The name of source providing support/grant resources."

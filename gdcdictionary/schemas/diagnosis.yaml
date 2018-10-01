@@ -115,7 +115,7 @@ properties:
     type: string
 
   type_of_resistance:
-    discription: >
+    description: >
       Type of TB resistance
     enum:
       - MDR non XDR

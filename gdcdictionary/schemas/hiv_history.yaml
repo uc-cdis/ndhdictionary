@@ -3,7 +3,7 @@ $schema: "http://json-schema.org/draft-04/schema#"
 id: "hiv_history"
 title: HIV History
 type: object
-namespace: http://gdc.nci.nih.gov
+namespace: https://niaid.bionimbus.org
 category: clinical
 program: '*'
 project: '*'
@@ -81,7 +81,7 @@ properties:
 
   lastnoad:
     description: >
-      Last reported ART free 
+      Last reported ART free
     type: integer
 
   lastnoav:
@@ -101,7 +101,7 @@ properties:
 
   arthxbase:
     description: >
-      Did particpant report use of ART prior to baseline (screening) visit?
+      Did participant report use of ART prior to baseline (screening) visit?
     type: boolean
 
   ehaart:
