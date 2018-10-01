@@ -118,7 +118,7 @@ properties:
 
   arthritis:
     description: >
-      Observaton for signs of arthritis, including joint deformities, joint swelling, tender, painful, or creaky joints. If not normal, explain.
+      Observation for signs of arthritis, including joint deformities, joint swelling, tender, painful, or creaky joints. If not normal, explain.
     type: string
 
   peripheral_edema:

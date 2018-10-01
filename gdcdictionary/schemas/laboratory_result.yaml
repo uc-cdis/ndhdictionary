@@ -72,7 +72,7 @@ properties:
 
   mchc:
     description: >
-      Mean corpusc. Hb conc (% cell vol) 
+      Mean corpusc. Hb conc (% cell vol)
     type: number
 
   platelets:
@@ -92,7 +92,7 @@ properties:
 
   lymph:
     description: >
-      Lymphocytes (%) 
+      Lymphocytes (%)
     type: number
 
   monos:
@@ -117,7 +117,7 @@ properties:
 
   hbsag:
     description: >
-      Hepatitis B Surface Antigen 
+      Hepatitis B Surface Antigen
     type: number
 
   athbs:
@@ -197,7 +197,7 @@ properties:
 
   leu2p:
     description: >
-      Percentage of CD8 positive cells (supressors)
+      Percentage of CD8 positive cells (suppressors)
     type: number
 
   leu4n:
@@ -207,7 +207,7 @@ properties:
 
   leu4p:
     description: >
-      Percentage of CD3 positive cells (total) 
+      Percentage of CD3 positive cells (total)
     type: number
 
   b8d38:
@@ -217,7 +217,7 @@ properties:
 
   q1d38:
     description: >
-      1st quadrant for CD38+DR- (%) 
+      1st quadrant for CD38+DR- (%)
     type: number
 
   q2d38:
@@ -227,7 +227,7 @@ properties:
 
   q3d38:
     description: >
-      3rd quadrant for CD38-DR- (%) 
+      3rd quadrant for CD38-DR- (%)
     type: number
 
   q4d38:
@@ -247,12 +247,12 @@ properties:
 
   c38mq:
     description: >
-      Median# CD38 mol/CD8+ cell (Quantibrite bead method) 
+      Median# CD38 mol/CD8+ cell (Quantibrite bead method)
     type: number
 
   c38mh:
     description: >
-      Median# CD38 mol/CD8+ cell (Hultin et al method) 
+      Median# CD38 mol/CD8+ cell (Hultin et al method)
     type: number
 
   blkit:
@@ -317,7 +317,7 @@ properties:
 
   ggtp:
     description: >
-      Gamma-GT (GGT) gammaglutamyltransferase (IU/L) 
+      Gamma-GT (GGT) gammaglutamyltransferase (IU/L)
     type: number
 
   sgpt:
@@ -327,7 +327,7 @@ properties:
 
   sgot:
     description: >
-      Ast (GOT) aspartate amino transferase (IU/L) 
+      Ast (GOT) aspartate amino transferase (IU/L)
     type: number
 
   alpho:
@@ -387,7 +387,7 @@ properties:
 
   hbvdncf2:
     description: >
-      HBVDN Conversion Factor - 2nd measure 
+      HBVDN Conversion Factor - 2nd measure
     type: number
 
   bunkd:
@@ -402,7 +402,7 @@ properties:
 
   ptinr:
     description: >
-      Ratio of PT (prothombin time) to gold standard 
+      Ratio of PT (prothombin time) to gold standard
     type: number
 
   ucreat:
@@ -417,7 +417,7 @@ properties:
 
   uprcr:
     description: >
-      Urine protein in mg per gram of creatinine (mg/g creat). 
+      Urine protein in mg per gram of creatinine (mg/g creat).
       If urine protein < 4, ratio usually not submitted by testing lab
     type: number
 

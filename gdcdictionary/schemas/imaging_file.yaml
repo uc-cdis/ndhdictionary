@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: imaging_study
+  - name: imaging_exams
     backref: imaging_files
     label: data_for
-    target_type: imaging_file
+    target_type: imaging_exam
     multiplicity: many_to_one
     required: true
 
@@ -36,14 +36,12 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - imaging_study
+  - imaging_exam
   - file_name
   - file_size
   - data_format
   - md5sum
   - data_category
-  - data_type
-  - experimental_strategy
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
@@ -80,5 +78,10 @@ properties:
       - "Poor image quality"
       - "Not Reported"
 
-  imaging_study:
+  series_instance_uid:
+    description: >
+      Formal identifier for this image or other content.
+    type: string
+
+  imaging_exams:
     $ref: "_definitions.yaml#/to_one"

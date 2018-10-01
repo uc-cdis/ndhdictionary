@@ -10,7 +10,7 @@ project: '*'
 description: >
   Data file containing information obtained from a any baseline visit or follow-up. These follow-ups are usually
   performed when visiting a clinical site. Files can include physical examinations, laboratory results,
-  neourcognitive tests, etc.
+  neurocognitive tests, etc.
 submittable: true
 validators: null
 
@@ -146,4 +146,4 @@ properties:
     $ref: "_definitions.yaml#/to_one"
 
   summary_drug_uses:
-    $ref: "_definitions.yaml#/to_one"    
+    $ref: "_definitions.yaml#/to_one"

@@ -1,14 +1,14 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "imaging_study"
-title: Imaging Study
+id: "imaging_exam"
+title: Imaging Exam
 type: object
 namespace: https://niaid.bionimbus.org
 category: medical_history
 program: '*'
 project: '*'
 description: >
-  Tests performed with a variety of techniques that produce pictures of the inside of a patient's body.
+  Information related to an imaging exam done for diagnostic or research purposes.
 additionalProperties: false
 submittable: true
 validators: null
@@ -21,19 +21,12 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: subjects
-    backref: imaging_studies
-    label: performed_on
-    target_type: subject
+  - name: imaging_studies
+    backref: imaging_exams
+    label: part_of
+    target_type: imaging_study
     multiplicity: many_to_one
     required: true
-  - name: follow_ups
-    backref: imaging_studies
-    label: performed_at
-    target_type: follow_up
-    multiplicity: one_to_one
-    required: false
-
 
 uniqueKeys:
   - [id]
@@ -42,23 +35,29 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - subjects
+  - imaging_studies
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  x_ray_count:
+  uid:
     description: >
-      Count of X-rays
-    type: integer
+      Formal DICOM identifier for the study.
+    type: string
 
-  ct_count:
+  series_uid:
     description: >
-      Count of CT Scan images
-    type: integer
+      CFormal identifier for this series.
+    type: string
 
-  subjects:
+  image_body_site:
+    description: >
+      Location of image in both lungs, left lung or right lung.
+    enum:
+      - "Both lungs"
+      - "Left lung"
+      - "Right lung"
+
+  imaging_studies:
     $ref: "_definitions.yaml#/to_one"
 
-  follow_ups:
-    $ref: "_definitions.yaml#/to_many"

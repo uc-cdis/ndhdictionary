@@ -58,7 +58,7 @@ properties:
 
   genexpert:
     description: >
-      Xpert MTB / RIF test to carry out the detection of the presence of Mycobacterium tuberculosis in a sample of diagnostic material and resistance to rifampicin in less than two hours.
+      Genexpert MTB / RIF test to carry out the detection of the presence of Mycobacterium tuberculosis in a sample of diagnostic material and resistance to rifampicin in less than two hours.
     type: boolean
 
   subjects:

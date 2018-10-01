@@ -54,7 +54,7 @@ properties:
       - "null"
     description: >
       The legacy barcode used before prior to the use
-      UUIDs. For TCGA this is bcraliquotbarcode.
+      UUIDs. For TCGA this is bcr aliquot barcode.
   aliquot_quantity:
     term:
       $ref: "_terms.yaml#/aliquot_quantity"

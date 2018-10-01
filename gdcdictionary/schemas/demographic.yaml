@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Data for the characterization of the patient by means of segementing the population (e.g.,
+  Data for the characterization of the patient by means of segmenting the population (e.g.,
   characterization by age, sex, or race).
 additionalProperties: false
 submittable: true
@@ -90,7 +90,7 @@ properties:
 
   caribbean_islander:
     description: >
-      Caribbean procedence
+      Caribbean precedence
     enum:
       - Not Caribbean island origin
       - Caribbean island origin
@@ -134,7 +134,7 @@ properties:
 
   human_age_at_index:
     description: >
-      The paticipant's age (in years) on the reference or anchor date used during date obfuscation.
+      The participant's age (in years) on the reference or anchor date used during date obfuscation.
     type: number
 
   subjects:
