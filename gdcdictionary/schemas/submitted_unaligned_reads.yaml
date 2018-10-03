@@ -83,7 +83,7 @@ properties:
       Octal spoligotype determined by the lorikeet spoligotype analysis software.
     type: string
 
-  source organism:
+  source_organism:
     description: >
       Type of organism the sequencing performed on
     type: string
