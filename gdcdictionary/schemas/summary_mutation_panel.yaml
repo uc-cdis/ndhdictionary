@@ -27,7 +27,12 @@ links:
     target_type: subject
     multiplicity: many_to_one
     required: true
-
+  - name: submitted_unaligned_reads_files
+    backref: summary_mutation_panels
+    label: derived_from
+    target_type: submitted_unaligned_reads
+    multiplicity: many_to_one
+    required: false
 
 uniqueKeys:
   - [id]
@@ -61,5 +66,22 @@ properties:
       Genexpert MTB / RIF test to carry out the detection of the presence of Mycobacterium tuberculosis in a sample of diagnostic material and resistance to rifampicin in less than two hours.
     type: boolean
 
+  snp:
+    description: >
+      Name of the single nucleotide polymorphisms that has been detected.
+    type: string
+
+  snp_result:
+    description: >
+      The result of detected snp. 0 represents reference allele, and 1 represents alternative allele.
+    type: integer
+
+  ncbi_sra:
+    description: >
+      Run code of the raw file in sequence read archive (SRA) that the snp result derived from.
+    type: string
+
   subjects:
+    $ref: "_definitions.yaml#/to_one"
+  submitted_unaligned_reads_files:
     $ref: "_definitions.yaml#/to_one"
