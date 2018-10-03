@@ -85,20 +85,6 @@ properties:
       - Sequencing Experiment
       - Targeted Sequencing Experiment
 
-  mycobacterium_tuberculosis_lineage:
-    description: >
-      Classification determined by spoligotype using the lorikeet spoligotype analysis software.
-    enum:
-      - "Beijing"
-      - "T5-RUS1"
-      - "T1"
-      - "Unknown"
-
-  octal_spoligotype:
-    description: >
-      Octal spoligotype determined by the lorikeet spoligotype analysis software.
-    type: string
-
   experiments:
     $ref: "_definitions.yaml#/to_many"
 

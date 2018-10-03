@@ -21,10 +21,10 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: imaging_study
+  - name: imaging_exams
     backref: imaging_reports
     label: describes
-    target_type: imaging_study
+    target_type: imaging_exam
     multiplicity: one_to_one
     required: true
 
@@ -36,7 +36,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - imaging_study
+  - imaging_exams
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -298,5 +298,5 @@ properties:
       High (calcified nodules, typically sequella)
     type: string
 
-  imaging_study:
+  imaging_exams:
     $ref: "_definitions.yaml#/to_one"
