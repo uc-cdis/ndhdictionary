@@ -53,7 +53,7 @@ properties:
 
   high_confidence:
     description: >
-      No': Nonsynonymous SNPs that do not have high confidence of association with drug resistance as determined by analysis performed by ReSeqTB or are not listed in ReSeqTB. 'Yes': Nonsynonymous SNPs with high confidence of association with drug resistance as determined by analysis performed by ReSeqTB. 'Null': Synonymous SNPs associated with drug resistance in the literature but not entered in ReSeqTB.
+      'No': Nonsynonymous SNPs that do not have high confidence of association with drug resistance as determined by analysis performed by ReSeqTB or are not listed in ReSeqTB. 'Yes': Nonsynonymous SNPs with high confidence of association with drug resistance as determined by analysis performed by ReSeqTB. 'Null': Synonymous SNPs associated with drug resistance in the literature but not entered in ReSeqTB.
     type: boolean
 
   hain:
@@ -68,7 +68,7 @@ properties:
 
   snp:
     description: >
-      Name of the single nucleotide polymorphisms that has been detected.
+      Name of the single nucleotide polymorphisms that have been detected.
     type: string
 
   snp_result:

@@ -86,7 +86,7 @@ properties:
   series_instance_number:
     description: >
       order number for this image or other content.
-    type: string
+    type: integer
 
   imaging_exams:
     $ref: "_definitions.yaml#/to_one"

@@ -85,7 +85,7 @@ properties:
 
   source_organism:
     description: >
-      Type of organism the sequencing performed on
+      Type of organism the sequencing was performed on
     type: string
 
   mycobacterium_tuberculosis_lineage:
