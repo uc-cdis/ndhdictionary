@@ -23,19 +23,22 @@ systemProperties:
   - error_type
 
 links:
-  - name: experiments
-    backref: sequencing_results
-    label: data_from
-    target_type: experiment
-    multiplicity: one_to_many
-    required: false
+  - exclusive: false
+    required: true
+    subgroup:
+      - name: experiments
+        backref: sequencing_results
+        label: data_from
+        target_type: experiment
+        multiplicity: one_to_many
+        required: false
 
-  - name: submitted_unaligned_reads_files
-    backref: sequencing_results
-    label: data_from
-    target_type: submitted_unaligned_reads
-    multiplicity: many_to_many
-    required: false
+      - name: submitted_unaligned_reads_files
+        backref: sequencing_results
+        label: data_from
+        target_type: submitted_unaligned_reads
+        multiplicity: many_to_many
+        required: false
 
 required:
   - submitter_id
