@@ -170,8 +170,17 @@ properties:
 
   smkhist:
     description: >
-      Number of years smoked cigarettes
+      Number of years smoked cigarettes. If the number is greater than 89 years, see 'smkhist_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  smkhist_gt89:
+    description: >
+      Indicate whether the 'Number of years smoked cigarettes' is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   smkgrp:
     description: >
