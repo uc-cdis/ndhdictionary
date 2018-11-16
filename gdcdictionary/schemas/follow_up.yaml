@@ -53,7 +53,7 @@ properties:
 
   age_at_visit:
     description: >
-      Age at visit in years - round to nearest integer
+      Age at visit in years - round to nearest integer. If the age in years at the visit is greater than 89, see 'age_at_visit_gt89'.
     type: integer
     maximum: 89
     minimum: 0

@@ -42,20 +42,6 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  age_unit:
-    description: >
-      Age unit used in this study
-    enum:
-      - "Days"
-      - "Hours"
-      - "Minutes"
-      - "Months"
-      - "Not Specified"
-      - "Seconds"
-      - "Weeks"
-      - "Years"
-      - "d.p.c."
-
   data_description:
     description: "Brief description of the data being provided for this study. Free text"
     type: string
@@ -83,8 +69,8 @@ properties:
 
   study_completeness:
     description: >
-      Description of data status. 
-      0=Descriptive data and results as originally received from the data provider. 
+      Description of data status.
+      0=Descriptive data and results as originally received from the data provider.
       1=Includes updates to the original data submission short of completeness.
       2=Complete set of descriptive data and results, as ascertained by curator.
     enum:
