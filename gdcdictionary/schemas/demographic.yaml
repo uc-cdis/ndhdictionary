@@ -134,8 +134,17 @@ properties:
 
   human_age_at_index:
     description: >
-      The participant's age (in years) on the reference or anchor date used during date obfuscation.
+      The participant's age (in years) on the reference or anchor date used during date obfuscation. If this age is greater than 89 years, see 'human_age_at_index_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  human_age_at_index_gt89:
+    description: >
+      Indicate if the participant's age (in years) on the reference or anchor date used during date obfuscation is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
