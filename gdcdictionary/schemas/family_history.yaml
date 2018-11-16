@@ -79,6 +79,15 @@ properties:
     term:
       $ref: "_terms.yaml#/relationship_age_at_diagnosis"
     type: number
+    maximum: 89
+    minimum: 0
+
+  relationship_age_at_diagnosis_gt89:
+    term:
+      $ref: "_terms.yaml#/relationship_age_at_diagnosis_gt89"
+    enum:
+      - "Yes"
+      - "No"
 
   relationship_primary_diagnosis:
     term:
