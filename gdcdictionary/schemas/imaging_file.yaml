@@ -36,7 +36,6 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - imaging_exam
   - file_name
   - file_size
   - data_format
