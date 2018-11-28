@@ -135,7 +135,9 @@ properties:
   human_age_at_index:
     description: >
       The participant's age (in years) on the reference or anchor date used during date obfuscation. If this age is greater than 89 years, see 'human_age_at_index_gt89'.
-    type: number
+    type:
+      - number
+      - "null"
     maximum: 89
     minimum: 0
 

@@ -54,7 +54,9 @@ properties:
   age_at_visit:
     description: >
       Age at visit in years - round to nearest integer. If the age in years at the visit is greater than 89, see 'age_at_visit_gt89'.
-    type: integer
+    type:
+      - integer
+      - "null"
     maximum: 89
     minimum: 0
 
@@ -92,7 +94,11 @@ properties:
 
   height:
     description: "The height of the patient in centimeters."
-    type: number
+    type:
+      - number
+      - "null"
+    maximum: 500
+    minimum: 0
 
   pregnancy_status:
     description: >

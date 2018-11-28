@@ -78,7 +78,9 @@ properties:
   relationship_age_at_diagnosis:
     term:
       $ref: "_terms.yaml#/relationship_age_at_diagnosis"
-    type: number
+    type:
+      - number
+      - "null"
     maximum: 89
     minimum: 0
 
