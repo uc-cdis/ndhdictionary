@@ -21,12 +21,21 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: imaging_exams
-    backref: imaging_files
-    label: data_for
-    target_type: imaging_exam
-    multiplicity: many_to_one
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: imaging_files
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+        - name: imaging_exams
+        backref: imaging_files
+        label: data_for
+        target_type: imaging_exam
+        multiplicity: many_to_one
+        required: false
 
 
 uniqueKeys:
@@ -88,4 +97,6 @@ properties:
     type: integer
 
   imaging_exams:
+    $ref: "_definitions.yaml#/to_one"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"
