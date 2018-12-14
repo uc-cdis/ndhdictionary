@@ -30,7 +30,7 @@ links:
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-        - name: imaging_exams
+      - name: imaging_exams
         backref: imaging_files
         label: data_for
         target_type: imaging_exam
