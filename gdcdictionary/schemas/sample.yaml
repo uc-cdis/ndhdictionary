@@ -48,7 +48,7 @@ links:
     backref: samples
     label: related_to
     target_type: diagnosis
-    multiplicity: one_to_many
+    multiplicity: many_to_one
     required: false
 
 # Sample properties: keep TCGA-specific fields
