@@ -170,8 +170,17 @@ properties:
 
   smkhist:
     description: >
-      Number of years smoked cigarettes
+      Number of years smoked cigarettes. If the number is greater than 89 years, see 'smkhist_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  smkhist_gt89:
+    description: >
+      Indicate whether the 'Number of years smoked cigarettes' is greater than 89 years.
+    enum:
+      - "Yes"
+      - "No"
 
   smkgrp:
     description: >
@@ -375,8 +384,17 @@ properties:
 
   ageatbl:
     description: >
-      Age at Baseline visit
+      Age at Baseline visit. If the age at baseline visit is greater than 89, see 'ageatbl_gt89'.
     type: number
+    maximum: 89
+    minimum: 0
+
+  ageatbl_gt89:
+    description: >
+      Indicate whether the Age at Baseline visit is greater than 89.
+    enum:
+      - "Yes"
+      - "No"
 
   eductn:
     description: >

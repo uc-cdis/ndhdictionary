@@ -1401,9 +1401,19 @@ read_group_name: # TOREVIEW
 
 relationship_age_at_diagnosis:
   description: >
-    The age (in years) when the patient's relative was first diagnosed.
+    The age (in years) when the patient's relative was first diagnosed. If the age is greater than 89 years, see 'relationship_age_at_diagnosis_gt89'.
   termDef:
     term: Relative Diagnosis Age Value
+    source: caDSR
+    cde_id: 5300571
+    cde_version: 1.0
+    term_url: "https://cdebrowser.nci.nih.gov/CDEBrowser/search?elementDetails=9&FirstTimer=0&PageId=ElementDetailsGroup&publicId=5300571&version=1.0"
+
+relationship_age_at_diagnosis_gt89:
+  description: >
+    Indicate if the the age (in years) when the patient's relative was first diagnosed is greater than 89 years.
+  termDef:
+    term: Relative Diagnosis Age Value Greater than 89
     source: caDSR
     cde_id: 5300571
     cde_version: 1.0

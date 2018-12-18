@@ -26,13 +26,18 @@ links:
   - exclusive: false
     required: true
     subgroup:
+      - name: core_metadata_collections
+        backref: sequencing_results
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
       - name: experiments
         backref: sequencing_results
         label: data_from
         target_type: experiment
         multiplicity: one_to_many
         required: false
-
       - name: submitted_unaligned_reads_files
         backref: sequencing_results
         label: data_from
@@ -90,7 +95,7 @@ properties:
 
   experiments:
     $ref: "_definitions.yaml#/to_many"
-
   submitted_unaligned_reads_files:
     $ref: "_definitions.yaml#/to_many"
-
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"
