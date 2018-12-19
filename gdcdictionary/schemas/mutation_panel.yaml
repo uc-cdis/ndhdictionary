@@ -23,17 +23,17 @@ links:
   - exclusive: false
     required: true
     subgroup:
+      - name: core_metadata_collections
+        backref: mutation_panels
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
       - name: subjects
-        backref: mutation_panels 
+        backref: mutation_panels
         label: data_from
         target_type: subject
         multiplicity: one_to_many
-        required: false
-      - name: core_metadata_records
-        backref: mutation_panels 
-        label: data_from
-        target_type: core_metadata
-        multiplicity: one_to_one
         required: false
 
 uniqueKeys:
@@ -68,13 +68,12 @@ properties:
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
-    enum: 
+    enum:
       - TSV
       - TXT
       - CSV
 
   subjects:
     $ref: "_definitions.yaml#/to_many"
-
-  core_metadata_records:
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_one"

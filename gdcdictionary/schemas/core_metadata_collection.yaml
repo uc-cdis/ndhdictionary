@@ -1,7 +1,7 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "data_collection"
-title: Data Collection
+id: "core_metadata_collection"
+title: Core Metadata Collection
 type: object
 namespace: https://niaid.bionimbus.org/
 category: administrative
@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: projects
-    backref: data_collections
+    backref: core_metadata_collections
     label: data_from
     target_type: project
     multiplicity: many_to_one
@@ -31,11 +31,6 @@ links:
 uniqueKeys:
   - [id]
   - [project_id, submitter_id]
-
-required:
-  - submitter_id
-  - type
-  - projects
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
@@ -56,8 +51,7 @@ properties:
     type: string
 
   date:
-    term:
-      $ref: "_definitions.yaml#/datetime"
+    $ref: "_definitions.yaml#/datetime"
 
   description:
     description: >
@@ -66,7 +60,7 @@ properties:
 
   format:
     description: >
-      The file format, physical medium, or dimensions of the resource. Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME] (http://www.iana.org/assignments/media-types/). 
+      The file format, physical medium, or dimensions of the resource. Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME] (http://www.iana.org/assignments/media-types/).
     type: string
 
   language:

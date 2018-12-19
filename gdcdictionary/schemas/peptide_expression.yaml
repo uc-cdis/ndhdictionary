@@ -23,18 +23,27 @@ systemProperties:
   - error_type
 
 links:
-  - name: aliquots
-    backref: peptide_expressions
-    label: data_for
-    target_type: aliquot
-    multiplicity: one_to_many
+  - exclusive: false
     required: true
-  - name: protein_mass_spectrometries
-    backref: peptide_expressions
-    label: derived_from
-    target_type: protein_mass_spectrometry
-    multiplicity: one_to_many
-    required: false
+    subgroup:
+      - name: core_metadata_collections
+        backref: peptide_expressions
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: aliquots
+        backref: peptide_expressions
+        label: data_for
+        target_type: aliquot
+        multiplicity: one_to_many
+        required: false
+      - name: protein_mass_spectrometries
+        backref: peptide_expressions
+        label: derived_from
+        target_type: protein_mass_spectrometry
+        multiplicity: one_to_many
+        required: false
 
 required:
   - submitter_id
@@ -79,6 +88,7 @@ properties:
 
   aliquots:
     $ref: "_definitions.yaml#/to_many"
-
   protein_mass_spectrometries:
     $ref: "_definitions.yaml#/to_many"
+  core_metadata_collections:
+    $ref: "_definitions.yaml#/to_one"

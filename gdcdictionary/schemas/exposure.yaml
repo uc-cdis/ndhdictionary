@@ -28,10 +28,6 @@ links:
     multiplicity: many_to_one
     required: true
 
-preferred:
-  - cigarettes_per_day
-  - years_smoked
-
 uniqueKeys:
   #unclear if want submitter ID for clinical
   - [id]
