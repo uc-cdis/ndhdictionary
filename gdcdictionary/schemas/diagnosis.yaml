@@ -146,7 +146,7 @@ properties:
 
   comorbidity:
     description: >
-      the simultaneous presence of two chronic diseases or conditions in a patient
+      The simultaneous presence of two chronic diseases or conditions in a patient
     enum:
       - HIV
       - Hepatic disease
