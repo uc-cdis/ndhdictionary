@@ -92,6 +92,7 @@ properties:
       - Aqueous Fluid
       - Arm
       - Artery
+      - Ascitic fluid
       - Ascending Colon
       - Ascending Colon Hepatic Flexure
       - Auditory Canal
@@ -99,6 +100,7 @@ properties:
       - Axilla
       - Back
       - Bile Duct
+      - Biopsy
       - Bladder
       - Blood
       - Blood Vessel
@@ -329,6 +331,11 @@ properties:
       - Stomach
       - Stomach - Mucosa Only
       - Subcutaneous Tissue
+      - Surgery - caseous masses
+      - Surgery - cavity internal wall
+      - Surgery - cavity external wall
+      - Surgery - infectious granuloma
+      - Surgery - healthy tissue
       - Synovium
       - Temporal Cortex
       - Tendon
