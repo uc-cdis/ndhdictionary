@@ -656,6 +656,28 @@ properties:
       Social risk factors for a patient (yes or no) as ex prisoner
     type: boolean
 
+  cokmtc:
+    description: >
+      Documented contact of known MDR TB Case
+    type: boolean
+
+  homeless:
+    description: >
+      homeless status
+    type: boolean
+
+  worked_abroad:
+    description: >
+      whether worked abroad
+    type:
+      boolean
+
+  tb_care_worker:
+    description: >
+      whether have been a tuberculosis care worker
+    type:
+      boolean
+
   follow_ups:
     $ref: "_definitions.yaml#/to_one"
 

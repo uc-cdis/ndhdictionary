@@ -144,5 +144,16 @@ properties:
       - number
       - "null"
 
+  comorbidity:
+    description: >
+      The simultaneous presence of two chronic diseases or conditions in a patient
+    enum:
+      - HIV
+      - Hepatic disease
+      - Renal disease
+      - Anemia
+      - Diabetes
+      - Other
+
   subjects:
     $ref: "_definitions.yaml#/to_one"
