@@ -147,13 +147,32 @@ properties:
   comorbidity:
     description: >
       The simultaneous presence of two chronic diseases or conditions in a patient
-    enum:
-      - HIV
-      - Hepatic disease
-      - Renal disease
-      - Anemia
-      - Diabetes
-      - Other
+    type: boolean
+
+  comorbidity_hiv:
+    description: >
+      Presence of HIV as comorbidity
+    type: boolean
+
+  comorbidity_hepatic_disease:
+    description: >
+      Presence of hepatic disease as comorbidity
+    type: boolean
+
+  comorbidity_renal_disease:
+    description: >
+        Presence of renal disease as comorbidity
+    type: boolean
+
+  comorbidity_anemia:
+    description: >
+        Presence of anemia as comorbidity
+    type: boolean
+
+  comorbidity_diabetes:
+    description: >
+        Presence of diabetes as comorbidity
+    type: boolean
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
