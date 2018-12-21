@@ -1703,6 +1703,11 @@ properties:
       Yes / No if Terizidone was included in the regimen
     type: boolean
 
+  eto:
+    description: >
+      Yes / No if Ethionamide was included in the regimen
+    type: boolean
+
   art:
     description: >
       Yes / No if Antiretroviral therapy (a treatment of people infected with human immunodeficiency virus using anti HIV-drugs) was included in the regimen
