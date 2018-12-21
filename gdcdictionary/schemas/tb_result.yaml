@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Tuberculosis test Values obtained from laboratory tests
+  Tuberculosis test Values obtained from laboratory tests required by a medical professional and performed at one of the recurrent patient visit
 additionalProperties: false
 submittable: true
 validators: null
@@ -73,6 +73,13 @@ properties:
       - "r"
       - "s"
       - "ag_cp"
+      - "lzd"
+      - "clr"
+      - "eto"
+      - "cfz"
+      - "ipm_cln"
+      - "dld"
+      - "bdq"
 
   response:
     description: >
@@ -85,6 +92,27 @@ properties:
       - "S"
       - "R"
       - "I"
+
+  culture:
+    description: >
+      Result of culture. Examples include positive growth of mycobacterium, more than 200 colonies, not done, study in progress, results not entered, nonspecific microflora, and more
+    enum:
+      - "Negative"
+      - "Unknown result"
+      - "Study in progress"
+      - "Not done"
+      - "Nonspecific microflora"
+      - "MOTT"
+      - "1 to 19"
+      - "Positive"
+      - "20 to 100"
+      - "100 to 200"
+      - "More than 200"
+
+  microscopy:
+    description: >
+      Result of microscopy. Examples include 10-99 acid-resistant bacteria in 1 field of view when stained by Ziehl-Nielsen, 1 to 9 in 1, 10 to 99 in 100, and more.
+    type: string
 
   samples:
     $ref: "_definitions.yaml#/to_one"
