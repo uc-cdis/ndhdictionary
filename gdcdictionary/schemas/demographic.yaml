@@ -14,6 +14,12 @@ additionalProperties: false
 submittable: true
 validators: null
 
+termDef:
+  - term: Demographic
+    source: NCI Thesaurus
+    term_id: C16495
+    term_version: 18.11d (Release date:2018-11-26)
+
 systemProperties:
   - id
   - project_id
@@ -49,11 +55,25 @@ properties:
     description: >
       The body mass divided by the square of the body height expressed in units of kg/m^2.
     type: number
+    termDef:
+      - term: bmi
+        source: NCI Thesaurus
+        term_id: C138901
+        term_version: 18.11d (Release date:2018-11-26)
 
   country_of_birth:
     description: >
       Country of birth
     type: string
+    termDef:
+      - term: Country Of Birth
+        source: NCI Thesaurus
+        term_id: C25155
+        term_version: 18.11d (Release date:2018-11-26)
+      - term: Country Of Birth
+        source: NCI Thesaurus
+        term_id: C25464
+        term_version: 18.11d (Release date:2018-11-26)
 
   gender:
     term:
@@ -64,6 +84,32 @@ properties:
       - unknown
       - unspecified
       - not reported
+    termDef:
+      - term: Gender
+        source: NCI Thesaurus
+        term_id: C17357
+        term_version: 18.11d (Release date:2018-11-26)
+    enumDef:
+      - enumeration: Female
+        source: NCI Thesaurus
+        term_id: C46110
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Male
+        source: NCI Thesaurus
+        term_id: C84364
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Unknown
+        source: NCI Thesaurus
+        term_id: C17998
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Unspecified
+        source: NCI Thesaurus
+        term_id: C38046
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Not Reported
+        source: NCI Thesaurus
+        term_id:  C43234
+        term_version: 18.09d (Release date:2018-09-24)
 
   race:
     term:
@@ -78,6 +124,52 @@ properties:
       - Unspecified
       - Unknown
       - Other
+    termDef:
+      - term: Race
+        source: NCI Thesaurus
+        term_id: C17049
+        term_version: 18.11d (Release date:2018-11-26)
+    enumDef:
+      - enumeration: Asian
+        source: NCI Thesaurus
+        term_id: C41260
+        term_version: 18.11d (Release date:2018-11-26)
+      - enumeration: White
+        source: NCI Thesaurus
+        term_id: C41261
+        term_version: 18.11d (Release date:2018-11-26)
+      - enumeration: Black
+        source: NCI Thesaurus
+        term_id: C128938
+        term_version: 18.11d (Release date:2018-11-26)
+      - enumeration: Multi-racial
+        source: NCI Thesaurus
+        term_id: C104495
+        term_version: 18.11d (Release date:2018-11-26)
+      - enumeration: Asian/Pacific Islander
+        source: NCI Thesaurus
+        term_id: C41219
+        term_version: 18.11d (Release date:2018-11-26)
+      - enumeration: American Indian or Alaskan Native
+        source: NCI Thesaurus
+        term_id: C41259
+        term_version: 18.11d (Release date:2018-11-26)
+      - enumeration: American Indian or Alaskan Native
+        source: NCI Thesaurus
+        term_id: C41259
+        term_version: 18.11d (Release date:2018-11-26)
+      - enumeration: Unspecified
+        source: NCI Thesaurus
+        term_id: C38046
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Unknown
+        source: NCI Thesaurus
+        term_id: C17998
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Other
+        source: NCI Thesaurus
+        term_id: C17649
+        term_version: 18.09d (Release date:2018-09-24)
 
   ethnicity:
     term:
@@ -87,6 +179,28 @@ properties:
       - Not Hispanic or Latino
       - Unknown
       - Other
+    termDef:
+      - term: Ethnicity
+        source: NCI Thesaurus
+        term_id: C16564
+        term_version: 18.11d (Release date:2018-11-26)
+    enumDef:
+      - enumeration: Hispanic or Latino
+        source: NCI Thesaurus
+        term_id: C17459
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Not Hispanic or Latino
+        source: NCI Thesaurus
+        term_id: C41222
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Unknown
+        source: NCI Thesaurus
+        term_id: C17998
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Other
+        source: NCI Thesaurus
+        term_id: C17649
+        term_version: 18.09d (Release date:2018-09-24)
 
   caribbean_islander:
     description: >
@@ -105,6 +219,36 @@ properties:
       - Other
       - Refusal
       - "Unknown"
+    termDef:
+      - term: Sexual Orientation
+        source: NCI Thesaurus
+        term_id: C84361
+        term_version: 18.11d (Release date:2018-11-26)
+    enumDef:
+       - enumeration: Heterosexual
+         source: NCI Thesaurus
+         term_id: C84362
+         term_version: 18.09d (Release date:2018-09-24)
+       - enumeration: Bisexual
+         source: NCI Thesaurus
+         term_id: C84364
+         term_version: 18.09d (Release date:2018-09-24)
+       - enumeration: Lesbian/Gay
+         source: NCI Thesaurus
+         term_id: C84363
+         term_version: 18.09d (Release date:2018-09-24)
+       - enumeration: Other
+         source: NCI Thesaurus
+         term_id: C17649
+         term_version: 18.09d (Release date:2018-09-24)
+       - enumeration: Refusal
+         source: NCI Thesaurus
+         term_id: C110959
+         term_version: 18.09d (Release date:2018-09-24)
+       - enumeration: "Unknown"
+         source: NCI Thesaurus
+         term_id: C17998
+         term_version: 18.09d (Release date:2018-09-24)
 
   vital_status:
     term:
@@ -114,6 +258,11 @@ properties:
       - Dead
       - Lost to Follow-up
       - Unknown
+    termDef:
+      - term: Vital Status
+        source: NCI Thesaurus
+        term_id: C25717
+        term_version: 18.11d (Release date:2018-11-26)
 
   year_of_birth:
     term:
@@ -121,16 +270,43 @@ properties:
     type:
       - number
       - "null"
+    termDef:
+      - term: Year Of Birth
+        source: NCI Thesaurus
+        term_id: C83164
+        term_version: 18.11d (Release date:2018-11-26)
 
   year_of_death:
     term:
       $ref: "_terms.yaml#/year_of_death"
     type: number
+    termDef:
+      - term: Year Of Death
+        source: NCI Thesaurus
+        term_id: C25164
+        term_version: 18.11d (Release date:2018-11-26)
+      - term: Year Of Death
+        source: NCI Thesaurus
+        term_id: C28554
+        term_version: 18.11d (Release date:2018-11-26)
 
   rodent_age_at_index:
     description: >
       "The rodent's age (in weeks) on the reference or anchor date used during date obfuscation"
     type: number
+    termDef:
+      - term: Rodent Age At Index
+        source: NCI Thesaurus
+        term_id: C14270
+        term_version: 18.11d (Release date:2018-11-26)
+      - term: Rodent Age At Index
+        source: NCI Thesaurus
+        term_id: C37908
+        term_version: 18.11d (Release date:2018-11-26)
+      - term: Rodent Age At Index
+        source: NCI Thesaurus
+        term_id: C25390
+        term_version: 18.11d (Release date:2018-11-26)
 
   human_age_at_index:
     description: >
@@ -140,6 +316,19 @@ properties:
       - "null"
     maximum: 89
     minimum: 0
+    termDef:
+      - term: Human Age At Index
+        source: NCI Thesaurus
+        term_id: C14225
+        term_version: 18.12e (Release date:2018-12-31)
+      - term: Human Age At Index
+        source: NCI Thesaurus
+        term_id: C37908
+        term_version: 18.12e (Release date:2018-12-31)
+      - term: Human Age At Index
+        source: NCI Thesaurus
+        term_id: C25390
+        term_version: 18.12e (Release date:2018-12-31)
 
   human_age_at_index_gt89:
     description: >
