@@ -44,7 +44,6 @@ uniqueKeys:
 required:
   - submitter_id
   - type
-  - follow_ups
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
