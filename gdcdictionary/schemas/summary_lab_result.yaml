@@ -14,6 +14,12 @@ additionalProperties: false
 submittable: true
 validators: null
 
+termDef:
+  - term: Summary Lab Result
+    source: NCI Thesaurus
+    term_id: C36292
+    term_version: 18.12e (Release date:2018-12-31)
+
 systemProperties:
   - id
   - project_id
@@ -54,86 +60,187 @@ properties:
     description: >
       LDL Cholesterol measured directly in the laboratory (mg/dL)
     type: number
+    termDef:
+       - term: ldlchold
+         source: NCI Thesaurus
+         term_id: C105588
+         term_version: 18.10e (Release date:2018-10-29)
 
   ldlcholc:
     description: >
       LDL Cholesterol calculated from other measurements (mg/dL)
     type: number
-
+    termDef:
+       - term: ldlcholc
+         source: NCI Thesaurus
+         term_id: C105588
+         term_version: 18.10e (Release date:2018-10-29)
+    
   chol_hdl_ration:
     description: >
       Cholesterol/HDL ratio
     type: number
+    termDef:
+       - term: chol_hdl_ration
+         source: NCI Thesaurus
+         term_id: C147362
+         term_version: 18.10e (Release date:2018-10-29)
 
   chol:
     description: >
       Cholesterol (mg/dL)
     type: number
+    termDef:
+       - term: chol
+         source: NCI Thesaurus
+         term_id: C105586
+         term_version: 18.10e (Release date:2018-10-29)
 
   triglyc:
     description: >
       Triglycerides (mg/dL)
     type: number
+    termDef:
+       - term: triglyc
+         source: NCI Thesaurus
+         term_id: C64812
+         term_version: 18.10e (Release date:2018-10-29)
 
   hdlchol:
     description: >
       HDL Cholesterol (mg/dL)
     type: number
+    termDef:
+       - term: hdlchol
+         source: NCI Thesaurus
+         term_id: C105587
+         term_version: 18.10e (Release date:2018-10-29)
 
   ldlchold_ratio:
     description: >
       LDL/HDL Cholesterol ratio
     type: number
+    termDef:
+       - term: ldlchold_ratio
+         source: NCI Thesaurus
+         term_id: C121182
+         term_version: 18.10e (Release date:2018-10-29)
 
   cd4dt:
     description: >
       Year that CD4 was collected
     type: integer
-
+    termDef:
+       - term: cd4dt
+         source: NCI Thesaurus
+         term_id: C16300
+         term_version: 18.10e (Release date:2018-10-29)
+       - term: cd4dt
+         source: NCI Thesaurus
+         term_id: C81286
+         term_version: 18.10e (Release date:2018-10-29)
+         
   hematocrit:
     description: >
       Hematocrit (%)
     type: number
+    termDef:
+       - term: hematocrit
+         source: NCI Thesaurus
+         term_id: C64796
+         term_version: 18.10e (Release date:2018-10-29)
 
   hemoglobin:
     description: >
       Hemoglobin (gm/dl)
     type: number
+    termDef:
+       - term: hemoglobin
+         source: NCI Thesaurus
+         term_id: C64848
+         term_version: 18.10e (Release date:2018-10-29)
 
   hsrat:
     description: >
       Helper/Suppressor Ratio (CD4N/ CD8N)
     type: number
+    termDef:
+       - term: hsrat
+         source: NCI Thesaurus
+         term_id: C129775
+         term_version: 18.10e (Release date:2018-10-29)
 
   leu3n:
     description: >
       # of CD4 positive cells (helpers, cells per mm^3)
     type: integer
+    termDef:
+       - term: leu3n
+         source: NCI Thesaurus
+         term_id: C55931
+         term_version: 18.10e (Release date:2018-10-29)
 
   leu3p:
     description: >
       % CD4 positive cells (helpers)
     type: number
+    termDef:
+       - term: leu3p
+         source: NCI Thesaurus
+         term_id: C25613
+         term_version: 18.10e (Release date:2018-10-29)
+       - term: leu3p
+         source: NCI Thesaurus
+         term_id: C153220
+         term_version: 18.10e (Release date:2018-10-29)
 
   leu2n:
     description: >
       # of CD8 positive cells (suppressors, cells per mm^3)
     type: integer
+    termDef:
+       - term: leu2n
+         source: NCI Thesaurus
+         term_id: C103811
+         term_version: 18.10e (Release date:2018-10-29)
 
   leu2p:
     description: >
       % CD8 positive cells (suppressors)
     type: number
+    termDef:
+       - term: leu2p
+         source: NCI Thesaurus
+         term_id: C25613
+         term_version: 18.10e (Release date:2018-10-29)
+       - term: leu2p
+         source: NCI Thesaurus
+         term_id: C12542
+         term_version: 18.10e (Release date:2018-10-29)
 
   leu4n:
     description: >
       # of CD3 positive cells (cells per mm^3)
     type: integer
+    termDef:
+       - term: leu4n
+         source: NCI Thesaurus
+         term_id: C103809
+         term_version: 18.10e (Release date:2018-10-29)
 
   leu4p:
     description: >
       % CD3 positive cells
     type: number
+    termDef:
+       - term: leu4p
+         source: NCI Thesaurus
+         term_id: C25613
+         term_version: 18.10e (Release date:2018-10-29)
+       - term: leu4p
+         source: NCI Thesaurus
+         term_id: C131386
+         term_version: 18.10e (Release date:2018-10-29)
 
   llq_vl:
     description: >
@@ -149,16 +256,39 @@ properties:
       - NASBA, .1 ml input
       - Bayer Branched DNA
       - Missing (some pre-HAART for new recruits)
+    termDef:
+       - term: llq_vl
+         source: NCI Thesaurus
+         term_id: C25555
+         term_version: 18.10e (Release date:2018-10-29)
+       - term: llq_vl
+         source: NCI Thesaurus
+         term_id: C129663
+         term_version: 18.10e (Release date:2018-10-29)
+       - term: llq_vl
+         source: NCI Thesaurus
+         term_id: C60819
+         term_version: 18.10e (Release date:2018-10-29)
 
   platelets:
     description: >
       Platelets (thousands/mm3)
     type: number
+    termDef:
+       - term: platelets
+         source: NCI Thesaurus
+         term_id: C51951
+         term_version: 18.10e (Release date:2018-10-29)
 
   rbc:
     description: >
       Count of Red blood cells (millions/mm3)
     type: number
+    termDef:
+       - term: rbc
+         source: NCI Thesaurus
+         term_id: C12521
+         term_version: 18.10e (Release date:2018-10-29)
 
   ud_vl:
     description: >
@@ -167,11 +297,29 @@ properties:
       - Below lower limit of quantification (VLOAD set to lower limit)
       - Detected
       - Above upper limit of quantification (VLOAD set to upper limit)
+    enumDef:
+      - enumeration: Below lower limit of quantification (VLOAD set to lower limit)
+        source: NCI Thesaurus
+        term_id: C82589
+        term_version: 18.12e (Release date:2018-12-31)
+      - enumeration: Detected
+        source: NCI Thesaurus
+        term_id: C16210
+        term_version: 18.12e (Release date:2018-12-31)
+      - enumeration: Above upper limit of quantification (VLOAD set to upper limit)
+        source: NCI Thesaurus
+        term_id: C85533
+        term_version: 18.12e (Release date:2018-12-31)
 
   viral_load:
     description: >
       Standardized viral load (copies/ml)
     type: number
+    termDef:
+       - term: viral_load
+         source: NCI Thesaurus
+         term_id: C51952
+         term_version: 18.10e (Release date:2018-10-29)
 
   viral_load_kit:
     description: >
@@ -191,16 +339,51 @@ properties:
     description: >
       Version number of data
     type: string
+    termDef:
+       - term: vldt
+         source: NCI Thesaurus
+         term_id: C51952
+         term_version: 18.10e (Release date:2018-10-29)
+       - term: vldt
+         source: NCI Thesaurus
+         term_id: C29848
+         term_version: 18.11d (Release date:2018-11-26)
+       - term: vldt
+         source: NCI Thesaurus
+         term_id: C25453
+         term_version: 18.11d (Release date:2018-11-26)
 
   wbc:
     description: >
       Count of white blood cells
     type: number
-
+    termDef:
+       - term: wbc
+         source: NCI Thesaurus
+         term_id: C51948
+         term_version: 18.10e (Release date:2018-10-29)
+   
   percent_infection:
     description: >
       percentage of cells that infected by virus.
     type: number
+    termDef:
+       - term: percent_infection
+         source: NCI Thesaurus
+         term_id: C25613
+         term_version: 18.11d (Release date:2018-11-26)
+       - term: percent_infection
+         source: NCI Thesaurus
+         term_id: C12508
+         term_version: 18.11d (Release date:2018-11-26)
+       - term: percent_infection
+         source: NCI Thesaurus
+         term_id: C128320
+         term_version: 18.11d (Release date:2018-11-26)
+       - term: percent_infection
+         source: NCI Thesaurus
+         term_id: C14283
+         term_version: 18.11d (Release date:2018-11-26)
 
   virus_titer_rep1:
     description: >
