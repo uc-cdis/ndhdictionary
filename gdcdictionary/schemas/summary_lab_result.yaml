@@ -185,11 +185,11 @@ properties:
       % CD4 positive cells (helpers)
     type: number
     termDef:
-       - term: % CD4 positive cells (helpers)
+       - term: leu3p
          source: NCI Thesaurus
          term_id: C25613
          term_version: 18.10e (Release date:2018-10-29)
-       - term: % CD4 positive cells (helpers)
+       - term: leu3p
          source: NCI Thesaurus
          term_id: C153220
          term_version: 18.10e (Release date:2018-10-29)
