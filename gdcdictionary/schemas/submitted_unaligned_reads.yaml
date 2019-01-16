@@ -99,11 +99,7 @@ properties:
   mycobacterium_tuberculosis_lineage:
     description: >
       Classification determined by spoligotype using the lorikeet spoligotype analysis software.
-    enum:
-      - "Beijing"
-      - "T5-RUS1"
-      - "T1"
-      - "Unknown"
+    type: string
 
   read_groups:
     $ref: "_definitions.yaml#/to_one"
