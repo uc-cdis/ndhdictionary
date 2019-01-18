@@ -34,6 +34,10 @@ uniqueKeys:
   - [id]
   - [project_id, submitter_id]
 
+required:
+  - submitter_id
+  - type
+
 properties:
   type:
     enum: [ "family_history" ]

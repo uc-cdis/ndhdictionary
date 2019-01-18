@@ -23,12 +23,21 @@ systemProperties:
   - error_type
 
 links:
-  - name: studies
-    backref: protocols
-    label: derived_from
-    target_type: study
-    multiplicity: many_to_many
+  - exclusive: false
     required: true
+    subgroup:
+      - name: core_metadata_collections
+        backref: protocols
+        label: data_from
+        target_type: core_metadata_collection
+        multiplicity: many_to_one
+        required: false
+      - name: studies
+        backref: protocols
+        label: derived_from
+        target_type: study
+        multiplicity: many_to_many
+        required: false
 
 required:
   - submitter_id
@@ -67,4 +76,6 @@ properties:
       Free text to expand upon details
     type: string
   studies:
+    $ref: "_definitions.yaml#/to_many"
+  core_metadata_collections:
     $ref: "_definitions.yaml#/to_many"

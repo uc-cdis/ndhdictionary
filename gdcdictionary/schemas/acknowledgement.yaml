@@ -29,7 +29,9 @@ links:
 
 required:
   - submitter_id
+  - type
   - projects
+
 
 uniqueKeys:
   - [ id ]
