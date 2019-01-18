@@ -22,6 +22,7 @@ systemProperties:
   - updated_datetime
 
 required:
+  - type
   - submitter_id
 
 uniqueKeys:
@@ -115,6 +116,3 @@ properties:
 
   samples:
     $ref: "_definitions.yaml#/to_one"
-
-
-
