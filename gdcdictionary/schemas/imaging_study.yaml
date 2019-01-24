@@ -31,7 +31,7 @@ links:
     backref: imaging_studies
     label: performed_at
     target_type: follow_up
-    multiplicity: one_to_one
+    multiplicity: many_to_one
     required: false
 
 
@@ -61,4 +61,4 @@ properties:
     $ref: "_definitions.yaml#/to_one"
 
   follow_ups:
-    $ref: "_definitions.yaml#/to_many"
+    $ref: "_definitions.yaml#/to_one"
