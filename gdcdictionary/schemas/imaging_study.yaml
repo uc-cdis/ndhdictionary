@@ -32,7 +32,7 @@ links:
     label: performed_at
     target_type: follow_up
     multiplicity: many_to_one
-    required: false
+    required: true
 
 
 uniqueKeys:
@@ -43,6 +43,7 @@ required:
   - submitter_id
   - type
   - subjects
+  - follow_ups
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"

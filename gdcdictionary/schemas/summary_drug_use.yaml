@@ -21,21 +21,18 @@ systemProperties:
   - updated_datetime
 
 links:
-  - exclusive: false
+  - name: follow_ups
+    backref: summary_drug_uses
+    label: performed_at
+    target_type: follow_up
+    multiplicity: one_to_one
     required: true
-    subgroup:
-      - name: follow_ups
-        backref: summary_drug_uses
-        label: performed_at
-        target_type: follow_up
-        multiplicity: one_to_one
-        required: false
-      - name: treatments
-        backref: summary_drug_uses
-        label: associate_with
-        target_type: treatment
-        multiplicity: one_to_one
-        required: false
+  - name: treatments
+    backref: summary_drug_uses
+    label: associate_with
+    target_type: treatment
+    multiplicity: one_to_one
+    required: false
 
 uniqueKeys:
   - [id]
@@ -44,6 +41,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
+  - follow_ups
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"

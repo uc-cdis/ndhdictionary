@@ -21,21 +21,18 @@ systemProperties:
   - updated_datetime
 
 links:
-  - exclusive: false
+  - name: core_metadata_collections
+    backref: imaging_files
+    label: data_from
+    target_type: core_metadata_collection
+    multiplicity: many_to_one
+    required: false
+  - name: imaging_exams
+    backref: imaging_files
+    label: data_for
+    target_type: imaging_exam
+    multiplicity: many_to_one
     required: true
-    subgroup:
-      - name: core_metadata_collections
-        backref: imaging_files
-        label: data_from
-        target_type: core_metadata_collection
-        multiplicity: many_to_one
-        required: false
-      - name: imaging_exams
-        backref: imaging_files
-        label: data_for
-        target_type: imaging_exam
-        multiplicity: many_to_one
-        required: false
 
 
 uniqueKeys:
@@ -50,6 +47,7 @@ required:
   - data_format
   - md5sum
   - data_category
+  - imaging_exams
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
