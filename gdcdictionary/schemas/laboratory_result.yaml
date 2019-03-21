@@ -421,7 +421,7 @@ properties:
       If urine protein < 4, ratio usually not submitted by testing lab
     type: number
 
-  VLOAD:
+  vload:
     description: >
       Standardized viral load (copies/ml)
     type: number
