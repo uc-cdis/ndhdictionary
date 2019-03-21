@@ -180,7 +180,7 @@ properties:
       CD3/CD8 Q IV T Lymphocytes
     type: number
 
-  leu3n:
+  cd4n:
     description: >
       Number of CD4 positive cells (helpers)/ul
     type: number
@@ -421,7 +421,7 @@ properties:
       If urine protein < 4, ratio usually not submitted by testing lab
     type: number
 
-  viral_load:
+  VLOAD:
     description: >
       Standardized viral load (copies/ml)
     type: number

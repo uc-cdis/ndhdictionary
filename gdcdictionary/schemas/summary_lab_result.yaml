@@ -170,12 +170,12 @@ properties:
          term_id: C129775
          term_version: 18.10e (Release date:2018-10-29)
 
-  leu3n:
+  cd4n:
     description: >
       # of CD4 positive cells (helpers, cells per mm^3)
     type: integer
     termDef:
-       - term: leu3n
+       - term: cd4n
          source: NCI Thesaurus
          term_id: C55931
          term_version: 18.10e (Release date:2018-10-29)
@@ -311,12 +311,12 @@ properties:
         term_id: C85533
         term_version: 18.12e (Release date:2018-12-31)
 
-  viral_load:
+  VLOAD:
     description: >
       Standardized viral load (copies/ml)
     type: number
     termDef:
-       - term: viral_load
+       - term: VLOAD
          source: NCI Thesaurus
          term_id: C51952
          term_version: 18.10e (Release date:2018-10-29)
