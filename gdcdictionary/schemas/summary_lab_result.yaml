@@ -311,12 +311,12 @@ properties:
         term_id: C85533
         term_version: 18.12e (Release date:2018-12-31)
 
-  VLOAD:
+  vload:
     description: >
       Standardized viral load (copies/ml)
     type: number
     termDef:
-       - term: VLOAD
+       - term: vload
          source: NCI Thesaurus
          term_id: C51952
          term_version: 18.10e (Release date:2018-10-29)
