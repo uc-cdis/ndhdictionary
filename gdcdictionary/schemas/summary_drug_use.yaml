@@ -676,7 +676,7 @@ properties:
 
   thrpy:
     description: >
-      Type of therapy used since last visit, simplified definition suggested on June 2, 2009
+      Type of therapy used to treat human immunodeficiency virus (HIV) infection that uses a combination of several antiretroviral drugs used since last visit. The therapy inhibits the ability of the virus to multiply in the body, and they slow down the development of AIDS.
     enum:
       - "No therapy"
       - "Mono therapy"
@@ -689,7 +689,7 @@ properties:
 
   thrpyv:
     description: >
-      Type of therapy used at visit, simplified definition suggested on June 2, 2009
+      Type of therapy used to treat human immunodeficiency virus (HIV) infection that uses a combination of several antiretroviral drugs used at visit. The therapy inhibits the ability of the virus to multiply in the body, and they slow down the development of AIDS.
     enum:
       - "No therapy"
       - "Mono therapy"
