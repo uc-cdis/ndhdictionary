@@ -684,6 +684,7 @@ properties:
       - "HAART"
       - "HAART (HU/ddI defined)"
       - "unknown regimen"
+      - "Potent ART"
       - "Missing"
 
   thrpyv:

@@ -24,7 +24,8 @@ required:
   - code
   - name
   - programs
-
+  - dbgap_accession_number
+  
 uniqueKeys:
   - [ id ]
   - [ code ]

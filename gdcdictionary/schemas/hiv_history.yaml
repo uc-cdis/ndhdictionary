@@ -55,9 +55,7 @@ properties:
       Summarized HIV sero-status
     enum:
       - Negative
-      - Prevalent
-      - Converter
-      - Converter identified at death
+      - Positive
 
   lnegdate:
     description: >
