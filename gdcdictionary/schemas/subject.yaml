@@ -45,7 +45,9 @@ properties:
   hiv_status:
     description: >
       HIV Status
-    type: boolean
+    enum:
+      - positive
+      - negative
 
   cohort_id:
     description: >
