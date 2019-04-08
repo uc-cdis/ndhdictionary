@@ -417,6 +417,12 @@ properties:
     term:
       $ref: "_terms.yaml#/days_to_collection"
     type: integer
+    
+  collection_date:
+    description: >
+      Date range in which samples were collected.
+    type: string
+
   days_to_sample_procurement:
     term:
       $ref: "_terms.yaml#/days_to_sample_procurement"

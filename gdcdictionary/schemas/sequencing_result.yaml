@@ -94,6 +94,18 @@ properties:
       - Sequencing Experiment
       - Targeted Sequencing Experiment
 
+  antimicrobial_resistance_evidence:
+    description: >
+      The method used to determine resistance.
+    type: string
+
+  antimicrobial_resistance:
+    description: >
+      A list of medications that the bacteria is resistant to.
+    type: array
+    items:
+      type: string
+
   experiments:
     $ref: "_definitions.yaml#/to_many"
   submitted_unaligned_reads_files:
