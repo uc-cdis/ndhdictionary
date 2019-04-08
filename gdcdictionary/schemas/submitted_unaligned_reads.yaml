@@ -68,6 +68,22 @@ properties:
     term:
       $ref: "_terms.yaml#/data_type"
     enum: [ "Unaligned Reads" ]
+
+  contigs:
+    description: >
+      The number of reads that can be assembled into a longer continuous read.
+    type: integer
+
+  sra_accession:
+    description: >
+      Sequence Read Archive accession number of raw data generated
+    type: string
+
+  gc_content:
+    description: >
+      gc content of data sequenced.
+    type: number
+
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
@@ -96,6 +112,11 @@ properties:
     description: >
       Type of organism the sequencing was performed on
     type: string
+
+  cds:
+    description: >
+      The coding region of a gene.
+    type: integer
 
   mycobacterium_tuberculosis_lineage:
     description: >

@@ -61,6 +61,11 @@ properties:
         term_id: C138901
         term_version: 18.11d (Release date:2018-11-26)
 
+  isolation_country:
+    description: >
+      The country in which the bacteria was isolated.
+    type: string
+
   country_of_birth:
     description: >
       Country of birth

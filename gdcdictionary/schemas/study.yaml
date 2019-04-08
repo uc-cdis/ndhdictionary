@@ -98,6 +98,13 @@ properties:
       Name of the primary organization that oversees implementation of the study
     type: string
 
+  patric_comments:
+    description: >
+      Comments from PATRIC's genome metadata.
+    type: array
+    items:
+      type: string
+
   study_setup:
     description: >
       Category

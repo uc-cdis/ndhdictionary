@@ -59,6 +59,11 @@ properties:
       Cohort name
     type: string
 
+  geographic_location:
+    description: >
+      Location of experiment.
+    type: string
+
   study_center:
     description: >
       Study Site (where enrolled)
@@ -85,10 +90,36 @@ properties:
      - Mustela putorius furo
      - Rattus rattus
      - Sus scrofa
+     - Mycobacterium tuberculosis
 
   strain:
     description: >
       A lower-level taxonomic rank used in microbiology or virology, plants and rodents, usually at the intraspecific level (within a species)
+    type: string
+
+  taxon_id:
+    description: >
+      NCBI identifier for classification of organisms.
+    type: integer
+
+  genus:
+    description: >
+      Genus of organism collected.
+    type: string
+
+  host_name:
+    description: >
+      The species from which the bacteria was isolated.
+    type: string
+
+  genome_length:
+    description: >
+      Number of basepairs of genome sequenced.
+    type: integer
+
+  genome_id:
+    description: >
+      PATRIC unique identifier for genome sequenced.
     type: string
 
   primary_site:
