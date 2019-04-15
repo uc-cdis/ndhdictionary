@@ -127,8 +127,6 @@ properties:
       $ref: "_terms.yaml#/data_format"
     type: string
 
-  laboratory_results:
-    $ref: "_definitions.yaml#/to_one"
   physical_exams:
     $ref: "_definitions.yaml#/to_one"
   neurocognitive_tests:
