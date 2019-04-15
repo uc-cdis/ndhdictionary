@@ -31,12 +31,6 @@ links:
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: laboratory_results
-        backref: visit_files
-        label: derived_from
-        target_type: laboratory_result
-        multiplicity: one_to_one
-        required: false
       - name: physical_exams
         backref: visit_files
         label: derived_from
