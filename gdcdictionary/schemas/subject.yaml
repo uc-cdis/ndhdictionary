@@ -42,6 +42,61 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+  amikacin_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  capreomycin_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  ethambutol_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  isoniazid_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  kanamycin_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  ofloxacin_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  rifampin_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  streptomycin_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  pyrazinamide_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  rifampicin_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  prothionamide_res_phenotype:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
   hiv_status:
     description: >
       HIV Status
