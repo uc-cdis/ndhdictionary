@@ -31,12 +31,6 @@ links:
         target_type: core_metadata_collection
         multiplicity: many_to_one
         required: false
-      - name: physical_exams
-        backref: visit_files
-        label: derived_from
-        target_type: physical_exam
-        multiplicity: one_to_one
-        required: false
       - name: neurocognitive_tests
         backref: visit_files
         label: derived_from
@@ -121,8 +115,6 @@ properties:
       $ref: "_terms.yaml#/data_format"
     type: string
 
-  physical_exams:
-    $ref: "_definitions.yaml#/to_one"
   neurocognitive_tests:
     $ref: "_definitions.yaml#/to_one"
   mental_health_questionnaires:
