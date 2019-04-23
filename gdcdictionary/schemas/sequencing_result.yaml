@@ -62,6 +62,82 @@ uniqueKeys:
 
 properties:
   $ref: "_definitions.yaml#/data_file_properties"
+
+  amikacin_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  capreomycin_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  ciprofloxacin_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  ethambutol_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  isoniazid_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  kanamycin_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  moxifloxacin_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  ofloxacin_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  pyrazinamide_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  rifampicin_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  streptomycin_res_mykrobe:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  ethambutol_res_ariba:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  isoniazid_res_ariba:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  pyrazinamide_res_ariba:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
+  rifampicin_res_ariba:
+    enum:
+      - "Susceptible"
+      - "Resistant"
+
   type:
     enum: [ "sequencing_result" ]
   data_category:
@@ -93,18 +169,6 @@ properties:
       - Targeted Ribosome Sequencing Experiment
       - Sequencing Experiment
       - Targeted Sequencing Experiment
-
-  antimicrobial_resistance_evidence:
-    description: >
-      The method used to determine resistance.
-    type: string
-
-  antimicrobial_resistance:
-    description: >
-      A list of medications that the bacteria is resistant to.
-    type: array
-    items:
-      type: string
 
   experiments:
     $ref: "_definitions.yaml#/to_many"
