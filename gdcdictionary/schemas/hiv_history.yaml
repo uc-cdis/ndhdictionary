@@ -175,11 +175,11 @@ properties:
       First reported ART year
     type: integer
     termDef:
-    - term: frstartd
+      - term: frstartd
         source: NCI Thesaurus
         term_id: C159699
         term_version: 19.04f (Release date:2019-04-30)
-    - term: frstartd
+      - term: frstartd
         source: NCI Thesaurus
         term_id: C94631
         term_version: 19.04f (Release date:2019-04-30)
