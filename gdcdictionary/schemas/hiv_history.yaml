@@ -44,6 +44,11 @@ properties:
     description: >
       Baseline year. First year enrolled.
     type: integer
+    termDef:
+       - term: bsdate
+         source: NCI Thesaurus
+         term_id: C121182
+         term_version: 18.10e (Release date:2018-10-29)
 
   bsvisit:
     description: >
@@ -58,41 +63,126 @@ properties:
       - Prevalent
       - Converter
       - Converter identified at death
+    termDef:
+      - term: status
+        source: NCI Thesaurus
+        term_id: C159691
+        term_version: 19.04f (Release date:2019-04-30)
+    enumDef:
+      - enumeration: Negative
+        source: NCI Thesaurus
+        term_id: C38757
+        version_date: 19.03d (Release date:2019-03-25)
+      - enumeration: Prevalent
+        source: NCI Thesaurus
+        term_id: C159688
+        version_date: 19.03d (Release date:2019-03-25)
+      - enumeration: Converter
+        source: NCI Thesaurus
+        term_id: C159689
+        version_date: 19.03d (Release date:2019-03-25)
+      - enumeration: Converter identified at death
+        source: NCI Thesaurus
+        term_id: C159690
+        version_date: 19.03d (Release date:2019-03-25)
 
   lnegdate:
     description: >
       Last time seen seronegative (year)
     type: integer
+    termDef:
+      - term: lnegdate
+        source: NCI Thesaurus
+        term_id: C159693
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lnegdate
+        source: NCI Thesaurus
+        term_id: C119994
+        term_version: 19.04f (Release date:2019-04-30)
 
   negvis:
     description: >
       Last visit seen seronegative
     type: integer
+    termDef:
+      - term: negvis
+        source: NCI Thesaurus
+        term_id: C159694
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: negvis
+        source: NCI Thesaurus
+        term_id: C119994
+        term_version: 19.04f (Release date:2019-04-30)
 
   fposdate:
     description: >
       First time seen seropositive (year)
     type: integer
+    termDef:
+      - term: fposdate
+        source: NCI Thesaurus
+        term_id: C159693
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fposdate
+        source: NCI Thesaurus
+        term_id: C159692
+        term_version: 19.04f (Release date:2019-04-30)
 
   posvis:
     description: >
       First visit seen seropositive
     type: integer
+    termDef:
+      - term: posvis
+        source: NCI Thesaurus
+        term_id: C159695
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: posvis
+        source: NCI Thesaurus
+        term_id: C159692
+        term_version: 19.04f (Release date:2019-04-30)
 
   lastnoad:
     description: >
       Last reported ART free
     type: integer
+    termDef:
+      - term: lastnoad
+        source: NCI Thesaurus
+        term_id: C159697
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lastnoad
+        source: NCI Thesaurus
+        term_id: C94631
+        term_version: 19.04f (Release date:2019-04-30)
 
   lastnoav:
     description: >
       Last reported ART free visit
     type: integer
+    termDef:
+      - term: lastnoav
+        source: NCI Thesaurus
+        term_id: C159698
+        term_version: (Release date:2019-04-30)
+      - term: lastnoav
+        source: NCI Thesaurus
+        term_id: C94631
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstartd:
     description: >
       First reported ART year
     type: integer
+    termDef:
+      - term: frstartd
+        source: NCI Thesaurus
+        term_id: C159699
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstartd
+        source: NCI Thesaurus
+        term_id: C94631
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstartv:
     description: >
@@ -103,21 +193,57 @@ properties:
     description: >
       Did participant report use of ART prior to baseline (screening) visit?
     type: boolean
+    termDef:
+      - term: arthxbase
+        source: NCI Thesaurus
+        term_id: C159709
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: arthxbase
+        source: NCI Thesaurus
+        term_id: C94631
+        term_version: 19.04f (Release date:2019-04-30)
 
   ehaart:
     description: >
       Ever HAART use
     type: boolean
+    termDef:
+      - term: ehaart
+        source: NCI Thesaurus
+        term_id: C159710
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: ehaart
+        source: NCI Thesaurus
+        term_id: C16165
+        term_version: 19.04f (Release date:2019-04-30)
 
   lastnohd:
     description: >
       Last reported HAART free year
     type: integer
+    termDef:
+      - term: lastnohd
+        source: NCI Thesaurus
+        term_id: C159700
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lastnohd
+        source: NCI Thesaurus
+        term_id: C16165
+        term_version: 19.04f (Release date:2019-04-30)
 
   lastnohv:
     description: >
       Last reported HAART free visit
     type: integer
+    termDef:
+      - term: lastnohv
+        source: NCI Thesaurus
+        term_id: C159698
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lastnohv
+        source: NCI Thesaurus
+        term_id: C16165
+        term_version: 19.04f (Release date:2019-04-30)
 
   frsthaad:
     description: >
@@ -128,111 +254,381 @@ properties:
     description: >
       First reported HAART visit
     type: integer
+    termDef:
+      - term: frsthaav
+        source: NCI Thesaurus
+        term_id: C159701
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frsthaav
+        source: NCI Thesaurus
+        term_id: C16165
+        term_version: 19.04f (Release date:2019-04-30)
 
   lcd4higd:
     description: >
       Last year seen with CD4N >= 200 and CD4% >= 14
     type: integer
+    termDef:
+      - term: lcd4higd
+        source: NCI Thesaurus
+        term_id: C159702
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higd
+        source: NCI Thesaurus
+        term_id: C103810
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higd
+        source: NCI Thesaurus
+        term_id: C61583
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higd
+        source: NCI Thesaurus
+        term_id: C159711
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higd
+        source: NCI Thesaurus
+        term_id: C16300
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higd
+        source: NCI Thesaurus
+        term_id: C70460
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higd
+        source: NCI Thesaurus
+        term_id: C113428
+        term_version: 19.04f (Release date:2019-04-30)
 
   lcd4higv:
     description: >
       Last visit seen with CD4N >= 200 and CD4% >= 14
     type: integer
+    termDef:
+      - term: lcd4higv
+        source: NCI Thesaurus
+        term_id: C159694
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higv
+        source: NCI Thesaurus
+        term_id: C103810
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higv
+        source: NCI Thesaurus
+        term_id: C61583
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higv
+        source: NCI Thesaurus
+        term_id: C159711
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higv
+        source: NCI Thesaurus
+        term_id: C16300
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higv
+        source: NCI Thesaurus
+        term_id: C70460
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lcd4higv
+        source: NCI Thesaurus
+        term_id: C113428
+        term_version: 19.04f (Release date:2019-04-30)
 
   fcd4lowd:
     description: >
       First year seen with CD4N < 200 or CD4% < 14
     type: integer
+    termDef:
+      - term: fcd4lowd
+        source: NCI Thesaurus
+        term_id: C159703
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowd
+        source: NCI Thesaurus
+        term_id: C103810
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowd
+        source: NCI Thesaurus
+        term_id: C61585
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowd
+        source: NCI Thesaurus
+        term_id: C159711
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowd
+        source: NCI Thesaurus
+        term_id: C16300
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowd
+        source: NCI Thesaurus
+        term_id: C70460
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowd
+        source: NCI Thesaurus
+        term_id: C113428
+        term_version: 19.04f (Release date:2019-04-30)
 
   fcd4lowv:
     description: >
       First visit seen with CD4N < 200 or CD4% < 14
     type: integer
+    termDef:
+      - term: fcd4lowv
+        source: NCI Thesaurus
+        term_id: C159696
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowv
+        source: NCI Thesaurus
+        term_id: C103810
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowv
+        source: NCI Thesaurus
+        term_id: C61585
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowv
+        source: NCI Thesaurus
+        term_id: C159711
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowv
+        source: NCI Thesaurus
+        term_id: C16300
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowv
+        source: NCI Thesaurus
+        term_id: C70460
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: fcd4lowv
+        source: NCI Thesaurus
+        term_id: C113428
+        term_version: 19.04f (Release date:2019-04-30)
 
   lastafrd:
     description: >
       Last reported AIDS free year
     type: integer
+    termDef:
+      - term: lastafrd
+        source: NCI Thesaurus
+        term_id: C159698
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lastafrd
+        source: NCI Thesaurus
+        term_id: C16165
+        term_version: 19.04f (Release date:2019-04-30)
 
   lastafrv:
     description: >
       Last reported AIDS free visit
     type: integer
+    termDef:
+      - term: lastafrv
+        source: NCI Thesaurus
+        term_id: C159698
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: lastafrv
+        source: NCI Thesaurus
+        term_id: C2851
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstaidd:
     description: >
       First reported AIDS year
     type: integer
+    termDef:
+      - term: frstaidd
+        source: NCI Thesaurus
+        term_id: C159699
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstaidd
+        source: NCI Thesaurus
+        term_id: C2851
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstaidv:
     description: >
       First reported AIDS visit
     type: integer
+    termDef:
+      - term: frstaidv
+        source: NCI Thesaurus
+        term_id: C159701
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstaidv
+        source: NCI Thesaurus
+        term_id: C2851
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstcncrd:
     description: >
       First confirmed cancer year
     type: integer
+    termDef:
+      - term: frstcncrd
+        source: NCI Thesaurus
+        term_id: C159701
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstcncrd
+        source: NCI Thesaurus
+        term_id: C9305
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstcncrv:
     description: >
       First confirmed cancer visit
     type: integer
+    termDef:
+      - term: frstcncrv
+        source: NCI Thesaurus
+        term_id: C159701
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstcncrv
+        source: NCI Thesaurus
+        term_id: C159705
+        term_version: 19.04f (Release date:2019-04-30)
 
   frsthtnmd:
     description: >
       First visit year with all necessary components to determine hypertension
     type: integer
+    termDef:
+      - term: frsthtnmd
+        source: NCI Thesaurus
+        term_id: C159701
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frsthtnmd
+        source: NCI Thesaurus
+        term_id: C159705
+        term_version: 19.04f (Release date:2019-04-30)
 
   frsthtnmv:
     description: >
       First visit with all necessary components to determine hypertension
     type: integer
+    termDef:
+      - term: frsthtnmv
+        source: NCI Thesaurus
+        term_id: C159707
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frsthtnmv
+        source: NCI Thesaurus
+        term_id: C3117
+        term_version: 19.04f (Release date:2019-04-30)
 
   frsthtnd:
     description: >
       First visit year with hypertension
     type: integer
+    termDef:
+      - term: frsthtnd
+        source: NCI Thesaurus
+        term_id: C159708
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frsthtnd
+        source: NCI Thesaurus
+        term_id: C3117
+        term_version: 19.04f (Release date:2019-04-30)
 
   frsthtnv:
     description: >
       First visit with hypertension
     type: integer
+    termDef:
+      - term: frsthtnv
+        source: NCI Thesaurus
+        term_id: C159696
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frsthtnv
+        source: NCI Thesaurus
+        term_id: C3117
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstdmmd:
     description: >
       First visit year with all necessary components to determine diabetes
     type: integer
+    termDef:
+      - term: frstdmmd
+        source: NCI Thesaurus
+        term_id: C159707
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstdmmd
+        source: NCI Thesaurus
+        term_id: C2985
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstdmmv:
     description: >
       First visit with all necessary components to determine diabetes
     type: integer
+    termDef:
+      - term: frstdmmv
+        source: NCI Thesaurus
+        term_id: C159707
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstdmmv
+        source: NCI Thesaurus
+        term_id: C2985
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstdmd:
     description: >
       First visit year with diabetes
     type: integer
+    termDef:
+      - term: frstdmd
+        source: NCI Thesaurus
+        term_id: C159708
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstdmd
+        source: NCI Thesaurus
+        term_id: C2985
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstdmv:
     description: >
       First visit with diabetes
     type: integer
+    termDef:
+      - term: frstdmv
+        source: NCI Thesaurus
+        term_id: C159696
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstdmv
+        source: NCI Thesaurus
+        term_id: C2985
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstdthd:
     description: >
       Year of death
     type: integer
+    termDef:
+      - term: frstdthd
+        source: NCI Thesaurus
+        term_id: C156426
+        term_version: 19.04f (Release date:2019-04-30)
 
   frstdthv:
     description: >
       First visit reported dead
     type: integer
+    termDef:
+      - term: frstdthv
+        source: NCI Thesaurus
+        term_id: C159701
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: frstdthv
+        source: NCI Thesaurus
+        term_id: C28554
+        term_version: 19.04f (Release date:2019-04-30)
 
   mortcutd:
     description: >
       Mortality cut-off year based on NDI submission (site-level year)
     type: integer
+    termDef:
+      - term: mortcutd
+        source: NCI Thesaurus
+        term_id: C159714
+        term_version: 19.04f (Release date:2019-04-30)
 
   lastconv:
     description: >
@@ -243,16 +639,35 @@ properties:
     description: >
       Year of last study visit attended
     type: integer
+    termDef:
+      - term: lastcond
+        source: NCI Thesaurus
+        term_id: C159712
+        term_version: 19.04f (Release date:2019-04-30)
 
   lastcontact:
     description: >
       Last year of contact (includes in-person or phone contact)
     type: integer
+    termDef:
+      - term: lastcontact
+        source: NCI Thesaurus
+        term_id: C159713
+        term_version: 19.04f (Release date:2019-04-30)
 
   cd4nadir:
     description: >
       HAART experienced only, CD4 nadir prior to HAART initiation (measured during followup or at HAART initiation for HAART- experienced recruits)
     type: integer
+    termDef:
+      - term: cd4nadir
+        source: NCI Thesaurus
+        term_id: C16300
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: cd4nadir
+        source: NCI Thesaurus
+        term_id: C43517
+        term_version: 19.04f (Release date:2019-04-30)
 
   bshcvstat:
     description: >
@@ -261,6 +676,32 @@ properties:
       - HCV negative
       - HCV positive
       - missing/unknown
+    termDef:
+      - term: bshcvstat
+        source: NCI Thesaurus
+        term_id: C159691
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: bshcvstat
+        source: NCI Thesaurus
+        term_id: C25213
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: bshcvstat
+        source: NCI Thesaurus
+        term_id: C14312
+        term_version: 19.04f (Release date:2019-04-30)
+    enumDef:
+      - enumeration: HCV negative
+        source: NCI Thesaurus
+        term_id: 
+        version_date: 
+      - enumeration: HCV positive
+        source: NCI Thesaurus
+        term_id: C129452
+        version_date: 19.03d (Release date:2019-03-25)
+      - enumeration: missing/unknown
+        source: NCI Thesaurus
+        term_id: C54031
+        version_date: 19.03d (Release date:2019-03-25)
 
   bshbvstat:
     description: >
@@ -269,6 +710,33 @@ properties:
       - HBV negative
       - HBV positive
       - missing/unknown
+    termDef:
+      - term: bshbvstat
+        source: NCI Thesaurus
+        term_id: C159691
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: bshbvstat
+        source: NCI Thesaurus
+        term_id: C25213
+        term_version: 19.04f (Release date:2019-04-30)
+      - term: bshbvstat
+        source: NCI Thesaurus
+        term_id: C14215
+        term_version: 19.04f (Release date:2019-04-30)
+    enumDef:
+      - enumeration: HBV negative
+        source: NCI Thesaurus
+        term_id: 
+        version_date: 
+      - enumeration: HBV positive
+        source: NCI Thesaurus
+        term_id: C141405
+        version_date: 19.03d (Release date:2019-03-25)
+      - enumeration: missing/unknown
+        source: NCI Thesaurus
+        term_id: C54031
+        version_date: 19.03d (Release date:2019-03-25)
+
 
   version:
     description: >
