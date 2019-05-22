@@ -107,7 +107,7 @@ properties:
     enum:
       - Asian
       - White
-      - Black or African American or African American
+      - Black or African American
       - Multi-racial
       - Asian/Pacific Islander
       - American Indian or Alaskan Native
