@@ -105,6 +105,7 @@ properties:
     term:
       $ref: "_terms.yaml#/race"
     type: array
+    additionalItems: false
     items:
         enum:
           - Asian
