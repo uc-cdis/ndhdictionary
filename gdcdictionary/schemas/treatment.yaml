@@ -51,7 +51,7 @@ properties:
   regimen_or_line_of_therapy:
     description: >
       General name for a the group of treatments of which this treatment was a part. This reference
-      name can be used to identify treatments involved in a certain outcome later one.
+      name can be used to identify treatments involved in a certain later outcome.
     type: string
 
   year_of_treatment:
