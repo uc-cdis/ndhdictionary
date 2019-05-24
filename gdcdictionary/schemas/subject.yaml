@@ -139,13 +139,7 @@ properties:
   species:
     description: "Taxonomic species of the subject."
     enum:
-     - Drosophila melanogaster
      - Homo sapiens
-     - Mus musculus
-     - Mustela putorius furo
-     - Rattus rattus
-     - Sus scrofa
-     - Mycobacterium tuberculosis
 
   strain:
     description: >
