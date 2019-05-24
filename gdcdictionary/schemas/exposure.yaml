@@ -76,10 +76,5 @@ properties:
       Does the participant have insurance coverage?
     type: boolean
 
-  rodent_weight:
-    description: >
-      The weight of the rodent subject measured in grams
-    type: number
-
   subjects:
     $ref: "_definitions.yaml#/to_one"
