@@ -48,26 +48,11 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  first_macs_visit_haart:
-    description: >
-      First visit reported HAART
-    type: number
-
-  last_macs_visit_haart_free:
-    description: >
-      Last visit reported HAART-free
-    type: integer
-
   regimen_or_line_of_therapy:
     description: >
       General name for a the group of treatments of which this treatment was a part. This reference
       name can be used to identify treatments involved in a certain outcome later one.
     type: string
-
-  year_of_last_haart_free:
-    description: >
-      Last reported HAART-free year
-    type: number
 
   year_of_treatment:
     description: >
