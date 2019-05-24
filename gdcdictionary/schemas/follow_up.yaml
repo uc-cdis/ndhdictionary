@@ -148,11 +148,6 @@ properties:
       Year of the visit.
     type: integer
 
-  tint:
-    description: >
-      6-month time interval for visit
-    type: integer
-
   days_to_follow_up:
     description: >
       Number of days between the date used for index and the date the patient was seen or contacted at follow-up.
