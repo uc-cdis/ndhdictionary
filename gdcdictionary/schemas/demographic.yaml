@@ -104,16 +104,19 @@ properties:
   race:
     term:
       $ref: "_terms.yaml#/race"
-    enum:
-      - Asian
-      - White
-      - Black or African American
-      - Multi-racial
-      - Asian/Pacific Islander
-      - American Indian or Alaskan Native
-      - Unspecified
-      - Unknown
-      - Other
+    type: array
+    additionalItems: false
+    items:
+        enum:
+          - Asian
+          - White
+          - Black or African American
+          - Multi-racial
+          - Asian/Pacific Islander
+          - American Indian or Alaskan Native
+          - Unspecified
+          - Unknown
+          - Other
     termDef:
       - term: Race
         source: NCI Thesaurus
