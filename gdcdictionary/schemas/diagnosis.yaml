@@ -47,18 +47,6 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
-  # CANCER SPECIFIC VARIABLES
-  classification_of_tumor:
-    term:
-      $ref: "_terms.yaml#/classification_of_tumor"
-    enum:
-      - primary
-      - metastasis
-      - recurrence
-      - other
-      - Unknown
-      - not reported
-      - Not Allowed To Collect
 
   lung_localization:
     description: >
