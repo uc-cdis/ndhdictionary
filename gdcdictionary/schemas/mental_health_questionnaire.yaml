@@ -222,7 +222,7 @@ properties:
 
   life_feeling:
     description: >
-      Feeling description about life as a whole
+      Feeling description about life as a whole.
     enum:
       - Delighted
       - Pleased
@@ -234,7 +234,7 @@ properties:
 
   freq_fresh_rested:
     description: >
-      Frequency waking up fresh and rested during the past month
+      Frequency waking up fresh and rested during the past month.
     enum:
       - None
       - Rarely
@@ -250,7 +250,7 @@ properties:
 
   worth_feeling:
     description: >
-      Feeling about being a person of worth, at least as much as others
+      Feeling about being a person of worth, at least as much as others.
     enum:
       - Always true
       - Often true
@@ -260,7 +260,7 @@ properties:
 
   talk_support:
     description: >
-      Number of people the subject can count on for understanding and support
+      Number of people the subject can count on for understanding and support.
     enum:
       - "No one"
       - "One person"
