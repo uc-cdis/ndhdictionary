@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  Record of a patient's background regarding cancer events of blood relatives.
+  Record of a patient's background regarding HIV events of blood relatives.
 additionalProperties: false
 submittable: true
 validators: null
