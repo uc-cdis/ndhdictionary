@@ -62,7 +62,7 @@ properties:
 
   hltva:
     description: >
-      Health limitation for vigorous activities such as running, lifting heavy objects, participating in strenuous sports..
+      Health limitation for vigorous activities such as running, lifting heavy objects, participating in strenuous sports.
     enum:
       - "Yes a lot"
       - "Yes a little"
@@ -70,7 +70,7 @@ properties:
 
   hltma:
     description: >
-      Health limitation for moderate activities such as moving a table, pushing a vacuum cleaner, bowling or playing golf..
+      Health limitation for moderate activities such as moving a table, pushing a vacuum cleaner, bowling or playing golf.
     enum:
       - "Yes a lot"
       - "Yes a little"
