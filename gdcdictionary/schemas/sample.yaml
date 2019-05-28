@@ -51,7 +51,6 @@ links:
     multiplicity: many_to_one
     required: false
 
-# Sample properties: keep TCGA-specific fields
 properties:
   type:
     type: string
@@ -65,9 +64,8 @@ properties:
       - string
       - "null"
     description: >
-      The legacy barcode used before prior to the use UUIDs, varies by project.
-      For TCGA this is bcrsamplebarcode.
-
+      A unique identifier for the entry.
+      
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
@@ -93,10 +91,7 @@ properties:
       - "Yes"
       - "No"
       - Unknown
-  freezing_method:
-    term:
-      $ref: "_terms.yaml#/freezing_method"
-    type: string
+
   initial_weight:
     term:
       $ref: "_terms.yaml#/initial_weight"
@@ -105,70 +100,7 @@ properties:
     term:
       $ref: "_terms.yaml#/intermediate_dimension"
     type: string
-  is_ffpe:
-    term:
-      $ref: "_terms.yaml#/is_ffpe"
-    type: boolean
-  method_of_sample_procurement:
-    term:
-      $ref: "_terms.yaml#/method_of_sample_procurement"
-    enum:
-      - Abdomino-perineal Resection of Rectum
-      - Anterior Resection of Rectum
-      - Aspirate
-      - Biopsy
-      - Blood Draw
-      - Bone Marrow Aspirate
-      - Core Biopsy
-      - Cystectomy
-      - Endo Rectal Tumor Resection
-      - Endoscopic Biopsy
-      - Endoscopic Mucosal Resection (EMR)
-      - Enucleation
-      - Excisional Biopsy
-      - Fine Needle Aspiration
-      - Full Hysterectomy
-      - Gross Total Resection
-      - Hand Assisted Laparoscopic Radical Nephrectomy
-      - Hysterectomy NOS
-      - Incisional Biopsy
-      - Indeterminate
-      - Laparoscopic Biopsy
-      - Laparoscopic Partial Nephrectomy
-      - Laparoscopic Radical Nephrectomy
-      - Laparoscopic Radical Prostatectomy with Robotics
-      - Laparoscopic Radical Prostatectomy without Robotics
-      - Left Hemicolectomy
-      - Lobectomy
-      - Local Resection (Exoresection; wall resection)
-      - Lumpectomy
-      - Modified Radical Mastectomy
-      - Needle Biopsy
-      - Open Craniotomy
-      - Open Partial Nephrectomy
-      - Open Radical Nephrectomy
-      - Open Radical Prostatectomy
-      - Orchiectomy
-      - Other
-      - Other Surgical Resection
-      - Pan-Procto Colectomy
-      - Pneumonectomy
-      - Right Hemicolectomy
-      - Sigmoid Colectomy
-      - Simple Mastectomy
-      - Subtotal Resection
-      - Surgical Resection
-      - Thoracoscopic Biopsy
-      - Total Colectomy
-      - Total Mastectomy
-      - Transplant
-      - Transurethral resection (TURBT)
-      - Transverse Colectomy
-      - Tumor Resection
-      - Wedge Resection
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
+
   oct_embedded:
     term:
       $ref: "_terms.yaml#/oct_embedded"
@@ -186,106 +118,11 @@ properties:
       - Unknown
       - Not Reported
       - Not Allowed To Collect
-  sample_type:
-    description: "Characterization of the sample as either clinical or contrived."
-    enum:
-      - Additional Metastatic
-      - Additional - New Primary
-      - Blood Derived Cancer - Bone Marrow, Post-treatment
-      - Blood Derived Cancer - Peripheral Blood, Post-treatment
-      - Blood Derived Normal
-      - Bone Marrow Normal
-      - Buccal Cell Normal
-      - Cell Line Derived Xenograft Tissue
-      - Cell Lines
-      - cfDNA
-      - Circulating Tumor Cell (CTC)
-      - Control Analyte
-      - ctDNA
-      - DNA
-      - EBV Immortalized Normal
-      - FFPE Recurrent
-      - FFPE Scrolls
-      - Fibroblasts from Bone Marrow Normal
-      - GenomePlex (Rubicon) Amplified DNA
-      - Human Tumor Original Cells
-      - Lipid
-      - Metastatic
-      - Mononuclear Cells from Bone Marrow Normal
-      - Primary Blood Derived Cancer - Peripheral Blood
-      - Recurrent Blood Derived Cancer - Peripheral Blood
-      - Primary Blood Derived Cancer - Bone Marrow
-      - Primary Tumor
-      - Primary Xenograft Tissue
-      - Protein
-      - Post neo-adjuvant therapy
-      - Recurrent Blood Derived Cancer - Bone Marrow
-      - Recurrent Tumor
-      - Repli-G (Qiagen) DNA
-      - Repli-G X (Qiagen) DNA
-      - RNA
-      - Slides
-      - Solid Tissue Normal
-      - Total RNA
-      - Xenograft Tissue
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
-  sample_type_id:
-    term:
-      $ref: "_terms.yaml#/sample_type_id"
-    enum:
-      - '01'
-      - '02'
-      - '03'
-      - '04'
-      - '05'
-      - '06'
-      - '07'
-      - '08'
-      - '09'
-      - '10'
-      - '11'
-      - '12'
-      - '13'
-      - '14'
-      - '15'
-      - '16'
-      - '20'
-      - '40'
-      - '41'
-      - '42'
-      - '50'
-      - '60'
-      - '61'
-      - '99'
+
   sample_volume:
     description: "The volume of the sample in mL."
     type: number
-  shortest_dimension:
-    term:
-      $ref: "_terms.yaml#/shortest_dimension"
-    type: string
-  time_between_clamping_and_freezing:
-    term:
-      $ref: "_terms.yaml#/time_between_clamping_and_freezing"
-    type: string
-  time_between_excision_and_freezing:
-    term:
-      $ref: "_terms.yaml#/time_between_excision_and_freezing"
-    type: string
-  tissue_type:
-    term:
-      $ref: "_terms.yaml#/tissue_type"
-    enum:
-      - Tumor
-      - Normal
-      - Abnormal
-      - Peritumoral
-      - Contrived
-      - Unknown
-      - Not Reported
-      - Not Allowed To Collect
+
 
   cell_line:
     description: >
