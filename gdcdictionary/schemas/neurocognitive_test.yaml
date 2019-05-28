@@ -53,7 +53,7 @@ properties:
 
   left_ankle_reflexes:
     description: >
-      Deep tendon reflexes at left ankle
+      Deep tendon reflexes at left ankle.
     enum:
       - "No"
       - "Yes"
@@ -62,7 +62,7 @@ properties:
 
   left_vibration_perception:
     description: >
-      Perception of vibration in great toe (left side) using a 128 Hz tuning fork
+      Perception of vibration in great toe (left side) using a 128 Hz tuning fork.
     enum:
       - "No"
       - "Yes (normal)"
@@ -73,7 +73,7 @@ properties:
 
   neurocognitive_test_total_time:
     description: >
-      Total time taken for the neurocognitive examination (minutes)
+      Total time taken for the neurocognitive examination (minutes).
     type: number
 
   paired_recall:
@@ -83,7 +83,7 @@ properties:
 
   pegboard_actual_score:
     description: >
-      Actual score at the pegboard test
+      Actual score at the pegboard test.
     type: integer
 
   pegboard_dominant_hand_drops:
@@ -123,7 +123,7 @@ properties:
 
   right_ankle_reflexes:
     description: >
-      Deep tendon reflexes at right ankle
+      Deep tendon reflexes at right ankle.
     enum:
       - "No"
       - "Yes"
@@ -132,7 +132,7 @@ properties:
 
   right_vibration_perception:
     description: >
-      Perception of vibration at great toe (right side) using a 128 Hz tuning fork
+      Perception of vibration at great toe (right side) using a 128 Hz tuning fork.
     enum:
       - "No"
       - "Yes (normal)"
@@ -173,12 +173,12 @@ properties:
 
   symbol_digit_actual_score:
     description: >
-      Symbol-digit paired recall, actual score
+      Symbol-digit paired recall, actual score.
     type: integer
 
   symbol_digit_raw_score:
     description: >
-      Symbol-digit raw score
+      Symbol-digit raw score.
     type: integer
 
   trail_making_connected_points_a:
