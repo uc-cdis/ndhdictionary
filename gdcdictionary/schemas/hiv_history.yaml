@@ -205,7 +205,7 @@ properties:
 
   ehaart:
     description: >
-      Ever HAART use
+      Ever HAART use (This is a derived value)
     type: boolean
     termDef:
       - term: ehaart
@@ -416,7 +416,7 @@ properties:
 
   lastafrv:
     description: >
-      Last reported AIDS free visit
+      Last reported AIDS free visit (derived from WIHS only)
     type: integer
     termDef:
       - term: lastafrv
@@ -456,146 +456,6 @@ properties:
         term_id: C2851
         term_version: 19.04f (Release date:2019-04-30)
 
-  frstcncrd:
-    description: >
-      First confirmed cancer year
-    type: integer
-    termDef:
-      - term: frstcncrd
-        source: NCI Thesaurus
-        term_id: C159701
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frstcncrd
-        source: NCI Thesaurus
-        term_id: C9305
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frstcncrv:
-    description: >
-      First confirmed cancer visit
-    type: integer
-    termDef:
-      - term: frstcncrv
-        source: NCI Thesaurus
-        term_id: C159701
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frstcncrv
-        source: NCI Thesaurus
-        term_id: C159705
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frsthtnmd:
-    description: >
-      First visit year with all necessary components to determine hypertension
-    type: integer
-    termDef:
-      - term: frsthtnmd
-        source: NCI Thesaurus
-        term_id: C159701
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frsthtnmd
-        source: NCI Thesaurus
-        term_id: C159705
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frsthtnmv:
-    description: >
-      First visit with all necessary components to determine hypertension
-    type: integer
-    termDef:
-      - term: frsthtnmv
-        source: NCI Thesaurus
-        term_id: C159707
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frsthtnmv
-        source: NCI Thesaurus
-        term_id: C3117
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frsthtnd:
-    description: >
-      First visit year with hypertension
-    type: integer
-    termDef:
-      - term: frsthtnd
-        source: NCI Thesaurus
-        term_id: C159708
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frsthtnd
-        source: NCI Thesaurus
-        term_id: C3117
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frsthtnv:
-    description: >
-      First visit with hypertension
-    type: integer
-    termDef:
-      - term: frsthtnv
-        source: NCI Thesaurus
-        term_id: C159696
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frsthtnv
-        source: NCI Thesaurus
-        term_id: C3117
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frstdmmd:
-    description: >
-      First visit year with all necessary components to determine diabetes
-    type: integer
-    termDef:
-      - term: frstdmmd
-        source: NCI Thesaurus
-        term_id: C159707
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frstdmmd
-        source: NCI Thesaurus
-        term_id: C2985
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frstdmmv:
-    description: >
-      First visit with all necessary components to determine diabetes
-    type: integer
-    termDef:
-      - term: frstdmmv
-        source: NCI Thesaurus
-        term_id: C159707
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frstdmmv
-        source: NCI Thesaurus
-        term_id: C2985
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frstdmd:
-    description: >
-      First visit year with diabetes
-    type: integer
-    termDef:
-      - term: frstdmd
-        source: NCI Thesaurus
-        term_id: C159708
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frstdmd
-        source: NCI Thesaurus
-        term_id: C2985
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frstdmv:
-    description: >
-      First visit with diabetes
-    type: integer
-    termDef:
-      - term: frstdmv
-        source: NCI Thesaurus
-        term_id: C159696
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frstdmv
-        source: NCI Thesaurus
-        term_id: C2985
-        term_version: 19.04f (Release date:2019-04-30)
-
   frstdthd:
     description: >
       Year of death
@@ -604,20 +464,6 @@ properties:
       - term: frstdthd
         source: NCI Thesaurus
         term_id: C156426
-        term_version: 19.04f (Release date:2019-04-30)
-
-  frstdthv:
-    description: >
-      First visit reported dead
-    type: integer
-    termDef:
-      - term: frstdthv
-        source: NCI Thesaurus
-        term_id: C159701
-        term_version: 19.04f (Release date:2019-04-30)
-      - term: frstdthv
-        source: NCI Thesaurus
-        term_id: C28554
         term_version: 19.04f (Release date:2019-04-30)
 
   mortcutd:
@@ -736,7 +582,6 @@ properties:
         source: NCI Thesaurus
         term_id: C54031
         version_date: 19.03d (Release date:2019-03-25)
-
 
   version:
     description: >
