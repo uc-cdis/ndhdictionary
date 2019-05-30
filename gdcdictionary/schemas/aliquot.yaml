@@ -71,20 +71,6 @@ properties:
     term:
       $ref: "_terms.yaml#/analyte_type"
     type: string
-  analyte_type_id:
-    term:
-      $ref: "_terms.yaml#/analyte_type_id"
-    enum:
-      - D
-      - E
-      - G
-      - H
-      - R
-      - S
-      - T
-      - W
-      - X
-      - Y
   concentration:
     term:
       $ref: "_terms.yaml#/concentration"
