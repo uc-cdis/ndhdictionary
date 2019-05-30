@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  History of comorbidities related to the subject.
+  History of comorbidities related to the subject. 
 additionalProperties: false
 submittable: true
 validators: null
@@ -63,8 +63,8 @@ properties:
     enumDef:
       - enumeration: HBV negative
         source: NCI Thesaurus
-        term_id: 
-        version_date: 
+        term_id:
+        version_date:
       - enumeration: HBV positive
         source: NCI Thesaurus
         term_id: C141405
@@ -97,8 +97,8 @@ properties:
     enumDef:
       - enumeration: HCV negative
         source: NCI Thesaurus
-        term_id: 
-        version_date: 
+        term_id:
+        version_date:
       - enumeration: HCV positive
         source: NCI Thesaurus
         term_id: C129452
@@ -107,7 +107,7 @@ properties:
         source: NCI Thesaurus
         term_id: C54031
         version_date: 19.03d (Release date:2019-03-25)
-  
+
   frstcncrd:
     description: >
       First confirmed cancer year
