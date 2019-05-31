@@ -86,26 +86,6 @@ properties:
     enum:
      - Homo sapiens
 
-  strain:
-    description: >
-      A lower-level taxonomic rank used in microbiology or virology, plants and rodents, usually at the intraspecific level (within a species)
-    type: string
-
-  taxon_id:
-    description: >
-      NCBI identifier for classification of organisms.
-    type: integer
-
-  genus:
-    description: >
-      Genus of organism collected.
-    type: string
-
-  host_name:
-    description: >
-      The species from which the bacteria was isolated.
-    type: string
-
   genome_length:
     description: >
       Number of basepairs of genome sequenced.
