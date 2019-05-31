@@ -44,15 +44,6 @@ links:
     multiplicity: many_to_one
     required: false
 
-  - name: diagnoses
-    backref: samples
-    label: related_to
-    target_type: diagnosis
-    multiplicity: many_to_one
-    required: false
-
-# Sample properties: keep TCGA-specific fields
-
   state:
     $ref: "_definitions.yaml#/state"
 
@@ -152,8 +143,6 @@ links:
   subjects:
     $ref: "_definitions.yaml#/to_one"
   follow_ups:
-    $ref: "_definitions.yaml#/to_one"
-  diagnoses:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
