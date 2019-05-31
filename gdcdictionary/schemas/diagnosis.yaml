@@ -1,0 +1,178 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "diagnosis"
+title: Diagnosis
+type: object
+namespace: https://niaid.bionimbus.org
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Data from the investigation, analysis and recognition of the presence and nature of disease,
+  condition, or injury from expressed signs and symptoms; also, the scientific determination of any kind; the concise results of such an investigation.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: subjects
+    backref: diagnoses
+    label: describes
+    target_type: subject
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - subjects
+  - primary_diagnosis
+  - version_data
+  - visit_id
+
+preferred:
+  - year_of_diagnosis
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  # CANCER SPECIFIC VARIABLES
+  classification_of_tumor:
+    term:
+      $ref: "_terms.yaml#/classification_of_tumor"
+    enum:
+      - primary
+      - metastasis
+      - recurrence
+      - other
+      - Unknown
+      - not reported
+      - Not Allowed To Collect
+
+  lung_localization:
+    description: >
+      Pulmonary tuberculosis (PTB) and extrapulmonary TB (EPTB): PTB and EPTB diagnosed at the same time. A patient with both pulmonary and extrapulmonary TB should be classified as a case of PTB. Extrapulmonary tuberculosis (EPTB) refers to any bacteriologically confirmed or clinically diagnosed case of TB involving organs other than the lungs, e.g. pleura, lymph nodes, abdomen, genitourinary tract, skin, joints and bones, meninges. Pulmonary tuberculosis (PTB) refers to any bacteriologically confirmed or clinically diagnosed case of TB involving the lung parenchyma or the tracheobronchial tree. Miliary TB is classified as PTB because there are lesions in the lungs. Tuberculous intra-thoracic lymphadenopathy (mediastinal and/or hilar) or tuberculous pleural effusion, without radiographic abnormalities in the lungs, constitutes a case of extrapulmonary TB.
+    enum:
+      - "Pulmonary and Extrapulmonary"
+      - "Pulmonary"
+      - "Extrapulmonary"
+
+  morphology:
+    term:
+      $ref: "_terms.yaml#/morphology"
+    type: string
+
+   # GENERAL DIAGNOSIS VARIABLES
+  primary_diagnosis:
+    term:
+      $ref: "_terms.yaml#/primary_diagnosis"
+    type: string
+
+  prior_treatment:
+    term:
+      $ref: "_terms.yaml#/prior_treatment"
+    enum:
+      - "Yes"
+      - "No"
+      - Unknown
+      - Not Reported
+      - Not Allowed To Collect
+
+  progression_or_recurrence:
+    term:
+      $ref: "_terms.yaml#/progression_or_recurrence"
+    enum:
+      - "yes"
+      - "no"
+      - unknown
+      - not reported
+      - Not Allowed To Collect
+
+  tumor_grade:
+    term:
+      $ref: "_terms.yaml#/tumor_grade"
+    type: string
+
+  tumor_stage:
+    term:
+      $ref: "_terms.yaml#/tumor_stage"
+    type: string
+
+  tissue_or_organ_of_origin:
+    term:
+      $ref: "_terms.yaml#/tissue_or_organ_of_origin"
+    type: string
+
+  type_of_resistance:
+    description: >
+      Type of TB resistance
+    enum:
+      - MDR non XDR
+      - Mono DR
+      - Poly DR
+      - Sensitive
+      - XDR
+
+  version_data:
+    description: >
+      Version number of data
+          011= Version 01 in Visit 01
+          ..
+          993= Version 03 in Visit 99
+    type: integer
+
+  visit_id:
+    description: >
+      Visit identifier
+    type: integer
+
+  year_of_diagnosis:
+    term:
+      $ref: "_terms.yaml#/year_of_diagnosis"
+    type:
+      - number
+      - "null"
+
+  comorbidity:
+    description: >
+      The simultaneous presence of two chronic diseases or conditions in a patient
+    type: boolean
+
+  comorbidity_hiv:
+    description: >
+      Presence of HIV as comorbidity
+    type: boolean
+
+  comorbidity_hepatic_disease:
+    description: >
+      Presence of hepatic disease as comorbidity
+    type: boolean
+
+  comorbidity_renal_disease:
+    description: >
+        Presence of renal disease as comorbidity
+    type: boolean
+
+  comorbidity_anemia:
+    description: >
+        Presence of anemia as comorbidity
+    type: boolean
+
+  comorbidity_diabetes:
+    description: >
+        Presence of diabetes as comorbidity
+    type: boolean
+
+  subjects:
+    $ref: "_definitions.yaml#/to_one"
