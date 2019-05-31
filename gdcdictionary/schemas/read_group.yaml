@@ -46,7 +46,7 @@ properties:
   state:
     $ref: "_definitions.yaml#/state"
   type:
-enum: [ "read_group" ]
+    enum: [ "read_group" ]
   experiment_name:
     term:
       $ref: "_terms.yaml#/experiment_name"
