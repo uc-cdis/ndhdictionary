@@ -37,12 +37,6 @@ uniqueKeys:
   - [ project_id, submitter_id ]
 
 properties:
-  id:
-    $ref: "_definitions.yaml#/UUID"
-  project_id:
-    $ref: "_definitions.yaml#/project_id"
-  submitter_id:
-    type: string
   state:
     $ref: "_definitions.yaml#/state"
   type:
