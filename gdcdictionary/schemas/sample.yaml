@@ -44,8 +44,15 @@ links:
     multiplicity: many_to_one
     required: false
 
+properties:
+  type:
+    type: string
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
   state:
     $ref: "_definitions.yaml#/state"
+
 
   current_weight:
     term:
