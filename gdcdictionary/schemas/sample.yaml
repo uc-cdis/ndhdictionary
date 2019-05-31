@@ -44,6 +44,14 @@ links:
     multiplicity: many_to_one
     required: false
 
+  - name: diagnoses
+    backref: samples
+    label: related_to
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: false
+
+# Sample properties: keep TCGA-specific fields
 properties:
   type:
     type: string
@@ -52,8 +60,13 @@ properties:
     systemAlias: node_id
   state:
     $ref: "_definitions.yaml#/state"
-
-
+  submitter_id:
+    type:
+      - string
+      - "null"
+    description: >
+      The legacy barcode used before prior to the use UUIDs, varies by project.
+      For TCGA this is bcrsamplebarcode.
   current_weight:
     term:
       $ref: "_terms.yaml#/current_weight"
@@ -150,6 +163,8 @@ properties:
   subjects:
     $ref: "_definitions.yaml#/to_one"
   follow_ups:
+    $ref: "_definitions.yaml#/to_one"
+  diagnoses:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     type: string
