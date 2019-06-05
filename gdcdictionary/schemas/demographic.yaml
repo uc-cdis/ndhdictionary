@@ -51,6 +51,16 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+  bmi:
+    description: >
+      The body mass divided by the square of the body height expressed in units of kg/m^2.
+    type: number
+    termDef:
+      - term: bmi
+        source: NCI Thesaurus
+        term_id: C138901
+        term_version: 18.11d (Release date:2018-11-26)
+  
   country_of_birth:
     description: >
       Country of birth
@@ -308,6 +318,29 @@ properties:
     enum:
       - "Yes"
       - "No"
+
+  isolation_country:
+    description: >
+      The country in which the bacteria was isolated.
+    type: string
+
+  rodent_age_at_index:
+    description: >
+      "The rodent's age (in weeks) on the reference or anchor date used during date obfuscation"
+    type: number
+    termDef:
+      - term: Rodent Age At Index
+        source: NCI Thesaurus
+        term_id: C14270
+        term_version: 18.11d (Release date:2018-11-26)
+      - term: Rodent Age At Index
+        source: NCI Thesaurus
+        term_id: C37908
+        term_version: 18.11d (Release date:2018-11-26)
+      - term: Rodent Age At Index
+        source: NCI Thesaurus
+        term_id: C25390
+        term_version: 18.11d (Release date:2018-11-26)
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
