@@ -114,6 +114,11 @@ properties:
     description: >
       Visit number
     type: integer
+    
+  harmonized_visit_number:
+    description: >
+      The derived harmonized visit number for the studies MACS and WIHS.
+    type: integer
 
   visit_id:
     description: >
