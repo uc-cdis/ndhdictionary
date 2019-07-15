@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: subjects
-    backref: comobidities
+    backref: comorbidities
     label: describes
     target_type: subject
     multiplicity: one_to_one
