@@ -425,6 +425,126 @@ properties:
       A numerical expression of the quantity of virus NP mRNA level relative to RPL14 with log transformation.
     type: number
 
+  baff:
+    description: >
+      The determination of the amount of B-cell activating factor present in a sample.  Tumor necrosis factor ligand superfamily member 13B (285 aa, ~31 kDa) is encoded by the human TNFSF13B gene. This protein is involved in signal transduction and the modulation of B- and T-cell proliferation.
+    type: number
+
+  bca1:
+    description: >
+      The determination of the amount of chemokine (C-X-C motif) ligand 13 present in a sample.  C-C motif chemokine 13 (98 aa, ~11 kDa) is encoded by the human CCL13 gene. This protein is involved in leukocyte chemotaxis and inflammation.
+    type: number
+
+  ccr5:
+    description: >
+      The determination of the amount of C-C chemokine receptor type 5 in a biological specimen.  C-C chemokine receptor type 5 (352 aa, ~41 kDa) is encoded by the human CCR5 gene. This protein is involved in the modulation of inflammatory responses and cellular signaling.
+    type: number
+
+  ccr5d32:
+    description: >
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt.
+    type: number
+
+  cd27:
+    description: >
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt.
+    type: number
+
+  crp:
+    description: >
+      A quantitative measurement of the amount of C-reactive protein present in a sample.  C-reactive protein (224 aa, ~25 kDa) is encoded by the human CRP gene. This protein is cleaved during biological activation and is associated with host defense mechanisms and inflammatory responses.
+    type: number
+
+  eotaxin:
+    description: >
+      The determination of the amount of eotaxin present in a sample.  Eotaxin (97 aa, ~11 kDa) is encoded by the human CCL11 gene. This protein plays a role in allergen-dependent eosinophil chemotaxis.
+    type: number
+
+  gmcsf:
+    description: >
+      The determination of the amount of granulocyte macrophage colony stimulating factor present in a sample.  Granulocyte-macrophage colony-stimulating factor (144 aa, ~16 kDa) is encoded by the human CSF2 gene. This protein plays a role in the positive regulation of the growth and differentiation of cells in the granulocyte, macrophage, eosinophil and erythrocyte lineages.
+    type: number
+
+  gp130:
+    description: >
+      Interleukin-6 receptor subunit beta (918 aa, ~104 kDa) is encoded by the human IL6ST gene. This protein is involved in cytokine receptor-mediated signal transduction.
+    type: number
+
+  ifng:
+    description: >
+      The determination of the amount of interleukin 1 beta present in a sample.  Interleukin-1 beta (269 aa, ~31 kDa) is encoded by the human IL1B gene. This protein is involved in the macrophage-dependent inflammatory response.
+    type: number
+
+  il1b:
+    description: >
+      The determination of the amount of interferon gamma present in a sample.  Interferon gamma (166 aa, ~19 kDa) is encoded by the human IFNG gene. This protein is involved in antiviral activity, macrophage activation, antiproliferative activity and immunopotentiation.
+    type: number
+
+  il2:
+    description: >
+      The determination of the amount of interleukin 2 present in a sample.  Interleukin-2 (153 aa, ~18 kDa) is encoded by the human IL2 gene. This protein is involved in T-cell proliferation, leukocyte stimulation and immune responses.
+    type: number
+
+  il4:
+    description: >
+      The determination of the amount of interleukin 4 present in a sample.  Interleukin-4 (153 aa, ~17 kDa) is encoded by the human IL4 gene. This protein is involved in the regulation of the expression of class II MHC molecules, Fc receptors and cell surface-bound immunoglobulins.
+    type: number
+
+  il6:
+    description: >
+      The determination of the amount of soluble interleukin 6 Receptor present in a sample.  Interleukin-6 (212 aa, ~24 kDa) is encoded by the human IL6 gene. This protein is involved in signaling affecting a wide variety of cell types including monocytes, lymphocytes, hepatocytes and nerve cells.
+    type: number
+
+  il8:
+    description: >
+      The determination of the amount of interleukin 8 present in a sample.  Interleukin-8 (99 aa, ~11 kDa) is encoded by the human CXCL8 gene. This protein is involved in chemotaxis and neutrophil activation.
+    type: number
+
+  il10:
+    description: >
+      The determination of the amount of interleukin 10 present in a sample.  Interleukin-10 (178 aa, ~21 kDa) is encoded by the human IL10 gene. This protein plays a role in the negative regulation of cytokine expression.
+    type: number
+
+  il12:
+    description: >
+      The determination of the amount of interleukin 12 present in a sample.  Exhibiting a broad range of biological activities on T and natural killer cells, Interleukin-12 is a disulfide-bonded heterodimeric cytokine composed of a 35-kD IL12A subunit (IL-6 Superfamily) and a 40-kDa IL12B subunit (Type I Cytokine Receptor 3 Family). IL12 stimulates T-cell-independent production of IFN-gamma by PBMCs, enhances NK cell lytic activity, acts as a growth factor for T- and NK-cells, and is important for Th1 and Th2 cell differentiation. Lymphocyte responses to IL12 require NOS2A and are mediated by STAT4 activator of transcription. (NCI).
+    type: number
+
+  il17:
+    description: >
+      The determination of the amount of interleukin 17 present in a sample.  Interleukin-17A (155 aa, ~18 kDa) is encoded by the human IL17A gene. This protein is involved in the positive regulation of cytokine production.
+    type: number
+
+  mcp1:
+    description: >
+      The determination of the amount of monocyte chemotactic protein 1 present in a sample.  Human CCL2 wild-type allele is located within 17q11.2-q12 and is approximately 2 kb in length. This allele, which encodes C-C motif chemokine 2 protein, is involved in the mediation of immune cell chemotaxis during tissue injury.
+    type: number
+
+  scd14:
+    description: >
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt. This term is the same as s_cd14 but was collected at a different timepoint.
+    type: number
+
+  s_cd14:
+    description: >
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt. This term is the same as s_cd14 but was collected at a different timepoint.
+    type: number
+
+  sil2ra:
+    description: >
+      The determination of the amount of monocyte chemotactic protein 1 present in a sample.  Human CCL2 wild-type allele is located within 17q11.2-q12 and is approximately 2 kb in length. This allele, which encodes C-C motif chemokine 2 protein, is involved in the mediation of immune cell chemotaxis during tissue injury.
+    type: number
+
+  stnfr2:
+    description: >
+      Term will by requested to NCIt and the description will be updated once the term is added to NCIt. 
+    type: number
+
+  tnfa:
+    description: >
+      The determination of the amount of TNF-alpha production inhibitory activity present in a sample.  Tumor necrosis factor (233 aa, ~26 kDa) is encoded by the human TNF gene. This protein is involved in the induction of cytokine expression, the stimulation of cell proliferation and the positive regulation of cell differentiation.
+    type: number
+
   follow_ups:
     $ref: "_definitions.yaml#/to_one"
 
