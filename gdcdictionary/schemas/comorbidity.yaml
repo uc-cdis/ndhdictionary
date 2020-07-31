@@ -8,7 +8,7 @@ category: clinical
 program: '*'
 project: '*'
 description: >
-  History of comorbidities related to the subject. 
+  History of comorbidities related to the subject.
 additionalProperties: false
 submittable: true
 validators: null
