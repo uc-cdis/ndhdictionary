@@ -86,6 +86,7 @@ required:
   - md5sum
   - data_category
   - data_type
+  - data_format
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"

@@ -46,6 +46,7 @@ required:
   - file_name
   - file_size
   - md5sum
+  - data_format
   - data_category
   - data_type
 
