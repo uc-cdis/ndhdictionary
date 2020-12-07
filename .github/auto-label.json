@@ -1,5 +1,7 @@
 {
   "rules": {
-    "test-portal-homepageTest": ["**"]
+    "test-portal-homepageTest": ["**"],
+    "test-sheepdogAndPeregrine-submitAndQueryNodesTest": ["**"],
+    "test-apis-dataUploadTest": ["**"]
   }
 }
