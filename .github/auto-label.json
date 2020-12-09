@@ -1,6 +1,6 @@
 {
   "rules": {
-    "test-portal-homepageTest": ["**"],
+    "test-apis-etlTest": ["**"],
     "test-sheepdogAndPeregrine-submitAndQueryNodesTest": ["**"],
     "test-apis-dataUploadTest": ["**"]
   }
