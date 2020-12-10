@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "test-apis-etlTest": ["**"],
+    "test-sheepdogAndPeregrine-submitAndQueryNodesTest": ["**"],
+    "test-apis-dataUploadTest": ["**"]
+  }
+}
