@@ -28,22 +28,19 @@ systemProperties:
   - updated_datetime
 
 links:
-  - exclusive: false
+  - name: follow_ups
+    backref: summary_lab_results
+    label: performed_at
+    target_type: follow_up
+    multiplicity: one_to_one
     required: true
-    subgroup:
-      - name: follow_ups
-        backref: summary_lab_results
-        label: performed_at
-        target_type: follow_up
-        multiplicity: many_to_one
-        required: false
 
-      - name: samples
-        backref: summary_lab_results
-        label: performed_on
-        target_type: sample
-        multiplicity: one_to_one
-        required: false
+  - name: samples
+    backref: summary_lab_results
+    label: performed_on
+    target_type: sample
+    multiplicity: one_to_one
+    required: false
 
 uniqueKeys:
   - [id]
@@ -52,6 +49,7 @@ uniqueKeys:
 required:
   - submitter_id
   - type
+  - follow_ups
 
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
